@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 541d8d95f4220cb4f94f7c5725c1942b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - quest: {instanceID: 0}
+  - splashImage: {instanceID: 0}
+  - idx1: {instanceID: 0}
+  - idx2: {instanceID: 0}
+  - idx3: {instanceID: 0}
+  - idx4: {instanceID: 0}
+  - idx5: {instanceID: 0}
+  - QuestObject: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

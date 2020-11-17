@@ -1,0 +1,672 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836a84f1f8ae9a142bac6be8f1cae0cc, type: 3}
+  m_Name: DialogData
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - id: 0
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uC624\uB298 \uC2DC\uD5D8 \uC798 \uBCFC \uC218 \uC788\uC744\uAE4C?"
+  - id: 1
+    myName: "\uAE40\uC601\uC7AC"
+    portrait: {fileID: 21300000, guid: 3d810395bb1edaa43bfc4f56f54b14b6, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uC57C~ \uB108 \uB418\uAC8C \uC77C\uCC0D \uC654\uB124. \uACF5\uBD80
+      \uB9CE\uC774 \uD588\uB0D0?"
+  - id: 2
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 125c1e4578956d44cb092be0eb95fbe9, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uD588\uACA0\uB0D0? \uC5B4\uC81C \uACA8\uC6B0 \uBC24\uC0DC\uB2E4"
+  - id: 3
+    myName: "\uAE40\uC601\uC7AC"
+    portrait: {fileID: 21300000, guid: 342d69b336c93cc4e97d93a7a7ec922c, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uB098\uB3C4 \uBC24\uC0D8. \uB098 \uC790\uC2E0\uC758 \uACE0\uB1CC\uD558\uB294
+      \uBAA8\uC2B5\uC744 \uC5F0\uC2B5\uD558\uB290\uB77C"
+  - id: 4
+    myName: 
+    portrait: {fileID: 21300000, guid: 8f5ec97e4d6678641b623fae09c54c3a, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uC5B4\uB514\uC120\uAC00 \uC790\uC2E0\uAC10\uC774 \uC19F\uAD6C\uCE5C\uB2E4.
+      \n\uC120\uC0DD\uB2D8\uC774 \uB4E4\uC5B4\uC624\uC2DC\uACE0 \uC2DC\uD5D8\uC9C0\uAC00
+      \uBC30\uBD80\uB41C\uB2E4."
+  - id: 5
+    myName: "\uBC15\uD5A5\uAE30 \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 09ff39c3c4502fa4c8f710c54bce9232, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uD559\uBC88\uC774\uB984\uBD80\uD130 \uC368\uB77C. \uACFC\uBAA9 \uCF54\uB4DC\uB294
+      01\uBC88\uC774\uB2E4. \uC54C\uACA0\uB098?\r"
+  - id: 6
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC2DC\uD5D8\uC9C0\uB97C \uBC1B\uB294\uB2E4\r"
+  - id: 7
+    myName: 
+    portrait: {fileID: 21300000, guid: 4078b85b577bb5844a1dca35013a21cb, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: 
+  - id: 8
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 9ccdd27805a617e43879c9a0da7351b9, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uC5B4? \uC120\uC0DD\uB2D8 \uC800\uD76C \uAD6D\uC5B4\uC778\uB370\uC694?
+      \uC2DC\uD5D8\uC9C0\uC5D0 \uC218\uD559\uC774\uB77C\uACE0 \uC368\uC788\uC5B4\uC694"
+  - id: 9
+    myName: "\uBC15\uD5A5\uAE30 \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 9ccdd27805a617e43879c9a0da7351b9, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uC4F8\uB370\uC5C6\uB294 \uC18C\uB9AC\uB9D0\uACE0 \uAC01\uC790 \uC2DC\uD5D8\uC9C0\uB9CC
+      \uBCF4\uB3C4\uB85D!"
+  - id: 10
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 4078b85b577bb5844a1dca35013a21cb, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC2DC\uD5D8\uC9C0\uC5D0 \uBB38\uC81C\uAC00 \uC788\uC74C\uC774 \uBD84\uBA85\uD574.
+      \uC218\uD559\uC740 \uB9C8\uC9C0\uB9C9 \uAD50\uC2DC\uB77C \uC544\uCE68\uC5D0
+      \uACF5\uBD80 \uC548 \uD588\uB294\uB370!"
+  - id: 11
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: d592573836b2e8948b68c4fab6547ad3, type: 3}
+    myText: "\uACE0\uAC1C\uB97C \uB4DC\uB2C8 \uCE5C\uAD6C\uB4E4\uC774 \uBB38\uC81C\uB97C
+      \uD480\uACE0 \uC788\uB2E4."
+  - id: 12
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 4078b85b577bb5844a1dca35013a21cb, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uBB34\uC5B8\uAC00 \uC798\uBABB\uB410\uC5B4! \uB0B4 \uC2A4\uC2A4\uB85C
+      \uD574\uACB0\uD574\uC57C \uD574"
+  - id: 13
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 44408d5444b329d42aa864bf1a76ab04, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uD734! \uAD6D\uC5B4 \uC2DC\uD5D8\uC9C0\uB97C \uC5BB\uC5C8\uB2E4. \uBE5B\uC758
+      \uC18D\uB3C4\uB85C \uD480\uC5B4\uC57C\uC9C0"
+  - id: 14
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC5F4\uC2EC\uD788 \uC5F0\uD544\uC744 \uAD74\uB9B0\uB2E4.\n3...4...3...1...5..."
+  - id: 15
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: "1\uAD50\uC2DC\uAC00 \uB05D\uB0AC\uB2E4"
+  - id: 16
+    myName: "\uBC15\uD5A5\uAE30 \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 9ccdd27805a617e43879c9a0da7351b9, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uB3D9\uC791 \uADF8\uB9CC. \uB2E4\uB4E4 \uD39C \uB0B4\uB824\uB194. \uB4A4\uC5D0\uC11C
+      \uBD80\uD130 \uAC77\uB3C4\uB85D."
+  - id: 17
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC640\uC6B0... \uBBF8\uCCD0\uBC84\uB9AC\uB294 \uC904 \uC54C\uC558\uB124."
+  - id: 18
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uCCAB\uB0A0\uBD80\uD130 \uC774\uB7F0 \uC704\uAE30\uAC00 \uC0DD\uAE30\uB2E4\uB2C8
+      \uC774\uBC88 \uC2DC\uD5D8\uC5D0 \uBB34\uC2A8 \uB9C8\uAC00 \uAF08\uB098?"
+  - id: 19
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC57C \uC774\uC81C \uCCAB\uB0A0 \uB05D\uB09C\uAC70\uC784? \uBBF8\uCCE4\uB0D0?"
+  - id: 20
+    myName: "\uC190\uC131\uB355"
+    portrait: {fileID: 21300000, guid: ecb75847b98134240b5ff207f51df057, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC624\uB298 \uC2DC\uD5D8 \uAC1C\uC5B4\uB824\uC6E0\uC9C0 \uC54A\uB0D0?
+      \uC544\uB2C8 \uC790\uBC14 \uC11C\uC220\uD615 3\uBC88 \uBB50\uC57C?"
+  - id: 21
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uBAB0\uB77C. \uC2DC\uD5D8\uC774 \uB05D\uB098\uBA74 \uC790\uD1F4\uC11C\uB97C
+      \uBC1B\uC544\uC640\uC57C\uACA0\uC5B4"
+  - id: 22
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: 
+  - id: 23
+    myName: "\uBC18\uC7A5"
+    portrait: {fileID: 21300000, guid: 6d21f74abad130342a65710769ed6a36, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uB2F5\uC9C0 \uC654\uB2E4\uC544"
+  - id: 24
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uB2E4\uB4E4 \uD5C8\uB465\uC9C0\uB465 \uC2DC\uD5D8\uC9C0\uB97C \uAEBC\uB0B8\uB2E4"
+  - id: 25
+    myName: "\uC190\uC131\uB4DD"
+    portrait: {fileID: 21300000, guid: ecb75847b98134240b5ff207f51df057, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uC57C \uCC44\uC810 \uB05D\uB098\uBA74 \uBD88\uB7EC\uC918!"
+  - id: 26
+    myName: "\uBC18\uC7A5"
+    portrait: {fileID: 21300000, guid: 6755fc05dbcb46e489d353bebf8a9f45, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uC790, 1\uBC88\uC5D0 3\uBC88, 2\uBC88\uC5D0 1\uBC88..."
+  - id: 27
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uB193\uCE58\uC9C0 \uC54A\uACE0 \uC5F4\uC2EC\uD788 \uCC44\uC810\uC744
+      \uD55C\uB2E4"
+  - id: 28
+    myName: "\uBC18\uC7A5"
+    portrait: {fileID: 21300000, guid: 6d21f74abad130342a65710769ed6a36, type: 3}
+    background: {fileID: 21300000, guid: c73f1e2375d9c7947acc768fbc9cdf35, type: 3}
+    myText: "\uC11C\uC220\uD615\uC740 *\uB2E8\uD398\uC5D0 \uC62C\uB824\uB193\uC744\uAC8C!\n\n*\uB2E8\uCCB4
+      \uD398\uC774\uC2A4\uBD81 \uBA54\uC2E0\uC800 \uBC29"
+  - id: 29
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC810\uC218\uAC00 \uC65C \uC774\uB798?"
+  - id: 30
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC65C 271\uC810\uC774 \uB098\uC624\uC9C0?"
+  - id: 31
+    myName: "\uC190\uC131\uB355"
+    portrait: {fileID: 21300000, guid: 38805bb72d497ea409a237c2cfd11b19, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uBB50? 271\uC810? \uAE54\uAE54\uAE54!"
+  - id: 32
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC65C \uC774\uB807\uAC8C \uB098\uC624\uC9C0? \uC74C... \uACC4\uC18D
+      \uACC4\uC0B0\uD574\uB3C4 \uB611\uAC19\uC740 \uC810\uC218\uAC00 \uB098\uC624\uB294\uB370"
+  - id: 33
+    myName: "\uC190\uC131\uB355"
+    portrait: {fileID: 21300000, guid: 8783b7b668b990d4887993e554e28d4d, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC544\uD558\uD558\uD558\uD558, \uD558\uD558\uD558\uD558\uD558, \uC7E4
+      271\uC810\uC774\uB798 \uD558\uD558\uD558\uD558\uD558\u2026\r..."
+  - id: 34
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uB0B4\uAC00 \uACC4\uC0B0\uC744 \uC798\uBABB\uD558\uACE0 \uC788\uB294
+      \uAC83 \uAC19\uC740\uB370\n\uC65C \uB0B4\uAC00 \uACC4\uC0B0\uC744 \uC798\uBABB
+      \uD558\uACE0 \uC788\uB294\uAC70\uC57C...?"
+  - id: 35
+    myName: "\uC190\uC131\uB355"
+    portrait: {fileID: 21300000, guid: d589fde664292024b96049a18a9053ee, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "(\uB514\uC9D1\uC5B4\uC9C4\uB2E4)"
+  - id: 36
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC5B4\uB518\uAC00\uAC00 \uC798\uBABB\uB41C \uAC83\uC774 \uD2C0\uB9BC\uC5C6\uC5B4\n\uADF8\uAC8C
+      \uB098\uB4E0, \uBC14\uB85C  \uAC8C\uC784\uC18D\uC774\uB4E0,\n\uADF8\uB807\uB2E4\uBA74
+      \uC5B4\uB514\uAC00...?"
+  - id: 37
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC774\uC81C\uC57C \uC81C\uB300\uB85C \uACC4\uC0B0\uD560 \uC218 \uC788\uACA0\uB124"
+  - id: 38
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC624\uB298 \uD3C9\uADE0\uC810\uC218\uB294 70\uC810! \uADF8\uB798.
+      \uB098\uC058\uC9C0 \uC54A\uC544. \uC544\uC8FC \uC88B\uC544. \uB9C8\uAC00 \uB080
+      \uB0A0 \uCE58\uACE4 \uC544\uC8FC \uB9CC\uC871\uC2A4\uB7EC\uC6CC"
+  - id: 39
+    myName: "\uC190\uC131\uB355"
+    portrait: {fileID: 21300000, guid: 9b821922afb49c14bb8e15f053daa801, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "271\uC810\uC744 \uD3EC\uAE30\uD558\uB2E4\uB2C8"
+  - id: 40
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uB2E4\uC74C\uBC88\uC5D4 \uAF2D 300\uC810 \uBC1B\uC744\uAC8C. \uB108\uB294
+      \uC5B4\uB54C?"
+  - id: 41
+    myName: "\uC190\uC131\uB355"
+    portrait: {fileID: 21300000, guid: 9b821922afb49c14bb8e15f053daa801, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC798 \uBCF8 \uAC83 \uAC19\uC544"
+  - id: 42
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uB0B4\uC77C \uACF5\uBD80\uB3C4 \uC5F4\uC2EC\uD788 \uD574. \uB0B4\uC77C
+      \uBCF4\uC790!"
+  - id: 43
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uB458\uCA0B\uB0A0 \uC2DC\uD5D8\uC744 \uBB34\uC0AC\uD788 \uCE58\uB974\uACE0\n\uB9C8\uC9C0\uB9C9
+      \uC14B\uC9F8\uB0A0\uC774 \uBC1D\uC558\uB2E4"
+  - id: 44
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uC5B4\uC81C \uBC24\uC0D8 \uACF5\uBD80\uB97C \uC2DC\uB3C4\uD588\uB2E4\uAC00
+      \uB2A6\uC7A0\uAE4C\uC9C0 \uC790\uBC84\uB9B0 \uBC14\uB78C\uC5D0 \uC2DC\uD5D8
+      \uC2DC\uC791 \uC9C1\uC804\uC5D0 \uC544\uC2AC\uC544\uC2AC\uD558\uAC8C \uD559\uAD50\uC5D0
+      \uB3C4\uCC29\uD588\uB2E4"
+  - id: 45
+    myName: "\uAE40\uC601\uC7AC"
+    portrait: {fileID: 21300000, guid: 3d810395bb1edaa43bfc4f56f54b14b6, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uC57C, \uC65C \uC774\uC81C \uC624\uB0D0. \uC5BC\uAD74 \uB54C\uAE54
+      \uC88B\uB2E4?"
+  - id: 46
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uC5B4\uC81C \uAFC0\uC7A0 \uC7A4\uC5B4"
+  - id: 47
+    myName: "\uD638\uC2DD\uC774 \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 3aa660142d59e1b4d95a7973b7278452, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uC598\uB4E4\uC544~, \uAF2C\uB9AC\uD45C\uAC00 \uB098\uC654\uC5B4\uC694~\n1\uBC88\uBD80\uD130
+      \uC774\uB984\uBD80\uB974\uBA74 \uB098\uC640\uC11C \uBC1B\uC544\uAC00\uC138\uC694~\r"
+  - id: 48
+    myName: "\uAE40\uC601\uC7AC"
+    portrait: {fileID: 21300000, guid: 3d810395bb1edaa43bfc4f56f54b14b6, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uB098 \uC544\uC9C1 \uAC00\uCC44\uC810\uB3C4 \uC548\uD588\uB294\uB370
+      \uD558\uD56B"
+  - id: 49
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uD5C9!!"
+  - id: 50
+    myName: "\uAE40\uC601\uC7AC"
+    portrait: {fileID: 21300000, guid: 3d810395bb1edaa43bfc4f56f54b14b6, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC774\uBC88\uC5D4 \uC640 \uADF8\uB7EC\uB2C8"
+  - id: 51
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uCEF4\uC2F8 \uC548\uAC16\uACE0 \uC628\uB4EF. \uC9D1\uC5D0 \uC788\uB098\uBD10"
+  - id: 52
+    myName: "\uD638\uC2DD\uC774 \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 1b41ee11f90f14a41adb722ab540b1e3, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC5B4\uBA38 \uC138\uC0C1\uC5D0, \uC6B0\uB9AC \uC720\uC800\uD559\uC0DD
+      \uCEF4\uC2F8\uB97C \uC548\uAC00\uC9C0\uACE0 \uC654\uC5B4? \uC5B4\uC774\uAD6C\uC57C
+      \uC815\uC2E0\uC744 \uC5B4\uB530\uB450\uACE0 \uB2E4\uB2C8\uB294 \uAC70\uC5EC!\n\uC73C\uC789...
+      \uC624\uB298 \uC2DC\uD5D8 \uBE75!\uC810!\uC774\uC5D0\uC694"
+  - id: 53
+    myName: "\uD638\uC2DD\uC774 \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 1b41ee11f90f14a41adb722ab540b1e3, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC790 \uB0B4\uAC00 \uC5EC\uBD84 \uAC00\uC9C0\uACE0 \uC788\uC5B4\uC694.\r\n\uC624\uB298\uC740
+      \uC774\uAC70 \uC368\uC694\r"
+  - id: 54
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC120\uC0DD\uB2D8\uAED8\uC11C \uCEF4\uC2F8\uB97C \uAC74\uB124\uC8FC\uC168\uB2E4"
+  - id: 55
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uAC10\uC0AC\uD569\uB2C8\uB2E4!"
+  - id: 56
+    myName: 
+    portrait: {fileID: 21300000, guid: 41a2480f92c7848498de307762ac22ca, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC2B5\uAD00\uCC98\uB7FC \uD39C \uB69C\uAED1\uC744 \uC5F4\uACE0 \uC885\uC774\uC5D0
+      \uB099\uC11C\uB97C \uD718\uAC08\uAE30\uB824 \uD55C\uB2E4"
+  - id: 57
+    myName: 
+    portrait: {fileID: 21300000, guid: 41a2480f92c7848498de307762ac22ca, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC5B4? \uC65C \uC548\uC368\uC9C0\uC9C0?"
+  - id: 58
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: f7dbdf7bf537c8a42b9d6eb9c57d97cd, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC120\uC0DD\uB2D8, \uD39C\uC774 \uC774\uC0C1\uD574\uC694. \uC0C9\uB3C4
+      \uC548\uB098\uC624\uB294\uB370\uC694?! \uC789\uD06C\uB294 \uC788\uB294\uB370...
+      \uC885\uC774\uC5D0 \uC548\uC368\uC838\uC694"
+  - id: 59
+    myName: "\uD638\uC2DD\uC774 \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: e1c16b6cff51dac4aa651e6e6ebf776c, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC790 \uC598\uB4E4\uC544~ \uC2DC\uD5D8\uC9C0 \uB098\uB220\uC904\uD14C\uB2C8\uAE4C
+      \uC77C\uC790 \uC904 \uB9DE\uCD94\uACE0 \uB4F1 \uB4A4\uB85C \uB3CC\uB9AC\uC790"
+  - id: 60
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC120\uC0DD\uB2D8\uC740 \uC2DC\uD5D8\uC9C0\uB97C \uBC30\uBD80\uD558\uC2DC\uB290\uB77C
+      \uB4E3\uC9C0 \uBABB\uD558\uC2E0\uB2E4"
+  - id: 61
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 41a2480f92c7848498de307762ac22ca, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uADF8\uB798, \uB610 \uC2A4\uC2A4\uB85C \uACE0\uCCD0\uC57C \uD558\uB098\uBD10\r\n\uC5D0\uB7EC
+      \uB531 \uAE30\uB2E4\uB824\uB77C!\r"
+  - id: 62
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uACE0\uC791 \uD39C \uD558\uB098\uC5D0\uB2E4 \uB098\uC758 \uD669\uAE08\uB625\uAC19\uC740
+      \uC2DC\uAC04\uC744 \uD5C8\uBE44\uD574\uBC84\uB838\uAD70."
+  - id: 63
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC5F4\uC2EC\uD788 \uACF5\uBD80\uD55C \uACFC\uBAA9\uC774\uB2C8 \uC2E4\uB825
+      \uBC1C\uD718 \uC880 \uD574\uBCFC\uAE4C?"
+  - id: 64
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC2DC\uD5D8\uC9C0\uB97C \uBC1B\uACE0 \uBE60\uB974\uAC8C \uBB38\uC81C\uB97C
+      \uD480\uC5B4\uB098\uAC00\uAE30 \uC2DC\uC791\uD55C\uB2E4"
+  - id: 65
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uAECC\uC774\uAD6C\uB9CC \uADF8\uB798!"
+  - id: 66
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: 
+  - id: 67
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: "\uBB50? \uC2DC\uD5D8\uC740 \uB9C9 \uC2DC\uC791\uD588\uB294\uB370?\n\uB098\uB3C4
+      \uBAA8\uB974\uB294 \uC0AC\uC774\uC5D0 \uC7A0\uAE50 \uC878\uC558\uB098? "
+  - id: 68
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: f7dbdf7bf537c8a42b9d6eb9c57d97cd, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC774\uAC8C \uBB34\uC2A8 \uC77C\uC774\uC8E0, \uC120\uC0DD\uB2D8?"
+  - id: 69
+    myName: 
+    portrait: {fileID: 21300000, guid: f7dbdf7bf537c8a42b9d6eb9c57d97cd, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC120\uC0DD\uB2D8\uC740 \uC5ED\uC2DC \uB4E3\uC9C0 \uBABB\uD558\uC2E0
+      \uB4EF \uD558\uB2E4"
+  - id: 70
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: d592573836b2e8948b68c4fab6547ad3, type: 3}
+    myText: "\uC55E\uC744 \uBCF4\uB2C8 \uC601\uC7AC\uB294 \uC774\uBBF8 \uC218\uBA74\uC0C1\uD0DC\uC5D0
+      \uC9C4\uC785\uD55C \uB4EF \uD558\uB2E4"
+  - id: 71
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: d592573836b2e8948b68c4fab6547ad3, type: 3}
+    myText: "\uC65C \uC774\uB7F0 \uC77C\uC774 \uB610 \uC77C\uC5B4\uB09C \uAC70\uC9C0?
+      \uBD88\uC548\uD574\uC11C \uC2DC\uD5D8\uC5D0 \uC9D1\uC911\uD560 \uC218\uAC00
+      \uC5C6\uC5B4"
+  - id: 72
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: d592573836b2e8948b68c4fab6547ad3, type: 3}
+    myText: "\uB204\uAC00 \uC7A5\uB09C\uC744 \uCE5C \uAC83\uC774\uB77C\uBA74 \uAC00\uB9CC\uB450\uC9C0
+      \uC54A\uACA0\uC5B4!!"
+  - id: 73
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+    myText: "1\uAD50\uC2DC\uAC00 \uB05D\uB098\uACE0 \uC26C\uB294 \uC2DC\uAC04\uC774
+      \uC654\uB2E4"
+  - id: 74
+    myName: "\uD038\uC740\uC8FC \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 8c50ea394589a0f43bc39bd1bea939d0, type: 3}
+    background: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+    myText: "\uC720\uC800~ \uC2DC\uD5D8 \uC798 \uBD24\uC5B4?"
+  - id: 75
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+    myText: "\uADF8\uB2E5\uC694..! \uD558\uD558\n\uADF8\uB7F0\uB370 \uC120\uC0DD\uB2D8\uB3C4
+      \uC544\uAE4C \uC804 \uC2DC\uAC04\uC5D0 \uC2DC\uD5D8 5\uBD84\uC804 \uC18C\uB9AC
+      \uB4E4\uC73C\uC168\uB098\uC694?"
+  - id: 76
+    myName: "\uD038\uC740\uC8FC \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+    myText: "\uC65C? \uC720\uC800(\uC774)\uB294 \uBABB\uB4E4\uC5C8\uC5B4?"
+  - id: 77
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: d6ecdf53d648fe949871e2adcc6a6db1, type: 3}
+    background: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+    myText: "\uC544\uB2C8\uC694, \uC885\uCE58\uACE0 \uC5BC\uB9C8 \uC548\uB3FC\uC11C
+      \uAC11\uC790\uAE30 \uB098\uC624\uB294 \uAC8C \uC544\uB2C8\uACA0\uC5B4\uC694!\n\uC190\uC774
+      \uB5A8\uB9AC\uB354\uB77C\uAD6C\uC694"
+  - id: 78
+    myName: "\uD038\uC740\uC8FC \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: 8c50ea394589a0f43bc39bd1bea939d0, type: 3}
+    background: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+    myText: "\uC2DC\uD5D8 \uC798 \uBD24\uC73C\uBA74 \uB410\uC9C0 \uBB50~ \uC88B\uC740
+      \uC810\uC218 \uAE30\uB300\uD560\uAC8C~"
+  - id: 79
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+    myText: "\uB0B4\uAC00 \uD63C\uC790 \uC2E0\uACBD \uC4F8 \uC77C\uC740 \uC544\uB2CC\uAC00...
+      \uACF5\uBD80\uB098 \uB9C8\uC800 \uD574\uC57C\uC9C0"
+  - id: 80
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: ...
+  - id: 81
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: "\uD558\uC9C0\uB9CC, \uB9CC\uC57D \uB2E4\uC74C \uAD50\uC2DC\uC5D0\uB3C4
+      \uC774\uB7F0 \uC77C\uC774 \uBC1C\uC0DD\uD558\uBA74 \uC5B4\uB5A1\uD558\uC9C0?
+      \uB098 \uB9D0\uACE0\uB3C4 \uB9CE\uC740 \uCE5C\uAD6C\uB4E4\uC774 \uB2F9\uD669\uD560\uAC70\uC57C"
+  - id: 82
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: "\uB098\uB294 \uC5D0\uB7EC\uB97C \uACE0\uCE60 \uC218 \uC788\uC73C\uB2C8\uAE4C,
+      \uB0B4\uAC00 \uACE0\uCCD0\uBCF4\uC790. \uD560 \uC218 \uC788\uB2E4\uBA74 \uB098\uC11C\uB294
+      \uAC8C \uB9DE\uACA0\uC9C0"
+  - id: 83
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: "2\uAD50\uC2DC\uAC00 \uC2DC\uC791\uB418\uC5C8\uB2E4"
+  - id: 84
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+    myText: "\uC2DC\uD5D8\uC774 \uC2DC\uC791\uB41C \uC9C0 40\uBD84 \uD6C4, \n"
+  - id: 85
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uB098\uC5D0\uAC8C \uC774\uC0C1\uD55C \uC77C\uB4E4\uB9CC \uAC00\uB4DD\uD588\uB358,
+      \uAE30\uBB18\uD55C \uAE30\uB9D0\uACE0\uC0AC\uAC00 \uB05D\uB0AC\uB2E4"
+  - id: 86
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+    myText: "\uC0AC\uC2E4 \uB05D\uB09C\uC9C0 \uC77C\uC8FC\uC77C \uB410\uB2E4\n\uB180\uACE0
+      \uBA39\uACE0 \uC790\uB290\uB77C \uC2DC\uAC04\uAC00\uB294\uC904 \uBAB0\uB790\uB2E4"
+  - id: 87
+    myName: "\uBC18\uC7A5"
+    portrait: {fileID: 21300000, guid: 6d21f74abad130342a65710769ed6a36, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uC624\uB298 \uAE30\uB9D0 \uC131\uC801\uD45C \uB098\uC628\uB300~"
+  - id: 88
+    myName: "\uC190\uC131\uB355"
+    portrait: {fileID: 21300000, guid: ecb75847b98134240b5ff207f51df057, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uC624\uB9C8\uC774\uAC13\n\uB204\uAC00 \uADF8\uB798?"
+  - id: 89
+    myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
+    portrait: {fileID: 21300000, guid: 39c01cb1fca350b47b395cad2224e5db, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uB0B4\uAC00"
+  - id: 90
+    myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
+    portrait: {fileID: 21300000, guid: 39c01cb1fca350b47b395cad2224e5db, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uC790~~~~ \uC870\uD68C\uD569\uC2DC\uB2E4!"
+  - id: 91
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 39c01cb1fca350b47b395cad2224e5db, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uC190\uC5D0 \uB4E4\uACE0 \uACC4\uC2E0\uAC74 \uC131\uC801\uD45C\uC778\uAC00\uC694?"
+  - id: 92
+    myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
+    portrait: {fileID: 21300000, guid: 39c01cb1fca350b47b395cad2224e5db, type: 3}
+    background: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+    myText: "\uB124 \uB9DE\uC2B5\uB2C8\uB2E4.\n\uBC88\uD638\uC21C\uB300\uB85C \uBD80\uB974\uBA74
+      \uB098\uC640\uC11C \uAC00\uC838\uAC00\uC138\uC694~~"
+  - id: 93
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC544\uC774\uB4E4\uC774 \uD558\uB098\uB458\uC529 \uC131\uC801\uD45C\uB97C
+      \uBC1B\uACE0 \uC790\uB9AC\uC5D0 \uC549\uB294\uB2E4"
+  - id: 94
+    myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC720\uC800~!"
+  - id: 95
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+    myText: "\uC608!"
+  - id: 96
+    myName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uC131\uC801\uD45C\uB97C \uACE0\uC774 \uB450\uC190\uC5D0 \uD488\uACE0
+      \uB2E4\uC2DC \uC790\uB9AC\uB85C \uD5A5\uD55C\uB2E4"
+  - id: 97
+    myName: "\uAE40\uC601\uC7AC"
+    portrait: {fileID: 21300000, guid: 3d810395bb1edaa43bfc4f56f54b14b6, type: 3}
+    background: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+    myText: "\uB85C\uB610 \uB2F9\uCCA8\uAE08 \uC218\uB839\uD558\uB7EC \uAC00\uB0D0?"
+  - id: 98
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: "\uC790\uB9AC\uC5D0 \uC549\uC544 \uCD95\uCD95\uD574\uC9C4 \uC131\uC801\uD45C\uB97C
+      \uD3BC\uCE5C\uB2E4"
+  - id: 99
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 6de64264fcd3d294ea1bd1e607c66672, type: 3}
+    background: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+    myText: ...
+  - id: 100
+    myName: "\uAE40\uC720\uB09C \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC720\uC800 \uC65C\uADF8\uB798?"
+  - id: 101
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC810\uC218\uAC00 \uC5C6\uC5B4\uC11C\uC694..."
+  - id: 102
+    myName: "\uAE40\uC720\uB09C \uC120\uC0DD\uB2D8"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uADF8\uB798? \uB3C4\uB451\uB9DE\uC558\uB098\uBCF4\uB2E4\n\uD574\uACB0\uD558\uB7EC\uAC00\uC57C\uC9C0
+      \uC774\uC81C"
+  - id: 103
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uB124..."
+  - id: 104
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC608? \uC81C\uAC00 \uC5D0\uB7EC\uB97C \uACE0\uCE58\uACE0 \uB2E4\uB2C8\uB294
+      \uAC78 \uC54C\uACE0 \uACC4\uC138\uC694?"
+  - id: 105
+    myName: 
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uAE40\uC720\uB09C \uC120\uC0DD\uB2D8\uC774 \uACE0\uAC1C\uB97C \uB044\uB355\uC774\uC2E0\uB2E4"
+  - id: 106
+    myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uBBF8\uB9BC\uC5D0\uC120 \uB108\uAC19\uC740 \uC77C\uC744 \uACAA\uB294
+      \uD559\uC0DD\uB4E4\uC774 \uC885\uC885 \uC788\uC9C0"
+  - id: 107
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC815\uB9D0\uC694? \uC800 \uB9D0\uACE0\uB3C4 \uB204\uAC00\uC694?"
+  - id: 108
+    myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
+    portrait: {fileID: 21300000, guid: ac1c28c5ed8981f4ca4275f51c092edd, type: 3}
+    background: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+    myText: "\uC5BC\uB978 \uAC00.\n\uB098\uC774\uC2A4\uC5D0 \uC62C\uB77C\uAC00\uAE30
+      \uC804\uC5D0 \uC5BC\uB978 \uD655\uC778\uD574\uC57C\uC9C0"
+  - id: 109
+    myName: "\uC774\uC81C\uBB18"
+    portrait: {fileID: 21300000, guid: aee01a6d692768745997686dc5ba9779, type: 3}
+    background: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+    myText: "\uC57C \uC720\uC800!"
+  - id: 110
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: aee01a6d692768745997686dc5ba9779, type: 3}
+    background: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+    myText: "\uD5D0 \uB108 \uB2E4\uD06C\uC11C\uD074 \uB300\uBC15\uC774\uB2E4\r"
+  - id: 111
+    myName: "\uC774\uC81C\uBB18"
+    portrait: {fileID: 21300000, guid: aee01a6d692768745997686dc5ba9779, type: 3}
+    background: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+    myText: "\uC774\uBC88 \uC2DC\uD5D8 \uC9C4\uC9DC \uD798\uB4E4\uC5C8\uC9C0 \uC54A\uB0D0\n\uB108\uBB34
+      \uC5B4\uB824\uC6E0\uC5B4"
+  - id: 112
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: aee01a6d692768745997686dc5ba9779, type: 3}
+    background: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+    myText: "\uC5B4\uC5B4 \uC5C4\uCCAD \uD798\uB4E4\uC5C8\uC9C0"
+  - id: 113
+    myName: "\uC774\uC81C\uBB18"
+    portrait: {fileID: 21300000, guid: ba4246627029d7b4fa79a11aa2cd5a00, type: 3}
+    background: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+    myText: "\uC65C \uD55C\uC228\uC744 \uADF8\uB807\uAC8C \uC26C\uB0D0, \uB108\uB3C4
+      \uACC4\uC18D \uBC24\uC0DC\uAD6C\uB098"
+  - id: 114
+    myName: "\uC720\uC800"
+    portrait: {fileID: 21300000, guid: ba4246627029d7b4fa79a11aa2cd5a00, type: 3}
+    background: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+    myText: "\uC751, \uADFC\uB370 \uC880 \uC7AC\uBC0C\uC5C8\uC5B4. \uC644\uC804 \uC2A4\uD399\uD0C0\uD074\uD588\uC9C0"
+  - id: 115
+    myName: "\uC774\uC81C\uBB18"
+    portrait: {fileID: 21300000, guid: c644d5bc979c8194498986c6763c442d, type: 3}
+    background: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+    myText: "\uBB50\uB798 \uC81C\uC815\uC2E0\uC544\uB2C8\uB124"
