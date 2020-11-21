@@ -84,7 +84,7 @@ public class Quest1Manager : MonoBehaviour
             }
             else //문제 답 입력
             {
-                if ((InputF_1.text.ToString()).Equals("4"))
+                if ((InputF_1.text.ToString()).Equals("4")) //정답 입력시
                 {
                     QuestBase.Info info = QuestInfo.Dequeue();
                     dialogueName.text = info.myName;
@@ -173,12 +173,11 @@ public class Quest1Manager : MonoBehaviour
 
     }
 
-    private string Correct_answer = "= new File ( \"final+2semester+2020/Korean.pdf\" ) ;"; //= new File ( "final+2semester+2020/Korean.pdf" ) ;
+    private string Correct_answer = "= new File ( \"final+2semester+2020/Korean.pdf\" ) ;";
 
     private bool isCorrect(string answer)
     {
         answer = answer.Trim();
-        string[] answer_value = answer.Split('\x020');
 
         //전체 문자열이 다르면 오답
         if (!answer.Replace(" ", "").Equals(Correct_answer.Replace(" ", "")))

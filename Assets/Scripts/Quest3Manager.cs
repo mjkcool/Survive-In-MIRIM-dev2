@@ -175,7 +175,6 @@ public class Quest3Manager : MonoBehaviour
     private bool isCorrect(string answer)
     {
         answer = answer.Trim();
-        string[] answer_value = answer.Split('\x020');
 
         string[] raw_list = Qinfo_2_CorrectA.Split('\x020');
         
