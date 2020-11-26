@@ -179,7 +179,7 @@ public class Quest1Manager : MonoBehaviour
     {
         answer = answer.Trim();
 
-        //전체 문자열이 다르면 오답
+        //1. 전체 문자열 비교
         if (!answer.Replace(" ", "").Equals(Correct_answer.Replace(" ", "")))
         {
             return false;
@@ -187,13 +187,13 @@ public class Quest1Manager : MonoBehaviour
 
         string[] raw_list = Correct_answer.Split('\x020');
 
-        //필수 단어들이 들어가 있는지
+        //2. 필수 단어의 여부
         if (answer.IndexOf(raw_list[1]+" ") == -1 || answer.IndexOf(raw_list[2]) == -1 || answer.IndexOf(raw_list[4]) == -1)
         {
             return false;
         }
 
-        //문자들의 위치 순서가 맞는지
+        //3. 글자들의 위치 순서 비교
         int pos = -1, nowpos;
         for(int i=0; i<raw_list.Length; i++)
         {
@@ -208,7 +208,7 @@ public class Quest1Manager : MonoBehaviour
             }
         }
 
-        return true;
+        return true; //모든 검증 통과시 true반환
     }
 
 
