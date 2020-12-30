@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18bcaccbbd961184298d7592feee9163, type: 3}
+  m_Name: Quest5Data
+  m_EditorClassIdentifier: 
+  QuestInfo:
+  - myName: "\uC5D0\uB7EC  \uBC1C\uC0DD"
+    myText: "\uB4DC\uB514\uC5B4 \uBB34\uC2DC\uBB34\uC2DC\uD55C \uBB38\uBC95 \uC5D0\uB7EC\uAC00
+      \uCC3E\uC544\uC654\uAD70"
+  - myName: "\uC5D0\uB7EC  \uBC1C\uC0DD"
+    myText: "\uC774 \uCF54\uB4DC\uB97C \uBCF4\uBA74, \uD559\uC0DD\uB4E4\uC758 \uC810\uC218\uAC00
+      \uBC30\uC5F4\uC5D0 \uC800\uC7A5\uB418\uC5B4 \uC788\uACE0 \uD2B9\uC815 \uD559\uC0DD\uC758
+      \uC810\uC218\uB97C \uBC18\uD658\uD574\uC8FC\uB294 \uBA54\uC11C\uB4DC\uAC00
+      \uAD6C\uD604\uB418\uC5B4 \uC788\uC5B4"
+  - myName: "\uC5D0\uB7EC  \uBC1C\uC0DD"
+    myText: "\uD559\uC0DD\uB4E4\uC758 \uC810\uC218\uB97C \uB2F4\uC740 \uBC30\uC5F4\uC740
+      \uC811\uADFC\uC81C\uC5B4\uC790\uAC00 private\uC774\uAE30 \uB54C\uBB38\uC5D0
+      \uC774 \uBA54\uC11C\uB4DC\uB97C \uC774\uC6A9\uD574\uC11C \uC810\uC218\uB97C
+      \uAC00\uC838\uC624\uB294 \uAC83 \uAC19\uC544"
+  - myName: "\xB7\u2022\uB514\uBC84\uAE45 \uC911\u2022\xB7"
+    myText: "0\uC73C\uB85C\uBD80\uD130 \uC2DC\uC791\uD558\uB294 \uD559\uC0DD\uC758
+      \uBC88\uD638\uAC00 \uC778\uC790\uB85C \uB4E4\uC5B4\uC624\uACE0 \uC788\uB124!\n\uBA87\uBC88\uC9F8
+      \uC904\uC774 \uC5D0\uB7EC\uB97C \uB9CC\uB4E4\uACE0 \uC788\uC744\uAE4C?"
+  - myName: "\xB7\u2022\uB514\uBC84\uAE45 \uC911\u2022\xB7"
+    myText: "\t\uBC88\uC9F8 \uC904\uC5D0\uC11C?"
+  - myName: "\xB7\u2022\uB514\uBC84\uAE45 \uC911\u2022\xB7"
+    myText: "\uADF8\uB807\uB2E4\uBA74 \uACE0\uCCD0\uBCFC\uAE4C?"
+  - myName: 
+    myText: 
+  - myName: "\uC5D0\uB7EC \uD574\uACB0"
+    myText: "\uB0B4 \uC131\uC801\uD45C\uB2E4!!"
+  - myName: "\uC5D0\uB7EC \uD574\uACB0"
+    myText: "\uC774\uB807\uAC8C \uD798\uB4E4\uAC8C \uC5BB\uC5B4\uB0B4\uB2E4\uB2C8,
+      \uC55E\uC73C\uB85C \uB0B4 \uC131\uC801\uD45C\uB294 \uC808\uB300 \uC5B4\uB514
+      \uAC00\uC9C0 \uC54A\uC744\uAC70\uC57C!"
+  - myName: "\uC5D0\uB7EC \uD574\uACB0"
+    myText: "\uD2B9\uD788 \uC6B0\uB9AC \uC9D1\uC73C\uB85C\uB294... "
