@@ -178,10 +178,10 @@ public class DialogueManager : MonoBehaviour
 
             dialogueText.text = completeText;
             dialoguePortrait.sprite = info.portrait;
-            backgroundPortrait.sprite = info.background;
+            backgroundPortrait.sprite = null;
 
             ////////오디오 설정
-            if (thisId==7)
+                if (thisId==7)
             {
                 GetComponent<AudioSource>().clip = paperSound;
                 GetComponent<AudioSource>().Play();
