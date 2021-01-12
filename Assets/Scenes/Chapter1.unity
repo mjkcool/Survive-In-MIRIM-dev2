@@ -417,8 +417,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9c582249af488e468e98896639c743d, type: 2}
-  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d,
-    type: 2}
+  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -611,7 +610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &199892487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -996,8 +995,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9c582249af488e468e98896639c743d, type: 2}
-  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d,
-    type: 2}
+  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1131,8 +1129,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
-  m_sharedMaterial: {fileID: -5813638769357572743, guid: 1a6641be55c45d24694bb5350978699d,
-    type: 2}
+  m_sharedMaterial: {fileID: -5813638769357572743, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1383,10 +1380,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -4410309104664922429, guid: b5db0d54da04fe54eab73d9d5845e521,
-    type: 3}
+  m_Sprite: {fileID: -4410309104664922429, guid: b5db0d54da04fe54eab73d9d5845e521, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1650,7 +1646,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4119a3bdbdec1ae41bffa460ebf686e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1776,10 +1772,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 2154697797156516133, guid: a4340f8c4bfb87c439e71f578aba6127,
-    type: 3}
+  m_Sprite: {fileID: 2154697797156516133, guid: a4340f8c4bfb87c439e71f578aba6127, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1850,8 +1845,7 @@ MonoBehaviour:
   m_text: "\uCEF4\uD30C\uC77C \uC911..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
-  m_sharedMaterial: {fileID: -5813638769357572743, guid: 1a6641be55c45d24694bb5350978699d,
-    type: 2}
+  m_sharedMaterial: {fileID: -5813638769357572743, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2014,8 +2008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 20, y: -20}
+  m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &514073300
 MonoBehaviour:
@@ -2105,7 +2099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 05047bc9d0c172d4fb06b3cffbddc924, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc470f3b7499c584f8e18f501191038d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2351,10 +2345,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2154697797156516133, guid: a4340f8c4bfb87c439e71f578aba6127,
-    type: 3}
+  m_Sprite: {fileID: 2154697797156516133, guid: a4340f8c4bfb87c439e71f578aba6127, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2760,8 +2753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1081792041315962003, guid: 53567f1ea1c370a44bf905d11407da1b,
-    type: 3}
+  m_Sprite: {fileID: -1081792041315962003, guid: 53567f1ea1c370a44bf905d11407da1b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2867,7 +2859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &713540904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,7 +2936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f238d08183835344abd78d8f15d26dbd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a09e5118b1e239e449efc8da72d31604, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3038,7 +3030,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -766375277
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3246,8 +3238,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9c582249af488e468e98896639c743d, type: 2}
-  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d,
-    type: 2}
+  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3405,7 +3396,7 @@ RectTransform:
   m_GameObject: {fileID: 713540902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_Children:
   - {fileID: 828302628}
   - {fileID: 199892487}
@@ -3417,7 +3408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 1080, y: 444}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &848461678
@@ -3480,8 +3471,7 @@ MonoBehaviour:
   m_text: "\n\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9c582249af488e468e98896639c743d, type: 2}
-  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d,
-    type: 2}
+  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4304,7 +4294,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4404,8 +4394,7 @@ MonoBehaviour:
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
   portraitImage: {fileID: 21300000, guid: 54b4334097c6541429af43ab0117cf61, type: 3}
-  successImage: {fileID: -4545246234056867605, guid: 53567f1ea1c370a44bf905d11407da1b,
-    type: 3}
+  successImage: {fileID: -4545246234056867605, guid: 53567f1ea1c370a44bf905d11407da1b, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
   InputF_2: {fileID: 896354267}
@@ -4489,7 +4478,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4609,7 +4598,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5012,8 +5001,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9c582249af488e468e98896639c743d, type: 2}
-  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d,
-    type: 2}
+  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5384,8 +5372,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9c582249af488e468e98896639c743d, type: 2}
-  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d,
-    type: 2}
+  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5475,8 +5462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5, y: -36.821}
-  m_SizeDelta: {x: 933.0212, y: 280.43903}
+  m_AnchoredPosition: {x: 8.3311, y: -60.899994}
+  m_SizeDelta: {x: 729.6834, y: 280.439}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1387974090
 GameObject:
@@ -5555,7 +5542,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -634474431
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5628,8 +5615,7 @@ MonoBehaviour:
   m_text: "\n\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9c582249af488e468e98896639c743d, type: 2}
-  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d,
-    type: 2}
+  m_sharedMaterial: {fileID: 5357469516693637430, guid: c9c582249af488e468e98896639c743d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6302,10 +6288,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 1272479336406208685, guid: 5893550f6c1da1e4ba8f77204f8fe881,
-    type: 3}
+  m_Sprite: {fileID: 1272479336406208685, guid: 5893550f6c1da1e4ba8f77204f8fe881, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8071,7 +8056,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8249,7 +8234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270.5, y: 197.4}
+  m_AnchoredPosition: {x: -215.9, y: 163.6}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1937568466
@@ -8283,8 +8268,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
-  m_sharedMaterial: {fileID: -5813638769357572743, guid: 1a6641be55c45d24694bb5350978699d,
-    type: 2}
+  m_sharedMaterial: {fileID: -5813638769357572743, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8647,10 +8631,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2914503216214332612, guid: 9851bfe8c8089fb4195b87669e231c19,
-    type: 3}
+  m_Sprite: {fileID: -2914503216214332612, guid: 9851bfe8c8089fb4195b87669e231c19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8893,10 +8876,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -6647843483411692235, guid: 25d277ea50793bc46a0da81709db5270,
-    type: 3}
+  m_Sprite: {fileID: -6647843483411692235, guid: 25d277ea50793bc46a0da81709db5270, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

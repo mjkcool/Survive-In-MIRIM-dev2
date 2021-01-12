@@ -4,23 +4,32 @@ using UnityEngine;
 
 public class InfoViewer : MonoBehaviour
 {
-    public GameObject logo;
+    public GameObject bigcloud, cloud;
+    public GameObject titleLogo; 
+    public GameObject map;
     public GameObject infoBox;
-    public GameObject btn1, btn2;
+    public GameObject error;
+    public GameObject btn;
 
     public void showInfo()
     {
         infoBox.SetActive(true);
-        logo.SetActive(false);
-        btn1.SetActive(false);
-        btn2.SetActive(false);
+        bigcloud.SetActive(false);
+        cloud.SetActive(false);
+        titleLogo.SetActive(false);
+        error.SetActive(false);
+        map.SetActive(false);
+        btn.SetActive(false);
     }
 
     public void hideInfo()
     {
         infoBox.SetActive(false);
-        logo.SetActive(true);
-        btn1.SetActive(true);
-        btn2.SetActive(true);
+        bigcloud.SetActive(true);
+        cloud.SetActive(true);
+        titleLogo.SetActive(true);
+        error.SetActive(true);
+        map.SetActive(true);
+        btn.SetActive(true);
     }
 }
