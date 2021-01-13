@@ -116,171 +116,171 @@ public class DialogueManager : MonoBehaviour
             
         }else{ //다이얼로그 진행
             if (isDelayturn)
-        {
-            delayDialog(); return;
-        }
-
-        DialogueBox.SetActive(true);
-
-        lock (dialogueInfo)
-        {
-            if ((thisId==12) && (!Q1completed)) //퀘스트 1 시작
             {
-                DialogueBox.SetActive(false);
-                DialogBtn.questnum = 1;
-                questStarter.questnum = 1;
-                questStarter.start();
-            }
-            else if ((thisId==36) && (!Q2completed)) //퀘스트 2 시작
-            {
-                DialogueBox.SetActive(false);
-                DialogBtn.questnum = 2;
-                questStarter.questnum = 2;
-                questStarter.start();
-            }
-            else if ((thisId==61) && (!Q3completed))//퀘스트 3 시작
-            {
-                DialogueBox.SetActive(false);
-                DialogBtn.questnum = 3;
-                questStarter.questnum = 3;
-                questStarter.start();
-            }
-            else if ((thisId==82) && (!Q4completed))//퀘스트 4 시작
-            {
-                DialogueBox.SetActive(false);
-                DialogBtn.questnum = 4;
-                questStarter.questnum = 4;
-                questStarter.start();
-            }
-            else if ((thisId==108) && (!Q5completed))//퀘스트 5 시작
-            {
-                DialogueBox.SetActive(false);
-                DialogBtn.questnum = 5;
-                questStarter.questnum = 5;
-                questStarter.start();
+                delayDialog(); return;
             }
 
-            if (isCurrentlyTyping == true)
+            DialogueBox.SetActive(true);
+
+            lock (dialogueInfo)
             {
-                CompleteText();
-                StopAllCoroutines();
-                isCurrentlyTyping = false;
-                return;
-            }
+                if ((thisId==12) && (!Q1completed)) //퀘스트 1 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 1;
+                    questStarter.questnum = 1;
+                    questStarter.start();
+                }
+                else if ((thisId==36) && (!Q2completed)) //퀘스트 2 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 2;
+                    questStarter.questnum = 2;
+                    questStarter.start();
+                }
+                else if ((thisId==61) && (!Q3completed))//퀘스트 3 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 3;
+                    questStarter.questnum = 3;
+                    questStarter.start();
+                }
+                else if ((thisId==82) && (!Q4completed))//퀘스트 4 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 4;
+                    questStarter.questnum = 4;
+                    questStarter.start();
+                }
+                else if ((thisId==108) && (!Q5completed))//퀘스트 5 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 5;
+                    questStarter.questnum = 5;
+                    questStarter.start();
+                }
+
+                if (isCurrentlyTyping == true)
+                {
+                    CompleteText();
+                    StopAllCoroutines();
+                    isCurrentlyTyping = false;
+                    return;
+                }
 
             
-            DialogueBase.Info info = dialogueInfo.Dequeue();
-            completeText = info.myText;
-            completeText = completeText.Replace("유저", UserName);
-            thisId = info.id;
+                DialogueBase.Info info = dialogueInfo.Dequeue();
+                completeText = info.myText;
+                completeText = completeText.Replace("유저", UserName);
+                thisId = info.id;
 
-            //유저 이름
-            if(info.myName.Equals("유저")) dialogueName.text = UserName;
-            else dialogueName.text = info.myName;
+                //유저 이름
+                if(info.myName.Equals("유저")) dialogueName.text = UserName;
+                else dialogueName.text = info.myName;
 
-            dialogueText.text = completeText;
-            dialoguePortrait.sprite = info.portrait;
-            Sprite thisBg = bg001; //기존배경, 임시값 bg001
-            if(thisId>1) thisBg = backgroundPortrait.sprite; //기존 이미지
-            switch (thisId) //변경
-            {
-                case 1: case 43: case 85: thisBg = bg001; break;
-                case 4: case 8: case 15: thisBg = bg002; break;
-                case 6: case 10: case 12: case 27: case 56: case 61: case 98: backgroundPortrait.sprite = bg006; break;
-                case 11: case 70: thisBg = bg011; break;
-                case 19: case 29: case 80: case 96: thisBg = bg008; break;
-                case 22: case 47: case 87: thisBg = bg005; break;
-                case 26: case 28: case 49: case 58: case 68: thisBg = bg003; break;
-                case 52: case 100: thisBg = bg004; break;
-                case 66: case 71: case 83: thisBg = bg007; break;
-                case 73: thisBg = bg009; break;
-                case 109: thisBg = bg012; break;
-            }
-            backgroundPortrait.sprite = thisBg;
+                dialogueText.text = completeText;
+                dialoguePortrait.sprite = info.portrait;
+                Sprite thisBg = bg001; //기존배경, 임시값 bg001
+                if(thisId>1) thisBg = backgroundPortrait.sprite; //기존 이미지
+                switch (thisId) //변경
+                {
+                    case 1: case 43: case 85: thisBg = bg001; break;
+                    case 4: case 8: case 15: thisBg = bg002; break;
+                    case 6: case 10: case 12: case 27: case 56: case 61: case 98: backgroundPortrait.sprite = bg006; break;
+                    case 11: case 70: thisBg = bg011; break;
+                    case 19: case 29: case 80: case 96: thisBg = bg008; break;
+                    case 22: case 47: case 87: thisBg = bg005; break;
+                    case 26: case 28: case 49: case 58: case 68: thisBg = bg003; break;
+                    case 52: case 100: thisBg = bg004; break;
+                    case 66: case 71: case 83: thisBg = bg007; break;
+                    case 73: thisBg = bg009; break;
+                    case 109: thisBg = bg012; break;
+                }
+                backgroundPortrait.sprite = thisBg;
 
 
-            ////////오디오 설정
-            if (thisId==7)
-            {
-                GetComponent<AudioSource>().clip = paperSound;
-                GetComponent<AudioSource>().Play();
-            }else if (thisId>7){GetComponent<AudioSource>().Stop();}
+                ////////오디오 설정
+                if (thisId==7)
+                {
+                    GetComponent<AudioSource>().clip = paperSound;
+                    GetComponent<AudioSource>().Play();
+                }else if (thisId>7){GetComponent<AudioSource>().Stop();}
 
-            if (thisId==14)
-            {
-                GetComponent<AudioSource>().clip = pencilSound;
-                GetComponent<AudioSource>().Play();
-            }
-            else if (thisId>14)
-            {
-                GetComponent<AudioSource>().Stop();
-            }
-            if (thisId==15)
-            {
-                GetComponent<AudioSource>().clip = examRingSound;
-                GetComponent<AudioSource>().Play();
-            }
-            else if (thisId>15)
-            {
-                GetComponent<AudioSource>().Stop();
-            }
-            if(thisId==22)
-            {
-               GetComponent<AudioSource>().clip = doorSound;
-                GetComponent<AudioSource>().Play();
-            }
-            else if (thisId>22)
-            {
-                GetComponent<AudioSource>().Stop();
-            }
-            if (thisId==28)
-            {
-                GetComponent<AudioSource>().clip = messengerSound;
-                GetComponent<AudioSource>().Play();
-            }
-             else if (thisId>28)
-            {
-                GetComponent<AudioSource>().Stop();
-            }
-            if (thisId==66)
-            {
-                GetComponent<AudioSource>().clip = minuteSound;
-                GetComponent<AudioSource>().Play();
-            }
-             else if (thisId>66)
-            {
-                GetComponent<AudioSource>().Stop();
-            }
-            if (thisId==84)
-            {
-                GetComponent<AudioSource>().clip = minuteSound;
-                GetComponent<AudioSource>().Play();
-            }
-             else if (thisId>84)
-            {
-                GetComponent<AudioSource>().Stop();
-            }
+                if (thisId==14)
+                {
+                    GetComponent<AudioSource>().clip = pencilSound;
+                    GetComponent<AudioSource>().Play();
+                }
+                else if (thisId>14)
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
+                if (thisId==15)
+                {
+                    GetComponent<AudioSource>().clip = examRingSound;
+                    GetComponent<AudioSource>().Play();
+                }
+                else if (thisId>15)
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
+                if(thisId==22)
+                {
+                   GetComponent<AudioSource>().clip = doorSound;
+                    GetComponent<AudioSource>().Play();
+                }
+                else if (thisId>22)
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
+                if (thisId==28)
+                {
+                    GetComponent<AudioSource>().clip = messengerSound;
+                    GetComponent<AudioSource>().Play();
+                }
+                 else if (thisId>28)
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
+                if (thisId==66)
+                {
+                    GetComponent<AudioSource>().clip = minuteSound;
+                    GetComponent<AudioSource>().Play();
+                }
+                 else if (thisId>66)
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
+                if (thisId==84)
+                {
+                    GetComponent<AudioSource>().clip = minuteSound;
+                    GetComponent<AudioSource>().Play();
+                }
+                 else if (thisId>84)
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
 
-            dialogueText.text = "";
-            StartCoroutine(TypeText(completeText));
-        }//end of lock
+                dialogueText.text = "";
+                StartCoroutine(TypeText(completeText));
+            }//end of lock
 
-        switch (thisId)
-        {
-            case 3:
-            case 13:
-            case 18:
-            case 21:
-            case 28:
-            case 42: //왜안되니
-            case 56:
-            case 65:
-            case 72:
-            case 78:
-            case 84:
-                isDelayturn = true; break;
-            default: break;
-        }
+            switch (thisId)
+            {
+                case 3:
+                case 13:
+                case 18:
+                case 21:
+                case 28:
+                case 42:
+                case 56:
+                case 65:
+                case 72:
+                case 78:
+                case 84:
+                    isDelayturn = true; break;
+                default: break;
+            }
         }
     }
 

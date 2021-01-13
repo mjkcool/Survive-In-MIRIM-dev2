@@ -52,7 +52,7 @@ public class Quest1Manager : MonoBehaviour
         SuccessPortrait.gameObject.SetActive(false);
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(1048, 1400);
+        rt.sizeDelta = new Vector2(0, 1156);
         QuestDialogBox.SetActive(true);
         QuestInfo.Clear();
 

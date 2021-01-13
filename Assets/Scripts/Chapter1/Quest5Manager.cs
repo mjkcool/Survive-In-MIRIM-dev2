@@ -52,7 +52,7 @@ public class Quest5Manager : MonoBehaviour
         SuccessPortrait.gameObject.SetActive(false);
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(1048, 700);
+        rt.sizeDelta = new Vector2(0, 630);
         QuestDialogBox.SetActive(true);
         Destroy(GameObject.Find("othertexts"));
         QuestInfo.Clear();
