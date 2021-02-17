@@ -176,11 +176,11 @@ MonoBehaviour:
   splashImage: {fileID: 1889428675}
   IndexImage: {fileID: 1889428677}
   idxs:
-  - {fileID: 21300000, guid: 6d9eeea2327ba1d40afd64bdb6305040, type: 3}
-  - {fileID: 21300000, guid: 5720d64f145f9d540bfdd9abc9c9839c, type: 3}
-  - {fileID: 21300000, guid: c6a4761ef43ed564b95632a429760afc, type: 3}
-  - {fileID: 21300000, guid: 62e3922a3409aea42b8c47a08f887a4e, type: 3}
-  - {fileID: 21300000, guid: dd779dabcc25ddd47ac196b1b1928c7d, type: 3}
+  - {fileID: 21300000, guid: 47a341918ff058f4cb72ba95243a51b0, type: 3}
+  - {fileID: 21300000, guid: 534353557213bf14ab6b116495c329a1, type: 3}
+  - {fileID: 21300000, guid: 6fa82829bdefca748a169cf73e524a01, type: 3}
+  - {fileID: 21300000, guid: 67b65987206683346a157564e73f9715, type: 3}
+  - {fileID: 21300000, guid: e11c1c0296c4410418e54daa74e9addd, type: 3}
   QuestObject: {fileID: 70581166}
   questnum: 0
   quest_effectSound: {fileID: 8300000, guid: 3a71e01b5bd815a4397078f9bfbe2624, type: 3}
@@ -315,7 +315,7 @@ MonoBehaviour:
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
   portraitImage: {fileID: 21300000, guid: 179cd81213411f247abd4be05a7eb75e, type: 3}
-  successImage: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+  successImage: {fileID: 21300000, guid: d34d885b0b39da242a5560d109c1daad, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
   InputF_2: {fileID: 896354267}
@@ -441,8 +441,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37
-  m_fontSizeBase: 37
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3626f7a32cde95946bfc578894bfb55d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7720b6f54a518f0489938e2918075b99, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uBE44\uC62C\uB808\uD0C0"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
   m_sharedMaterial: {fileID: -5813638769357572743, guid: 1a6641be55c45d24694bb5350978699d, type: 2}
@@ -1081,8 +1081,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1581,7 +1581,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 341.33334, y: 341.33334}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
   portraitImage: {fileID: 21300000, guid: d42427cd0b5b5d64ca0e4d54fa565834, type: 3}
-  successImage: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+  successImage: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
   InputF_2: {fileID: 896354267}
@@ -3190,8 +3190,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3310,11 +3310,11 @@ RectTransform:
   m_Father: {fileID: 847800330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -64.400024, y: 583.7}
-  m_SizeDelta: {x: 700, y: 700}
-  m_Pivot: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 495.5}
+  m_SizeDelta: {x: 800, y: 800}
+  m_Pivot: {x: 1, y: 0}
 --- !u!224 &847800330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3422,8 +3422,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37
-  m_fontSizeBase: 37
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3754,7 +3754,7 @@ MonoBehaviour:
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
   m_RegexValue: 
-  m_GlobalPointSize: 37
+  m_GlobalPointSize: 38
   m_CharacterLimit: 57
   m_OnEndEdit:
     m_PersistentCalls:
@@ -4376,7 +4376,7 @@ MonoBehaviour:
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
   portraitImage: {fileID: 21300000, guid: 54b4334097c6541429af43ab0117cf61, type: 3}
-  successImage: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+  successImage: {fileID: 21300000, guid: 2a53c04651c2dd6459e49b7a4b840bb7, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
   InputF_2: {fileID: 896354267}
@@ -4834,7 +4834,7 @@ MonoBehaviour:
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
   portraitImage: {fileID: 21300000, guid: b2f1bf5014b47c245951f82f1091435c, type: 3}
-  successImage: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+  successImage: {fileID: 21300000, guid: 70b710d5ced594244bdcc594082c7d80, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
   InputF_2: {fileID: 896354267}
@@ -4888,7 +4888,7 @@ MonoBehaviour:
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
   portraitImage: {fileID: 21300000, guid: 75102288a5f71fc49a0f23a4d4a79b05, type: 3}
-  successImage: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+  successImage: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
   InputF_2: {fileID: 896354267}
@@ -4977,8 +4977,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5123,7 +5123,7 @@ MonoBehaviour:
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 2
   m_RegexValue: 
-  m_GlobalPointSize: 60
+  m_GlobalPointSize: 55
   m_CharacterLimit: 2
   m_OnEndEdit:
     m_PersistentCalls:
@@ -5403,8 +5403,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5645,8 +5645,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6476,7 +6476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b8250d71ae30d5488ed7a38db739ef6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd72f6804b3f6ec498ba662b47595a27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8345,8 +8345,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8999,7 +8999,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0d2eb28e79431d458302940270f3258, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4870a7d60877364cbb318c290f7d88a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

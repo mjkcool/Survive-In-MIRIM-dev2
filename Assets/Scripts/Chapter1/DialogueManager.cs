@@ -171,11 +171,11 @@ public class DialogueManager : MonoBehaviour
             
                 DialogueBase.Info info = dialogueInfo.Dequeue();
                 completeText = info.myText;
-                completeText = completeText.Replace("유저", UserName);
+                completeText = completeText.Replace("[User]", UserName);
                 thisId = info.id;
 
                 //유저 이름
-                if(info.myName.Equals("유저")) dialogueName.text = UserName;
+                if(info.myName.Equals("[User]")) dialogueName.text = UserName;
                 else dialogueName.text = info.myName;
 
                 dialogueText.text = completeText;
@@ -184,17 +184,27 @@ public class DialogueManager : MonoBehaviour
                 if(thisId>1) thisBg = backgroundPortrait.sprite; //기존 이미지
                 switch (thisId) //변경
                 {
-                    case 1: case 43: case 85: thisBg = bg001; break;
-                    case 4: case 8: case 15: thisBg = bg002; break;
-                    case 6: case 10: case 12: case 27: case 56: case 61: case 98: backgroundPortrait.sprite = bg006; break;
-                    case 11: case 70: thisBg = bg011; break;
-                    case 19: case 29: case 80: case 96: thisBg = bg008; break;
-                    case 22: case 47: case 87: thisBg = bg005; break;
-                    case 26: case 28: case 49: case 58: case 68: thisBg = bg003; break;
-                    case 52: case 100: thisBg = bg004; break;
-                    case 66: case 71: case 83: thisBg = bg007; break;
+                    case 1: case 43: case 85:
+                        thisBg = bg001; break;
+                    case 4: case 8: case 15:
+                        thisBg = bg002; break;
+                    case 6: case 10: case 12: case 27: case 56: case 61: case 98:
+                        thisBg = bg006; break;
+                    case 11: case 70:
+                        thisBg = bg011; break;
+                    case 19: case 29: case 80: case 96:
+                        thisBg = bg008; break;
+                    case 22: case 47: case 87:
+                        thisBg = bg005; break;
+                    case 26: case 28: case 49: case 58: case 68:
+                        thisBg = bg003; break;
+                    case 52: case 100:
+                        thisBg = bg004; break;
+                    case 66: case 71: case 83:
+                        thisBg = bg007; break;
                     case 73: thisBg = bg009; break;
                     case 109: thisBg = bg012; break;
+                    default: thisBg = bg001; break;
                 }
                 backgroundPortrait.sprite = thisBg;
 
@@ -265,10 +275,11 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(TypeText(completeText));
             }//end of lock
 
+            //딜레이
             switch (thisId)
             {
                 case 3:
-                case 13:
+                case 14:
                 case 18:
                 case 21:
                 case 28:
@@ -320,6 +331,7 @@ public class DialogueManager : MonoBehaviour
     //대사 2초 자동 뜸들이기 함수
     private void delayDialog()
     {
+        
         DialogueBox.SetActive(false);
         isDelayturn = false;
         Invoke("DequeueDialogue", 2f);
