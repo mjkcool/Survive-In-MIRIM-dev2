@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901a403f4334e504996522f7194a9ce5, type: 3}
+  m_Name: Software
+  m_EditorClassIdentifier: 
+  prologueInfo:
+  - prologueId: 0
+    prologueName: 
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    prologueText: "\uD558\uB098 \uB458 \uD558\uB098\uB458!"
+  - prologueId: 1
+    prologueName: '[User]'
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    prologueText: "\uC6B0\uC2B9\uC774 \uBAA9\uD45C\uB2E4! \uC1A6\uACFC \uC6B0\uC2B9!
+      \uD5E5\uD5E5..."
+  - prologueId: 2
+    prologueName: '[F2]'
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    prologueText: "\u314B\u314B\uB108\uBB50\uB0D0"
+  - prologueId: 3
+    prologueName: '[User]'
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    prologueText: "\uB098 \uC5F0\uC2B5\uB55C\uC5D0 \uBAB8\uC0B4\uB0A0\uAC83\uAC19\uC74C.
+      \uC815\uC791 \uCCB4\uC721\uB300\uD68C\uB54C \uD798\uBABB\uC4F0\uBA74 \uC5B4\uB5A1\uD558\uB0D0"
+  - prologueId: 4
+    prologueName: '[F2]'
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    prologueText: "\uC57C \uC624\uB298 \uB05D\uB098\uACE0 \uD3B8\uC758\uC810 \uACE0?"
+  - prologueId: 5
+    prologueName: '[User]'
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    prologueText: "\uAC01\uC774\uB2E4. \uC57C \uC120\uBC30\uB2D8\uB4E4 \uC77C\uC5B4\uB0AC\uC5B4.
+      \uC904\uB118\uAE30 \uBAA8\uC5EC~!!"
+  - prologueId: 6
+    prologueName: '[F2]'
+    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    prologueText: "\uC57C \uB098 \uB354 \uC26C\uACE0\uC2F6\uC5B4\u3160\u3160."

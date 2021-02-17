@@ -13,8 +13,7 @@ public class FadeInScript : MonoBehaviour
 
     public void Awake()
     {
-        StartCoroutine(FadeFlow());
-        
+        StartCoroutine(FadeFlow());  
     }
 
     IEnumerator FadeFlow()

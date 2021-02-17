@@ -24,7 +24,7 @@ public class Popup : MonoBehaviour
     }
     public void Start()
     {
-        //audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();   
         GameLoad(); 
     }
 

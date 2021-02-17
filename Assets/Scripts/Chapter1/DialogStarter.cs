@@ -59,7 +59,7 @@ public class DialogStarter : MonoBehaviour
     public void TriggerDialogue()
     {
         chapterIndex.SetActive(false);
-         DialogueManager.instance.EnqueueDialogue(dialogue);
+        DialogueManager.instance.EnqueueDialogue(dialogue);
     }
     
 }

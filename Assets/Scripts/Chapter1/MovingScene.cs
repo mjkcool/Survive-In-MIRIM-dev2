@@ -20,11 +20,18 @@ public class MovingScene : MonoBehaviour
     public int nowQuestNum;
     public void setUsername()
     {
-        string name;
-        if((UserName.text.ToString()).Length == 0 || UserName.text.ToString() == null) name = "User";
-        else name = UserName.text.ToString();
-        DialogueManager.UserName = name; 
-        Debug.Log("유저내임 첨 입력: " + DialogueManager.UserName);
+        PlayerPrefs.SetString("Name", UserName.text);
+
+        if(PlayerPrefs.HasKey("Name"))
+        {
+            UserName.text = PlayerPrefs.GetString("Name");
+            DialogueManager.UserName = UserName.text; 
+            Debug.Log("유저내임 첨 입력: " +  UserName.text);
+        }
+        else
+        {
+            DialogueManager.UserName = "User";
+        }
     }
 
 }

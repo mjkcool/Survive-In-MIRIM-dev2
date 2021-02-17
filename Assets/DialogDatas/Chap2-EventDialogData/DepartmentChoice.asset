@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f4e8979fce3aab4c9fe2bf1bbe3c52c, type: 3}
+  m_Name: DepartmentChoice
+  m_EditorClassIdentifier: 
+  prologueInfo: []
+  choiceText: "\uC5B4\uB290 \uACFC??"
+  optionsInfo:
+  - choiceBtn: "\uC18C\uD504\uD2B8\uC6E8\uC5B4\uACFC"
+    nextDialogue: {fileID: 11400000, guid: aeca3f431d5388c44b9f91e1fa4ec4ee, type: 2}
+    userEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: e5a98beeba045214fb76a59348fe16d1, type: 2}
+          m_TargetAssemblyTypeName: SetDepartment, Assembly-CSharp
+          m_MethodName: SetSoft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - choiceBtn: "\uC6F9\uC194\uB8E8\uC158\uACFC"
+    nextDialogue: {fileID: 11400000, guid: 872da51f4ff7d0a4b94635a8e124c726, type: 2}
+    userEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: e5a98beeba045214fb76a59348fe16d1, type: 2}
+          m_TargetAssemblyTypeName: SetDepartment, Assembly-CSharp
+          m_MethodName: Setsolu
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - choiceBtn: "\uB514\uC790\uC778\uACFC"
+    nextDialogue: {fileID: 11400000, guid: 3d77363cba9f6b441afdba201e2b0419, type: 2}
+    userEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: e5a98beeba045214fb76a59348fe16d1, type: 2}
+          m_TargetAssemblyTypeName: SetDepartment, Assembly-CSharp
+          m_MethodName: Setde
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

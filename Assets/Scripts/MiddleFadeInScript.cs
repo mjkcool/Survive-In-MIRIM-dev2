@@ -1,12 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class FadeOutScript : MonoBehaviour
+public class MiddleFadeInScript : MonoBehaviour
 {
-    public static FadeOutScript instance;
     private void Awake()
     {
         if (instance != null)
@@ -18,11 +17,10 @@ public class FadeOutScript : MonoBehaviour
             instance = this;
         }
     }
-
-    public int NextSceneNumber;
+    public static MiddleFadeInScript instance;
     public Image FadeImage;
     float time = 0f;
-    float F_time = 1f;
+    float F_time = 2f;
 
     public void Fade()
     {
@@ -34,15 +32,14 @@ public class FadeOutScript : MonoBehaviour
         FadeImage.gameObject.SetActive(true);
         time=0f;
         Color alpha = FadeImage.color;
-        while(alpha.a<1f)
+        while(alpha.a>0f)
         {
             time+=Time.deltaTime/F_time;
-            alpha.a = Mathf.Lerp(0,1,time);
+            alpha.a = Mathf.Lerp(1,0,time);
             FadeImage.color = alpha;
             yield return null;
         }
         yield return null;
-        yield return new WaitForSeconds(1.6f);
-        SceneManager.LoadScene(NextSceneNumber);
+        FadeImage.gameObject.SetActive(false);
     }
 }
