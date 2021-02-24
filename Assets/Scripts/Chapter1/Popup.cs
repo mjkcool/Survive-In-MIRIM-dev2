@@ -47,7 +47,7 @@ public class Popup : MonoBehaviour
    
    //데이터 초기화 = 새로시작
     public void newGame(){
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("LoadId");
     }
 
    public void Close()

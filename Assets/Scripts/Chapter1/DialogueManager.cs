@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
         {
             instance = this;
         }
+        
     }
 
     public static string UserName = "User";
@@ -204,7 +205,7 @@ public class DialogueManager : MonoBehaviour
                         thisBg = bg007; break;
                     case 73: thisBg = bg009; break;
                     case 109: thisBg = bg012; break;
-                    default: thisBg = bg001; break;
+                    default: break;
                 }
                 backgroundPortrait.sprite = thisBg;
 

@@ -9,6 +9,7 @@ using TMPro;
 public class MovingScene2 : MonoBehaviour
 {
     public TMP_InputField UserName;
+    public TMP_InputField PrologueUserName;
     public int NextSceneNumber;
     public DialogueBase dialogueBase;
     
@@ -20,13 +21,23 @@ public class MovingScene2 : MonoBehaviour
     public int nowQuestNum;
     public void setUsername()
     {
-        string name;
-        if((UserName.text.ToString()).Length == 0 || UserName.text.ToString() == null) name = "User";
-        else name = UserName.text.ToString();
-        PrologueManager.UserName = name; 
-        Debug.Log("유저내임 첨 입력: " + PrologueManager.UserName);
-        DialogueManager2.UserName = name; 
-        Debug.Log("유저내임 첨 입력: " + DialogueManager2.UserName);
+        PlayerPrefs.SetString("Name", UserName.text);
+        PlayerPrefs.SetString("PrologueName", PrologueUserName.text);
+        PlayerPrefs.Save(); 
+        if(PlayerPrefs.HasKey("Name"))
+        {
+            PrologueUserName.text = PlayerPrefs.GetString("Name");
+            UserName.text = PlayerPrefs.GetString("Name");
+            PrologueManager.PrologueUserName = PrologueUserName.text; 
+            DialogueManager2.UserName = UserName.text; 
+            Debug.Log("프롤로그내임 첨 입력: " +  PrologueUserName.text);
+            Debug.Log("유저내임 첨 입력: " +  UserName.text);
+        }
+        else
+        {
+            PrologueManager.PrologueUserName = "User";
+            DialogueManager2.UserName = "User";
+        }
     }
 
 }

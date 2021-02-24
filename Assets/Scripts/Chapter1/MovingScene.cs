@@ -21,6 +21,7 @@ public class MovingScene : MonoBehaviour
     public void setUsername()
     {
         PlayerPrefs.SetString("Name", UserName.text);
+        PlayerPrefs.Save(); 
 
         if(PlayerPrefs.HasKey("Name"))
         {

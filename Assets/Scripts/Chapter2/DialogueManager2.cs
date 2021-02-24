@@ -18,6 +18,7 @@ public class DialogueManager2 : MonoBehaviour
         {
             instance2 = this;
         }
+        
     }
 
     public static string UserName = "User";
@@ -68,20 +69,20 @@ public class DialogueManager2 : MonoBehaviour
     }
 
     //세이브된 thisId2데이터가 퀘스트부분일때
-    public void QuestDialogue(DialogueBase2 db)
-    {
-        dialogueInfo2 = new Queue<DialogueBase2.Info>();
-        foreach (DialogueBase2.Info info in db.dialogueInfo2)
-        {
-            dialogueInfo2.Enqueue(info);
-        }
-        for(int i=0; i<thisId2; i++)
-        {
-            dialogueInfo2.Dequeue(); //thisId2보다 작은 수의 thisId2 삭제
-        }
-        DequeueDialogue();
-        DialogueBox.SetActive(false);
-    }
+    // public void QuestDialogue(DialogueBase2 db)
+    // {
+    //     dialogueInfo2 = new Queue<DialogueBase2.Info>();
+    //     foreach (DialogueBase2.Info info in db.dialogueInfo2)
+    //     {
+    //         dialogueInfo2.Enqueue(info);
+    //     }
+    //     for(int i=0; i<thisId2; i++)
+    //     {
+    //         dialogueInfo2.Dequeue(); //thisId2보다 작은 수의 thisId2 삭제
+    //     }
+    //     DequeueDialogue();
+    //     DialogueBox.SetActive(false);
+    // }
 
     //세이브된 thisId2데이터 로드
     public void LoadDialogue(DialogueBase2 db)
@@ -116,13 +117,13 @@ public class DialogueManager2 : MonoBehaviour
 
             lock (dialogueInfo2)
             {
-                if ((thisId2==3) && (!Q1completed)) //퀘스트 1 시작
-                {
-                    DialogueBox.SetActive(false);
-                    DialogBtn.questnum = 1;
-                    questStarter.questnum = 1;
-                    questStarter.start();
-                }
+                // if ((thisId2==5) && (!Q1completed)) //퀘스트 1 시작
+                // {
+                //     DialogueBox.SetActive(false);
+                //     DialogBtn.questnum = 1;
+                //     questStarter.questnum = 1;
+                //     questStarter.start();
+                // }
 
                 if (isCurrentlyTyping == true)
                 {
@@ -135,11 +136,11 @@ public class DialogueManager2 : MonoBehaviour
             
                 DialogueBase2.Info info = dialogueInfo2.Dequeue();
                 completeText = info.myText2;
-                completeText = completeText.Replace("유저", UserName);
+                completeText = completeText.Replace("[User]", UserName);
                 thisId2 = info.id2;
 
                 //유저 이름
-                if(info.myName2.Equals("유저")) dialogueName.text = UserName;
+                if(info.myName2.Equals("[User]")) dialogueName.text = UserName;
                 else dialogueName.text = info.myName2;
 
                 dialogueText.text = completeText;
@@ -174,22 +175,22 @@ public class DialogueManager2 : MonoBehaviour
                 StartCoroutine(TypeText(completeText));
             }//end of lock
 
-            switch (thisId2)
-            {
-                case 3:
-                case 13:
-                case 18:
-                case 21:
-                case 28:
-                case 42:
-                case 56:
-                case 65:
-                case 72:
-                case 78:
-                case 84:
-                    isDelayturn = true; break;
-                default: break;
-            }
+            // switch (thisId2)
+            // {
+            //     case 3:
+            //     case 13:
+            //     case 18:
+            //     case 21:
+            //     case 28:
+            //     case 42:
+            //     case 56:
+            //     case 65:
+            //     case 72:
+            //     case 78:
+            //     case 84:
+            //         isDelayturn = true; break;
+            //     default: break;
+            // }
         }
     }
 

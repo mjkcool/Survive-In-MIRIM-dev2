@@ -24,11 +24,11 @@ public class DialogStarter2 : MonoBehaviour
             Invoke("TriggerDialogue", 5f);
         }
         //퀘스트 중에 세이브했을 경우
-        else if(DialogueManager2.instance2.thisId2 == 3)
-        {
-            GetComponent<AudioSource>().Stop();
-            DialogueManager2.instance2.QuestDialogue(dialogue);
-        }
+        // else if(DialogueManager2.instance2.thisId2 == 3)
+        // {
+        //     GetComponent<AudioSource>().Stop();
+        //     DialogueManager2.instance2.QuestDialogue(dialogue);
+        // }
         //일반적인 다이얼로그에서 세이브했을경우
         else 
         {

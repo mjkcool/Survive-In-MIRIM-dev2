@@ -19,7 +19,7 @@ public class DialogueButton2 : MonoBehaviour
         switch (questnum)
         {
             case 1:
-               Quest1Manager.instance.DequeueQuest();
+                Ch1_Quest1Manager.instance.DequeueQuest();
                break;
             // case 2:
             //     Quest2Manager.instance2.DequeueQuest();

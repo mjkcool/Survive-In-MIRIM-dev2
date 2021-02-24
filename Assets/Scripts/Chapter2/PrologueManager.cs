@@ -20,7 +20,7 @@ public class PrologueManager : MonoBehaviour
         }
     }
 
-    public static string UserName = "User";
+    public static string PrologueUserName = "User";
     //public AudioClip doorSound; //사용오디오
 
     public Sprite bg001; //배경이미지
@@ -45,11 +45,16 @@ public class PrologueManager : MonoBehaviour
     public TMP_Text choiceText;
     public Queue<PrologueBase.Info> prologueInfo;
     public PrologueBase prologue;
-    public DialogueBase2 dialogue;
+    public DialogueBase dialogue;
     private AudioSource audio; 
 
      public void Start()
     {
+        if (PlayerPrefs.HasKey("LoadId2")){
+            dialogueOptionsUI.SetActive(false);
+            DialogueBox.SetActive(false);
+            GoEnd();
+        } 
         audio = GetComponent<AudioSource>();
     }
 
@@ -148,11 +153,12 @@ public class PrologueManager : MonoBehaviour
             
                 PrologueBase.Info info = prologueInfo.Dequeue();
                 completeText = info.prologueText;
-                completeText = completeText.Replace("유저", UserName);
+                completeText = completeText.Replace("[User]", PrologueUserName);
                 prologueId = info.prologueId;
 
                 //유저 이름
-                if(info.prologueName.Equals("유저")) dialogueName.text = UserName;
+                if(info.prologueName.Equals("[User]")) dialogueName.text = PrologueUserName;
+                
                 else dialogueName.text = info.prologueName;
 
                 dialogueText.text = completeText;

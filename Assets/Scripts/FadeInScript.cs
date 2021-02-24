@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 // using UnityEditor;
 
 // [InitializeOnLoad]
 public class FadeInScript : MonoBehaviour
 {
+    [SerializeField]
     public Image FadeImage;
     float time = 0f;
     float F_time = 2f;
