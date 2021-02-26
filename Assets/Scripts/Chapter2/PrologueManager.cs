@@ -33,9 +33,16 @@ public class PrologueManager : MonoBehaviour
     public float delay = 2f;
     public PrologueButton DialogBtn;
     public bool isCurrentlyTyping;
-    private string completeText;
+    private string completeText, name;
     public int prologueId;
     private bool isDelayturn;
+
+    public int department;
+
+    private string[] F1 = {"시언희", "노재현", "유지영"};
+    private string[] F2 = {"강수영", "차우림", "김라면"};
+    private string[] F3 = {"김수형", "오자민", "곽노움"};
+    private string[] F4 = {"김니은", "방은지", "문재수"};
 
     private bool isDialogueOption;
     public GameObject dialogueOptionsUI;
@@ -150,18 +157,27 @@ public class PrologueManager : MonoBehaviour
                     isCurrentlyTyping = false;
                     return;
                 }
-            
+
                 PrologueBase.Info info = prologueInfo.Dequeue();
-                completeText = info.prologueText;
-                completeText = completeText.Replace("[User]", PrologueUserName);
                 prologueId = info.prologueId;
+                completeText = info.prologueText;
+                name = info.prologueName;
+                completeText = completeText.Replace("[User]", PrologueUserName);
+                name = name.Replace("[User]", PrologueUserName);
+                int department = PlayerPrefs.GetInt("Department");
 
-                //유저 이름
-                if(info.prologueName.Equals("[User]")) dialogueName.text = PrologueUserName;
-                
-                else dialogueName.text = info.prologueName;
-
+                //과에 따른 이름값 변형
+                completeText = completeText.Replace("[F1]", F1[department]);
+                name = name.Replace("[F1]", F1[department]);
+                completeText = completeText.Replace("[F2]", F2[department]);
+                name = name.Replace("[F2]", F2[department]);
+                completeText = completeText.Replace("[F3]", F3[department]);
+                name = name.Replace("[F3]", F3[department]);
+                completeText = completeText.Replace("[F4]", F4[department]);
+                name = name.Replace("[F4]", F4[department]);
+            
                 dialogueText.text = completeText;
+                dialogueName.text = name;
                 dialoguePortrait.sprite = info.portrait;
                 Sprite thisBg = bg001; //기존배경, 임시값 bg001
                 if(prologueId>1) thisBg = backgroundPortrait.sprite; //기존 이미지

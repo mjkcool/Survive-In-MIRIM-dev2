@@ -32,10 +32,8 @@ public class Popup2 : MonoBehaviour
 
     //로드/세이브
     public void GameSave(){
-       // PlayerPrefs.SetInt("PrologueId",PrologueManager.prologueInstance.prologueId);
         PlayerPrefs.SetInt("LoadId2",DialogueManager2.instance2.thisId2);
         PlayerPrefs.Save(); 
-       // Debug.Log("저장된 프롤로그아이디: " + PrologueManager.prologueInstance.prologueId);
         Debug.Log("저장된 아이디: " + DialogueManager2.instance2.thisId2);
     }
 

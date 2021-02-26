@@ -7,10 +7,10 @@ using TMPro;
 
 public class QuestStarter : MonoBehaviour
 {
-    public QuestBase[] quests = {};
+    public QuestBase[] quests = new QuestBase[5];
     public GameObject splashImage;
     public Image IndexImage; //=splashImage
-    public Sprite[] idxs = {}; //포트레잇 이미지(퀘스트 문제 이미지)
+    public Sprite[] idxs = new Sprite[5]; //포트레잇 이미지(퀘스트 문제 이미지)
     public GameObject QuestObject;
     public int questnum;
     public AudioClip quest_effectSound;

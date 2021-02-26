@@ -41,10 +41,7 @@ public class QuestStarter2 : MonoBehaviour
         QuestObject.SetActive(true);
         switch (questnum)
         {
-            case 1:
-                Ch1_Quest1Manager.instance.EnqueueQuest(quests[questnum - 1]);
-                break;
-            default: break;
+            
         }
         
     }

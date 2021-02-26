@@ -32,7 +32,8 @@ public class DialogueManager : MonoBehaviour
     public AudioClip minuteSound;
     public AudioClip messengerSound;
 
-    public Sprite bg001, bg002, bg003, bg004, bg005, bg006, bg007, bg008, bg009, bg010, bg011, bg012;
+    public Sprite[] bg = new Sprite[12];
+    public Sprite[] portraits;
 
     public GameObject DialogueBox;
     public TextMeshProUGUI dialogueName;
@@ -44,7 +45,7 @@ public class DialogueManager : MonoBehaviour
     public DialogueButton DialogBtn;
 
     public bool isCurrentlyTyping;
-    private string completeText;
+    private string completeText, name;
     public int thisId;
     private bool isDelayturn;
     public GameObject MedalAnimation;
@@ -172,39 +173,36 @@ public class DialogueManager : MonoBehaviour
             
                 DialogueBase.Info info = dialogueInfo.Dequeue();
                 completeText = info.myText;
+                name = info.myName;
                 completeText = completeText.Replace("[User]", UserName);
+                name = name.Replace("[User]", UserName);
                 thisId = info.id;
 
-                //유저 이름
-                if(info.myName.Equals("[User]")) dialogueName.text = UserName;
-                else dialogueName.text = info.myName;
+                dialogueText.text = completeText; dialogueName.text = name;
 
-                dialogueText.text = completeText;
-                dialoguePortrait.sprite = info.portrait;
-                Sprite thisBg = bg001; //기존배경, 임시값 bg001
-                if(thisId>1) thisBg = backgroundPortrait.sprite; //기존 이미지
-                switch (thisId) //변경
+                Sprite thisBg = backgroundPortrait.sprite; //기존 이미지
+                switch (thisId) //배경사진과 포트레잇 변경
                 {
                     case 1: case 43: case 85:
-                        thisBg = bg001; break;
+                        thisBg = bg[0]; break;
                     case 4: case 8: case 15:
-                        thisBg = bg002; break;
+                        thisBg = bg[1]; break;
                     case 6: case 10: case 12: case 27: case 56: case 61: case 98:
-                        thisBg = bg006; break;
+                        thisBg = bg[5]; break;
                     case 11: case 70:
-                        thisBg = bg011; break;
+                        thisBg = bg[10]; break;
                     case 19: case 29: case 80: case 96:
-                        thisBg = bg008; break;
+                        thisBg = bg[7]; break;
                     case 22: case 47: case 87:
-                        thisBg = bg005; break;
+                        thisBg = bg[4]; break;
                     case 26: case 28: case 49: case 58: case 68:
-                        thisBg = bg003; break;
+                        thisBg = bg[2]; break;
                     case 52: case 100:
-                        thisBg = bg004; break;
+                        thisBg = bg[3]; break;
                     case 66: case 71: case 83:
-                        thisBg = bg007; break;
-                    case 73: thisBg = bg009; break;
-                    case 109: thisBg = bg012; break;
+                        thisBg = bg[6]; break;
+                    case 73: thisBg = bg[8]; break;
+                    case 109: thisBg = bg[11]; break;
                     default: break;
                 }
                 backgroundPortrait.sprite = thisBg;
@@ -332,7 +330,6 @@ public class DialogueManager : MonoBehaviour
     //대사 2초 자동 뜸들이기 함수
     private void delayDialog()
     {
-        
         DialogueBox.SetActive(false);
         isDelayturn = false;
         Invoke("DequeueDialogue", 2f);

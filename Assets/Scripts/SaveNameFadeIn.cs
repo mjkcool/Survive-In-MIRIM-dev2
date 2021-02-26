@@ -10,7 +10,7 @@ using TMPro;
 public class SaveNameFadeIn : MonoBehaviour
 {
     [SerializeField]
-    public TextMeshProUGUI SaveName;
+    public TMP_InputField NameField;
     public Image FadeImage;
     float time = 0f;
     float F_time = 2f;
@@ -21,15 +21,13 @@ public class SaveNameFadeIn : MonoBehaviour
 
     IEnumerator FadeFlow()
     {
-        if(!PlayerPrefs.HasKey("Name"))
+        if(PlayerPrefs.HasKey("Name"))
         {
-            SaveName.text= "User";
-            Debug.Log("유저내임 로드: " +  SaveName.text);
-        } else {
             string UserName = PlayerPrefs.GetString("Name");
-            SaveName.text = UserName;
-            Debug.Log("유저내임 로드: " +  SaveName.text);
+            NameField.text = UserName;
+            Debug.Log("유저내임 로드: " + NameField.text);
         }
+
         FadeImage.gameObject.SetActive(true);
         time=0f;
         Color alpha = FadeImage.color;

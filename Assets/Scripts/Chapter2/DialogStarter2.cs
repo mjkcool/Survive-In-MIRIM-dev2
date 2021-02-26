@@ -7,7 +7,7 @@ using TMPro;
 
 public class DialogStarter2 : MonoBehaviour
 {
-    public DialogueBase2 dialogue;
+    public DialogueBase dialogue;
     public Queue<PrologueBase.Info> prologueInfo;
     public GameObject chapterIndex;
     private Animator animator;
@@ -23,13 +23,7 @@ public class DialogStarter2 : MonoBehaviour
             chapterIndex.SetActive(true);
             Invoke("TriggerDialogue", 5f);
         }
-        //퀘스트 중에 세이브했을 경우
-        // else if(DialogueManager2.instance2.thisId2 == 3)
-        // {
-        //     GetComponent<AudioSource>().Stop();
-        //     DialogueManager2.instance2.QuestDialogue(dialogue);
-        // }
-        //일반적인 다이얼로그에서 세이브했을경우
+
         else 
         {
             GetComponent<AudioSource>().Stop();

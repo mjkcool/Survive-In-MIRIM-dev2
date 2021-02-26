@@ -13,8 +13,7 @@ public class Ch1_Quest4Manager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Image Portrait;
     public Image SuccessPortrait;
-    public Sprite portraitImage;
-    public Sprite portraitImage2;
+    public Sprite[] portraitImages = new Sprite[2];
     public Sprite successImage;
     //Q1-1
     public TMP_InputField InputF_1;
@@ -49,11 +48,11 @@ public class Ch1_Quest4Manager : MonoBehaviour
     {
         Portrait.gameObject.SetActive(true);
         SuccessPortrait.sprite = successImage;
-        Portrait.sprite = portraitImage;
+        Portrait.sprite = portraitImages[0];
         SuccessPortrait.gameObject.SetActive(false);
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(0, 678);
+        rt.sizeDelta = new Vector2(0, 790);
         QuestDialogBox.SetActive(true);
         Destroy(GameObject.Find("othertexts"));
         QuestInfo.Clear();
@@ -88,6 +87,7 @@ public class Ch1_Quest4Manager : MonoBehaviour
                     QuestBase.Info info = QuestInfo.Dequeue();
                     dialogueName.text = info.myName;
                     dialogueText.text = info.myText;
+                    Portrait.sprite = portraitImages[1];
                     Input_1.SetActive(false);
                 }
                 else if ((InputF_1.text.ToString()).Trim().Equals("") || (InputF_1.text.ToString()) == null)
@@ -98,7 +98,7 @@ public class Ch1_Quest4Manager : MonoBehaviour
                 {
                     InputF_1.text = null;
                     Input_1.SetActive(false);
-                    dialogueName.text = null;
+                    dialogueName.text = "에러 발생";
                     dialogueText.text = "여기는 아닌가봐";
                     flag = false;
                 }
@@ -111,7 +111,7 @@ public class Ch1_Quest4Manager : MonoBehaviour
             {
                 Input_2.SetActive(true);
                 dialogueName.text = Qinfo_2.myName;
-                dialogueText.text = null;
+                dialogueText.text = Qinfo_2.myText;
                 flag = true;
             }
             else //문제 답 입력

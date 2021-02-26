@@ -13,8 +13,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Image Portrait;
     public Image SuccessPortrait;
-    public Sprite portraitImage;
-    public Sprite portraitImage2;
+    public Sprite[] portraitImages = new Sprite[2];
     public Sprite successImage;
     //Q1-1
     public TMP_InputField InputF_1;
@@ -48,11 +47,11 @@ public class Ch1_Quest1Manager : MonoBehaviour
     public void EnqueueQuest(QuestBase db)
     {
         SuccessPortrait.sprite = successImage;
-        Portrait.sprite = portraitImage;
+        Portrait.sprite = portraitImages[0];
         SuccessPortrait.gameObject.SetActive(false);
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(0, 1156);
+        rt.sizeDelta = new Vector2(0, 1243);
         QuestDialogBox.SetActive(true);
         QuestInfo.Clear();
 
@@ -73,7 +72,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
 
     public void DequeueQuest()
     {
-        if (QuestInfo.Count == dialogtotalcnt-3)
+        if (QuestInfo.Count == dialogtotalcnt - 3)
         {
             if (!flag) //문제 틀린 직후
             {
@@ -89,6 +88,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
                     QuestBase.Info info = QuestInfo.Dequeue();
                     dialogueName.text = info.myName;
                     dialogueText.text = info.myText;
+                    Portrait.sprite = portraitImages[1];
                     Input_1.SetActive(false);
                 }
                 else if ((InputF_1.text.ToString()).Trim().Equals("") || (InputF_1.text.ToString()) == null)
@@ -98,7 +98,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
                 else //오답 입력시
                 {
                     Input_1.SetActive(false);
-                    dialogueName.text = null;
+                    dialogueName.text = "에러 발생";
                     dialogueText.text = "이곳은 아닌 것 같아";
                     flag = false;
                 }
@@ -116,7 +116,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
             }
             else //문제 답 입력
             {
-                if ((InputF_2.text.ToString()).Trim().Equals("") || (InputF_2.text.ToString()) == null) //
+                if ((InputF_2.text.ToString()).Trim().Equals("") || (InputF_2.text.ToString()) == null)
                 {
                     return; //미입력시 아무 반응 안함
                 }
@@ -138,18 +138,18 @@ public class Ch1_Quest1Manager : MonoBehaviour
                     else //오답 입력시
                     {
                         Input_2.SetActive(false);
-                        dialogueName.text = null;
+                        dialogueName.text = "·•디버깅 중•·";
                         dialogueText.text = "잘못된 문장인가봐\n제대로 작동하지 않아";
                         flag = false;
                     }
                 }
-                
+
             }
         }
         else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
         {
             SuccessPortrait.gameObject.SetActive(false);
-            Portrait.gameObject.SetActive(false);
+            // Portrait.gameObject.SetActive(false);
             QuestManager.instance.spinStar();
             Invoke("EndofQuest", 4.5f);
             return;

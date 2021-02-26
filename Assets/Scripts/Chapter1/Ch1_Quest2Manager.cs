@@ -13,8 +13,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Image Portrait;
     public Image SuccessPortrait;
-    public Sprite portraitImage;
-    public Sprite portraitImage2;
+    public Sprite[] portraitImages = new Sprite[2];
     public Sprite successImage;
     //Q1-1
     public TMP_InputField InputF_1;
@@ -49,11 +48,11 @@ public class Ch1_Quest2Manager : MonoBehaviour
     {
         Portrait.gameObject.SetActive(true);
         SuccessPortrait.sprite = successImage;
-        Portrait.sprite = portraitImage;
+        Portrait.sprite = portraitImages[0];
         SuccessPortrait.gameObject.SetActive(false);
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(0, 842);
+        rt.sizeDelta = new Vector2(0, 782);
         QuestDialogBox.SetActive(true);
         Destroy(GameObject.Find("othertexts"));
         QuestInfo.Clear();
@@ -81,7 +80,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
             {
                 Input_1.SetActive(true);
                 dialogueName.text = Qinfo_1.myName;
-                dialogueText.text = Qinfo_1.myText;
+                dialogueText.text = null;
                 flag = true;
             }
             else //문제 답 입력
@@ -91,6 +90,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
                     QuestBase.Info info = QuestInfo.Dequeue();
                     dialogueName.text = info.myName;
                     dialogueText.text = info.myText;
+                    Portrait.sprite = portraitImages[1];
                     Input_1.SetActive(false);
                 }
                 else if ((InputF_1.text.ToString()).Trim().Equals("") || (InputF_1.text.ToString()) == null)
@@ -101,7 +101,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
                 {
                     InputF_1.text = null;
                     Input_1.SetActive(false);
-                    dialogueName.text = null;
+                    dialogueName.text = "에러 발생";
                     dialogueText.text = "이곳이 아닌 것 같아!";
                     flag = false;
                 }
@@ -114,7 +114,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
             {
                 Input_2.SetActive(true);
                 dialogueName.text = Qinfo_2.myName;
-                dialogueText.text = null;
+                dialogueText.text = Qinfo_1.myText;
                 flag = true;
             }
             else //문제 답 입력
@@ -142,7 +142,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
                     else //오답 입력시
                     {
                         Input_2.SetActive(false);
-                        dialogueName.text = null;
+                        dialogueName.text = "·•디버깅 중•·";
                         dialogueText.text = "오류가 그대로인걸!";
                         flag = false;
                     }

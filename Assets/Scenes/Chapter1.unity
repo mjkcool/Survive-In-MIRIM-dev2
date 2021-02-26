@@ -314,8 +314,9 @@ MonoBehaviour:
   dialogueText: {fileID: 1321134422}
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
-  portraitImage: {fileID: 21300000, guid: 00fad404a02f91f43956abfbc10073b7, type: 3}
-  portraitImage2: {fileID: 21300000, guid: 0c1efa7aa2a834c47a2b2eea9064c86a, type: 3}
+  portraitImages:
+  - {fileID: 21300000, guid: 00fad404a02f91f43956abfbc10073b7, type: 3}
+  - {fileID: 21300000, guid: 0c1efa7aa2a834c47a2b2eea9064c86a, type: 3}
   successImage: {fileID: 21300000, guid: d34d885b0b39da242a5560d109c1daad, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
@@ -633,7 +634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -45.21997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &213034284
@@ -1882,8 +1883,9 @@ MonoBehaviour:
   dialogueText: {fileID: 1321134422}
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
-  portraitImage: {fileID: 21300000, guid: ba9e2d89378e05945a464c9da2914fee, type: 3}
-  portraitImage2: {fileID: 21300000, guid: 40a9dc80a1fae5e43a21a384782027f6, type: 3}
+  portraitImages:
+  - {fileID: 21300000, guid: ba9e2d89378e05945a464c9da2914fee, type: 3}
+  - {fileID: 21300000, guid: 40a9dc80a1fae5e43a21a384782027f6, type: 3}
   successImage: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
@@ -3154,7 +3156,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 620}
-  m_SizeDelta: {x: 0, y: 1156}
+  m_SizeDelta: {x: 0, y: 1243}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &747945839
 MonoBehaviour:
@@ -3176,7 +3178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 179cd81213411f247abd4be05a7eb75e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3977,11 +3979,11 @@ RectTransform:
   m_Father: {fileID: 213034285}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 2160}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1130968851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4484,8 +4486,9 @@ MonoBehaviour:
   dialogueText: {fileID: 1321134422}
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
-  portraitImage: {fileID: 21300000, guid: e3565246bb4268f44b35033813cf3d2b, type: 3}
-  portraitImage2: {fileID: 21300000, guid: 3b0c38c3d103d854c814167fc5f3d19b, type: 3}
+  portraitImages:
+  - {fileID: 21300000, guid: e3565246bb4268f44b35033813cf3d2b, type: 3}
+  - {fileID: 21300000, guid: 3b0c38c3d103d854c814167fc5f3d19b, type: 3}
   successImage: {fileID: 21300000, guid: 2a53c04651c2dd6459e49b7a4b840bb7, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
@@ -4943,8 +4946,9 @@ MonoBehaviour:
   dialogueText: {fileID: 1321134422}
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
-  portraitImage: {fileID: 21300000, guid: f511be7bc2b93f4499a63d88e1e60a3b, type: 3}
-  portraitImage2: {fileID: 21300000, guid: 1809d07376ba3f44798a27fbfd7ce25b, type: 3}
+  portraitImages:
+  - {fileID: 21300000, guid: f511be7bc2b93f4499a63d88e1e60a3b, type: 3}
+  - {fileID: 21300000, guid: 1809d07376ba3f44798a27fbfd7ce25b, type: 3}
   successImage: {fileID: 21300000, guid: 70b710d5ced594244bdcc594082c7d80, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
@@ -4998,8 +5002,9 @@ MonoBehaviour:
   dialogueText: {fileID: 1321134422}
   Portrait: {fileID: 747945839}
   SuccessPortrait: {fileID: 1536592129}
-  portraitImage: {fileID: 21300000, guid: 5c0ce7e082f0485499165a51cd9c99cb, type: 3}
-  portraitImage2: {fileID: 21300000, guid: 717cf96d05a89cc4cacce04ac38c78a8, type: 3}
+  portraitImages:
+  - {fileID: 21300000, guid: 5c0ce7e082f0485499165a51cd9c99cb, type: 3}
+  - {fileID: 21300000, guid: 717cf96d05a89cc4cacce04ac38c78a8, type: 3}
   successImage: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
   InputF_1: {fileID: 1322868892}
   Input_1: {fileID: 1322868890}
@@ -6546,18 +6551,19 @@ MonoBehaviour:
   examRingSound: {fileID: 8300000, guid: 9d88b948daa7e0145a1f9861a1d1e747, type: 3}
   minuteSound: {fileID: 8300000, guid: 35e729b5d60734441befcfc7e137bbdf, type: 3}
   messengerSound: {fileID: 8300000, guid: c94fe96d901b2d543b218a4b0dd373e0, type: 3}
-  bg001: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
-  bg002: {fileID: 21300000, guid: f08e40c95117f8b4f802437a79ab44a4, type: 3}
-  bg003: {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
-  bg004: {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
-  bg005: {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
-  bg006: {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
-  bg007: {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
-  bg008: {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
-  bg009: {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
-  bg010: {fileID: 21300000, guid: bfb138457f68ec14888e388c3c7c39f6, type: 3}
-  bg011: {fileID: 21300000, guid: d592573836b2e8948b68c4fab6547ad3, type: 3}
-  bg012: {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
+  bg:
+  - {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+  - {fileID: 21300000, guid: f08e40c95117f8b4f802437a79ab44a4, type: 3}
+  - {fileID: 21300000, guid: 85250fae35f03554aa217f49ee1d5c0b, type: 3}
+  - {fileID: 21300000, guid: da6d054fec600c24d9443d64028cf76c, type: 3}
+  - {fileID: 21300000, guid: b2980eae17e10864daa6bdcd8c235759, type: 3}
+  - {fileID: 21300000, guid: 36ad6b908ce04fd4eba2d17dd22ddf75, type: 3}
+  - {fileID: 21300000, guid: 6c3bd4d518e602e4c8d3f21d7d275650, type: 3}
+  - {fileID: 21300000, guid: b49f293589f002548bea9514d8316b35, type: 3}
+  - {fileID: 21300000, guid: 00f30f4f2d689504e8d92bbf8fad1e7b, type: 3}
+  - {fileID: 21300000, guid: bfb138457f68ec14888e388c3c7c39f6, type: 3}
+  - {fileID: 21300000, guid: d592573836b2e8948b68c4fab6547ad3, type: 3}
+  - {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
   DialogueBox: {fileID: 713540902}
   dialogueName: {fileID: 1937568467}
   dialogueText: {fileID: 1374111550}
@@ -6569,7 +6575,7 @@ MonoBehaviour:
   isCurrentlyTyping: 0
   thisId: 0
   MedalAnimation: {fileID: 426694936}
-  endingAnimation: {fileID: 0}
+  endingAnimation: {fileID: 560361127}
   MedalGround: {fileID: 1961850176}
   Q1completed: 0
   Q2completed: 0
@@ -8409,7 +8415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1961850177
 RectTransform:
   m_ObjectHideFlags: 0

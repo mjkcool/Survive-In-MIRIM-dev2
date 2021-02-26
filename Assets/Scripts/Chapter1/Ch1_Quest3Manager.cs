@@ -13,8 +13,7 @@ public class Ch1_Quest3Manager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Image Portrait;
     public Image SuccessPortrait;
-    public Sprite portraitImage;
-    public Sprite portraitImage2;
+    public Sprite[] portraitImages = new Sprite[2];
     public Sprite successImage;
     
     //Q1-1
@@ -49,9 +48,10 @@ public class Ch1_Quest3Manager : MonoBehaviour
     {
         Portrait.gameObject.SetActive(true);
         SuccessPortrait.sprite = successImage;
-        Portrait.sprite = portraitImage;
+        Portrait.sprite = portraitImages[0];
         SuccessPortrait.gameObject.SetActive(false);
-        //이미지 사이즈 지정(*변경없음*)
+        RectTransform rt = (RectTransform)Portrait.transform;
+        rt.sizeDelta = new Vector2(0, 944);
         QuestDialogBox.SetActive(true);
         Destroy(GameObject.Find("othertexts"));
         QuestInfo.Clear();
@@ -89,6 +89,7 @@ public class Ch1_Quest3Manager : MonoBehaviour
                     QuestBase.Info info = QuestInfo.Dequeue();
                     dialogueName.text = info.myName;
                     dialogueText.text = info.myText;
+                    Portrait.sprite = portraitImages[1];
                     Input_1.SetActive(false);
                 }
                 else if ((InputF_1.text.ToString()).Trim().Equals("") || (InputF_1.text.ToString()) == null)
@@ -98,7 +99,7 @@ public class Ch1_Quest3Manager : MonoBehaviour
                 else //오답 입력시
                 {
                     Input_1.SetActive(false);
-                    dialogueName.text = null;
+                    dialogueName.text = "에러 발생";
                     dialogueText.text = "음... 이곳이 아닌 것 같아";
                     flag = false;
                 }
