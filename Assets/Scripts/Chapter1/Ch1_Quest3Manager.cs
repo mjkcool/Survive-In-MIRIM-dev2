@@ -100,7 +100,7 @@ public class Ch1_Quest3Manager : MonoBehaviour
                 {
                     Input_1.SetActive(false);
                     dialogueName.text = "에러 발생";
-                    dialogueText.text = "음... 이곳이 아닌 것 같아";
+                    dialogueText.text = "음··· 이곳이 아닌 것 같아.";
                     flag = false;
                 }
             }

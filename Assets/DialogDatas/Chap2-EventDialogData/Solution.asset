@@ -16,7 +16,7 @@ MonoBehaviour:
   - prologueId: 0
     prologueName: '[User]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
-    prologueText: "\uD5C9...\uD5C9\u2026"
+    prologueText: "\uD5C9\xB7\xB7\xB7\uD5C9\xB7\xB7\xB7."
   - prologueId: 1
     prologueName: "\uC120\uBC30"
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
@@ -25,13 +25,13 @@ MonoBehaviour:
   - prologueId: 2
     prologueName: '[User]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
-    prologueText: "\uC774\uAC74\u2026 \uD0DC\uB989\uC120\uC218\uCD0C\uC5D0 \uC628
-      \uAC83 \uAC19\uB2E4."
+    prologueText: "\uC774\uAC74\xB7\xB7\xB7. \uD0DC\uB989\uC120\uC218\uCD0C\uC5D0
+      \uC628 \uAC83 \uAC19\uB2E4."
   - prologueId: 3
     prologueName: '[F3]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
     prologueText: "\uC6B0\uC2B9\uC744 \uC704\uD574\uC120 \uD53C\uB540\uC774 \uD544\uC694\uD55C
-      \uAC70 \uC544\uB2C8\uACA0\uB2C8"
+      \uAC70 \uC544\uB2C8\uACA0\uB2C8."
   - prologueId: 4
     prologueName: '[F2]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}

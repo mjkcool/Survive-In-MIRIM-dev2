@@ -99,7 +99,7 @@ public class Ch1_Quest4Manager : MonoBehaviour
                     InputF_1.text = null;
                     Input_1.SetActive(false);
                     dialogueName.text = "에러 발생";
-                    dialogueText.text = "여기는 아닌가봐";
+                    dialogueText.text = "여기는 아닌가봐.";
                     flag = false;
                 }
             }

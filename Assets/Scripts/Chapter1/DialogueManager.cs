@@ -221,9 +221,7 @@ public class DialogueManager : MonoBehaviour
                     Sprite thisBg = backgroundPortrait.sprite; //기존 이미지
                     switch (thisId) //배경사진
                     {
-                        case 1:
-                        case 43:
-                        case 85:
+                        case 1: case 43: case 85:
                             thisBg = bg[0]; break;
                         case 4:
                         case 8:

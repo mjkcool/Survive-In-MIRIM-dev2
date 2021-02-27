@@ -20,7 +20,7 @@ MonoBehaviour:
   - prologueId: 1
     prologueName: '[F3]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
-    prologueText: "\u3134\u3134\uC544\uC9C1"
+    prologueText: "\u3134\u3134\uC544\uC9C1."
   - prologueId: 2
     prologueName: '[F4]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}

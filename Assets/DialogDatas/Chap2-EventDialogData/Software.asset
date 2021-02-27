@@ -21,16 +21,16 @@ MonoBehaviour:
     prologueName: '[User]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
     prologueText: "\uC6B0\uC2B9\uC774 \uBAA9\uD45C\uB2E4! \uC1A6\uACFC \uC6B0\uC2B9!
-      \uD5E5\uD5E5..."
+      \uD5E5\uD5E5\xB7\xB7\xB7."
   - prologueId: 2
     prologueName: '[F2]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
-    prologueText: "\u314B\u314B\uB108\uBB50\uB0D0"
+    prologueText: "\u314B\u314B\uB108\uBB50\uB0D0."
   - prologueId: 3
     prologueName: '[User]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
     prologueText: "\uB098 \uC5F0\uC2B5\uB55C\uC5D0 \uBAB8\uC0B4\uB0A0\uAC83\uAC19\uC74C.
-      \uC815\uC791 \uCCB4\uC721\uB300\uD68C\uB54C \uD798\uBABB\uC4F0\uBA74 \uC5B4\uB5A1\uD558\uB0D0"
+      \uC815\uC791 \uCCB4\uC721\uB300\uD68C\uB54C \uD798\uBABB\uC4F0\uBA74 \uC5B4\uB5A1\uD558\uB0D0."
   - prologueId: 4
     prologueName: '[F2]'
     portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
