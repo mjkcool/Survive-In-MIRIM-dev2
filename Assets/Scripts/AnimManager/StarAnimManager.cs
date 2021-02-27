@@ -27,6 +27,7 @@ public class StarAnimManager : MonoBehaviour
                 soundSource.clip = star_effectSound[1];
                 soundSource.Play();
                 yield return new WaitForSeconds(2f);
+                
             }
         }
         

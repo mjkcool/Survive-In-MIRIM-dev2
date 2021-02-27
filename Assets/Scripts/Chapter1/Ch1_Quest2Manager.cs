@@ -80,12 +80,12 @@ public class Ch1_Quest2Manager : MonoBehaviour
             {
                 Input_1.SetActive(true);
                 dialogueName.text = Qinfo_1.myName;
-                dialogueText.text = null;
+                dialogueText.text = Qinfo_1.myText;
                 flag = true;
             }
             else //문제 답 입력
             {
-                if ((InputF_1.text.ToString()).Equals("9"))
+                if ((InputF_1.text.ToString()).Trim().Equals("8"))
                 {
                     QuestBase.Info info = QuestInfo.Dequeue();
                     dialogueName.text = info.myName;
@@ -93,7 +93,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
                     Portrait.sprite = portraitImages[1];
                     Input_1.SetActive(false);
                 }
-                else if ((InputF_1.text.ToString()).Trim().Equals("") || (InputF_1.text.ToString()) == null)
+                else if ((InputF_1.text.ToString()).Equals("") || (InputF_1.text.ToString()) == null)
                 {
                     return; //미입력시 아무 반응 안함
                 }
@@ -114,7 +114,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
             {
                 Input_2.SetActive(true);
                 dialogueName.text = Qinfo_2.myName;
-                dialogueText.text = Qinfo_1.myText;
+                dialogueText.text = Qinfo_2.myText;
                 flag = true;
             }
             else //문제 답 입력
@@ -163,11 +163,13 @@ public class Ch1_Quest2Manager : MonoBehaviour
             if (QuestInfo.Count == dialogtotalcnt - 4) //input 1 최초 로드
             {
                 Input_1.SetActive(true);
+                InputF_1.text = "";
                 Qinfo_1 = info;
             }
             else if (QuestInfo.Count == dialogtotalcnt - 7) //input 2 최초 로드 
             {
                 Input_2.SetActive(true);
+                InputF_2.text = "";
                 Qinfo_2 = info;
             }
             dialogueName.text = info.myName;
@@ -175,7 +177,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
         }
     }
 
-    private string Qinfo_2_CorrectA = "-= multiple_choice_minus_score";
+    private string Qinfo_2_CorrectA = "score -= multiple_choice_minus_score";
 
     private bool isCorrect(string answer)
     {
@@ -184,7 +186,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
 
         string[] raw_list = Qinfo_2_CorrectA.Split('\x020');
         //필수 단어들이 들어가 있는지
-        if (answer.IndexOf(raw_list[0]) == -1 || answer.IndexOf(raw_list[1]) == -1)
+        if (answer.IndexOf(raw_list[0]) == -1 || answer.IndexOf(raw_list[1]) == -1 || answer.IndexOf(raw_list[2]) == -1)
         {
             return false;
         }

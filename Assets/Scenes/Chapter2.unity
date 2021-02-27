@@ -1684,6 +1684,10 @@ MonoBehaviour:
   endingAnimation: {fileID: 1522307619}
   MedalGround: {fileID: 1910813556}
   Q1completed: 0
+  Q2completed: 0
+  Q3completed: 0
+  Q4completed: 0
+  Q5completed: 0
 --- !u!82 &231363247
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6971,7 +6975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 71.6251, y: 5.0097}
+  m_AnchoredPosition: {x: 71.62509, y: 5.009697}
   m_SizeDelta: {x: -229.8773, y: -94.943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066884583
@@ -8459,7 +8463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 72.3212, y: 4.3002}
+  m_AnchoredPosition: {x: 72.3212, y: 4.3002014}
   m_SizeDelta: {x: -227.5032, y: -94.943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222619875
@@ -9221,7 +9225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1145902553
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2154697797156516133, guid: a4340f8c4bfb87c439e71f578aba6127, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11391,7 +11395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 73.4035, y: 2.9}
+  m_AnchoredPosition: {x: 73.4035, y: 2.9000015}
   m_SizeDelta: {x: -227.1162, y: -94.943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1851566956

@@ -83,7 +83,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
             }
             else //문제 답 입력
             {
-                if ((InputF_1.text.ToString()).Equals("4")) //정답 입력시
+                if ((InputF_1.text.ToString()).Trim().Equals("4")) //정답 입력시
                 {
                     QuestBase.Info info = QuestInfo.Dequeue();
                     dialogueName.text = info.myName;
@@ -91,7 +91,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
                     Portrait.sprite = portraitImages[1];
                     Input_1.SetActive(false);
                 }
-                else if ((InputF_1.text.ToString()).Trim().Equals("") || (InputF_1.text.ToString()) == null)
+                else if ((InputF_1.text.ToString()).Equals("") || (InputF_1.text.ToString()) == null)
                 {
                     return; //미입력시 아무 반응 안함
                 }
@@ -160,11 +160,13 @@ public class Ch1_Quest1Manager : MonoBehaviour
             if (QuestInfo.Count == dialogtotalcnt - 3) //input 1 최초 로드
             {
                 Input_1.SetActive(true);
+                InputF_1.text = "";
                 Qinfo_1 = info;
             }
             else if (QuestInfo.Count == dialogtotalcnt - 5) //input 2 최초 로드 
             {
                 Input_2.SetActive(true);
+                InputF_2.text = "";
                 Qinfo_2 = info;
             }
             dialogueName.text = info.myName;

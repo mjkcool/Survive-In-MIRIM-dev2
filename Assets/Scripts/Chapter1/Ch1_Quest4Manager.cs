@@ -159,11 +159,13 @@ public class Ch1_Quest4Manager : MonoBehaviour
             if (QuestInfo.Count == dialogtotalcnt - 5) //input 1 최초 로드
             {
                 Input_1.SetActive(true);
+                InputF_1.text = "";
                 Qinfo_1 = info;
             }
             else if (QuestInfo.Count == dialogtotalcnt - 7) //input 2 최초 로드 
             {
                 Input_2.SetActive(true);
+                InputF_2.text = "";
                 Qinfo_2 = info;
             }
             dialogueName.text = info.myName;

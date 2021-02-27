@@ -66,7 +66,7 @@ public class DialogueManager2 : MonoBehaviour
     public Queue<DialogueBase.Info> dialogueInfo;
     public Queue<PrologueBase.Info> prologueInfo;
 
-    public bool Q1completed = false;
+    public bool Q1completed = false, Q2completed = false, Q3completed = false, Q4completed = false, Q5completed=false;
     private AudioSource audio; //사용할 오디오 소스 컴포넌트
 
     public void Start()
@@ -89,20 +89,20 @@ public class DialogueManager2 : MonoBehaviour
     }
 
     //세이브된 thisId2데이터가 퀘스트부분일때
-    // public void QuestDialogue(DialogueBase db)
-    // {
-    //     dialogueInfo = new Queue<DialogueBase.Info>();
-    //     foreach (DialogueBase.Info info in db.dialogueInfo)
-    //     {
-    //         dialogueInfo.Enqueue(info);
-    //     }
-    //     for(int i=0; i<thisId2; i++)
-    //     {
-    //         dialogueInfo.Dequeue(); //thisId2보다 작은 수의 thisId2 삭제
-    //     }
-    //     DequeueDialogue();
-    //     DialogueBox.SetActive(false);
-    // }
+    public void QuestDialogue(DialogueBase db)
+    {
+        dialogueInfo = new Queue<DialogueBase.Info>();
+        foreach (DialogueBase.Info info in db.dialogueInfo)
+        {
+            dialogueInfo.Enqueue(info);
+        }
+        for(int i=0; i<thisId2; i++)
+        {
+            dialogueInfo.Dequeue(); //thisId2보다 작은 수의 thisId2 삭제
+        }
+        DequeueDialogue();
+        DialogueBox.SetActive(false);
+    }
 
     //세이브된 thisId2데이터 로드
     public void LoadDialogue(DialogueBase db)
@@ -139,13 +139,41 @@ public class DialogueManager2 : MonoBehaviour
 
             lock (dialogueInfo)
             {
-                // if ((thisId2==5) && (!Q1completed)) //퀘스트 1 시작
-                // {
-                //     DialogueBox.SetActive(false);
-                //     DialogBtn.questnum = 1;
-                //     questStarter.questnum = 1;
-                //     questStarter.start();
-                // }
+                if ((thisId2==13) && (!Q1completed)) //퀘스트 1 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 1;
+                    questStarter.questnum = 1;
+                    questStarter.start();
+                }
+                else if ((thisId2==29) && (!Q2completed)) //퀘스트 2 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 2;
+                    questStarter.questnum = 2;
+                    questStarter.start();
+                }
+                else if ((thisId2==46) && (!Q3completed)) //퀘스트 2 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 3;
+                    questStarter.questnum = 3;
+                    questStarter.start();
+                }
+                else if ((thisId2==87) && (!Q4completed)) //퀘스트 2 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 4;
+                    questStarter.questnum = 4;
+                    questStarter.start();
+                }
+                else if ((thisId2==103) && (!Q5completed)) //퀘스트 2 시작
+                {
+                    DialogueBox.SetActive(false);
+                    DialogBtn.questnum = 5;
+                    questStarter.questnum = 5;
+                    questStarter.start();
+                }
 
                 if (isCurrentlyTyping == true)
                 {
