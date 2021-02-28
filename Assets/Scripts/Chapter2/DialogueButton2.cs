@@ -8,9 +8,9 @@ public class DialogueButton2 : MonoBehaviour
 
     public void GetNextLine()
     {
-        lock (DialogueManager2.instance2)
+        lock (DialogueManager2.instance)
         {
-            DialogueManager2.instance2.DequeueDialogue();
+            DialogueManager2.instance.DequeueDialogue();
         }
         
     }
@@ -20,21 +20,34 @@ public class DialogueButton2 : MonoBehaviour
         {
             case 1:
                 Ch2_Quest1Manager.instance.DequeueQuest();
-               break;
-            // case 2:
-            //     Ch2_Quest2Manager.instance2.DequeueQuest();
-            //     break;
-            // case 3:
-            //     Ch2_Quest3Manager.instance2.DequeueQuest();
-            //     break;
-            // case 4:
-            //     Ch2_Quest4Manager.instance2.DequeueQuest();
-            //     break;
-            // case 5:
-            //     Ch2_Quest5Manager.instance2.DequeueQuest();
-            //     break;
+                break;
+            case 2:
+                Ch2_Quest2Manager.instance.DequeueQuest();
+                break;
+            case 3:
+                Ch2_Quest3Manager.instance.DequeueQuest();
+                break;
+            case 4:
+                Ch2_Quest4Manager.instance.DequeueQuest();
+                break;
+            case 5:
+                Ch2_Quest5Manager.instance.DequeueQuest();
+                break;
             default: break;
         }
         
+    }
+
+    public void TriggerChoosing(int choiceNumber)
+    {
+        switch (questnum)
+        {
+            case 1: Ch2_Quest1Manager.instance.chooseAnswer(choiceNumber); break;
+            case 2: Ch2_Quest2Manager.instance.chooseAnswer(choiceNumber); break;
+            case 3: Ch2_Quest3Manager.instance.chooseAnswer(choiceNumber); break;
+            case 4: Ch2_Quest4Manager.instance.chooseAnswer(choiceNumber); break;
+            case 5: Ch2_Quest5Manager.instance.chooseAnswer(choiceNumber); break;
+            default: break;
+        }
     }
 }

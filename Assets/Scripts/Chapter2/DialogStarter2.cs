@@ -18,7 +18,7 @@ public class DialogStarter2 : MonoBehaviour
     {
         Debug.Log(Screen.width);
         //아이디 값이 0, 즉 세이브가 없는 경우
-        if(DialogueManager2.instance2.thisId2 == 0)
+        if(DialogueManager2.instance.thisId2 == 0)
         {
             chapterIndex.SetActive(true);
             Invoke("TriggerDialogue", 5f);
@@ -27,14 +27,14 @@ public class DialogStarter2 : MonoBehaviour
         else 
         {
             GetComponent<AudioSource>().Stop();
-            DialogueManager2.instance2.LoadDialogue(dialogue);
+            DialogueManager2.instance.LoadDialogue(dialogue);
         }
     }
 
     public void TriggerDialogue()
     {
         chapterIndex.SetActive(false);
-        DialogueManager2.instance2.EnqueueDialogue(dialogue);
+        DialogueManager2.instance.EnqueueDialogue(dialogue);
     }
     
 }

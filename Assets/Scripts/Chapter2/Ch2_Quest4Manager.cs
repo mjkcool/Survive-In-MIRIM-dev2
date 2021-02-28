@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,14 +8,16 @@ using TMPro;
 public class Ch2_Quest4Manager : MonoBehaviour
 {
     //Dialog Objects
-    public GameObject QuestDialogBox;
+    public GameObject Quest, DialogBox;
     public TextMeshProUGUI dialogueName;
     public TextMeshProUGUI dialogueText;
     public Image Portrait, Character;
+    public GameObject ChoicesPack;
+    public TextMeshProUGUI[] choices = new TextMeshProUGUI[5];
     public Sprite[] portraitImages = new Sprite[2];
     public Sprite[] characterPortrait = new Sprite[2];
 
-    private int dialogtotalcnt;
+    private int answerNumber, dialogtotalcnt;
     public Queue<QuestBase.Info> QuestInfo;
 
     public static Ch2_Quest4Manager instance;
@@ -34,7 +36,7 @@ public class Ch2_Quest4Manager : MonoBehaviour
 
     public void Start()
     {
-        QuestInfo = new Queue<QuestBase.Info>();  //�ʱ�ȭ
+        QuestInfo = new Queue<QuestBase.Info>();  //초기화
     }
 
 
@@ -42,11 +44,11 @@ public class Ch2_Quest4Manager : MonoBehaviour
     {
         Portrait.sprite = portraitImages[0];
         Character.sprite = characterPortrait[1];
-        //�̹��� ������ ����
+        //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
         rt.sizeDelta = new Vector2(0, 1243);
-        QuestDialogBox.SetActive(true);
-        Portrait.gameObject.SetActive(false); //�ʱ⿣ �ڵ� �̹��� NOT show
+        Quest.SetActive(true);
+        Portrait.gameObject.SetActive(false); //초기엔 코드 이미지 NOT show
         QuestInfo.Clear();
 
         foreach (QuestBase.Info info in db.QuestInfo)
@@ -54,11 +56,12 @@ public class Ch2_Quest4Manager : MonoBehaviour
             QuestInfo.Enqueue(info);
         }
         dialogtotalcnt = QuestInfo.Count;
+        answerNumber = Random.Range(0, 5);
 
         DequeueQuest();
     }
 
-    private bool flag = true; //�⺻���� true
+    private bool flag = true; //기본값은 true
 
     public void DequeueQuest()
     {
@@ -70,5 +73,31 @@ public class Ch2_Quest4Manager : MonoBehaviour
         QuestBase.Info info = QuestInfo.Dequeue();
         dialogueName.text = info.myName;
         dialogueText.text = info.myText;
+    }
+
+    private string[] examples = new string[4]
+        {"[-1::]", ".reverse(True)", ".sort(reverse=True)", ".sort(False)"};
+    private string answer = ".reverse()";
+
+    public void chooseAnswer(int number) //Trigger choice one
+    {
+        QuestManager.instance.startLoading(number == answerNumber);
+
+        //컴파일 애니메이션
+        if (number == answerNumber) //정답 맞춘 경우
+        {
+            QuestBase.Info info = QuestInfo.Dequeue();
+            dialogueName.text = info.myName;
+            dialogueText.text = info.myText;
+            ChoicesPack.gameObject.SetActive(false);
+        }
+        else
+        {
+            ChoicesPack.gameObject.SetActive(false);
+            Quest.SetActive(true);
+            dialogueName.text = "디버거";
+            dialogueText.text = "잘못된 정답인것같아!";
+            flag = false;
+        }
     }
 }

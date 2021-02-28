@@ -7,29 +7,29 @@ using TMPro;
 
 public class DialogueManager2 : MonoBehaviour
 {
-    public static DialogueManager2 instance2;
+    public static DialogueManager2 instance;
     private void Awake()
     {
-        if (instance2 != null)
+        if (instance != null)
         {
             Debug.LogWarning("fix this" + gameObject.name);
         }
         else
         {
-            instance2 = this;
+            instance = this;
         }
 
     }
 
     public static string UserName = "User";
-    public AudioClip crowdshoutSound; //ì‚¬ìš©ì˜¤ë””ì˜¤
+    public AudioClip crowdshoutSound; //»ç¿ë¿Àµğ¿À
     public AudioClip outcrowdSound;
     public AudioClip wheeSound;
     public AudioClip twothreeSound;
     public AudioClip jumpropeSound;
     public AudioClip duguduguSound;
 
-    public Sprite bg001; //ë°°ê²½ì´ë¯¸ì§€
+    public Sprite bg001; //¹è°æÀÌ¹ÌÁö
 
     public GameObject DialogueBox;
     public TextMeshProUGUI dialogueName;
@@ -42,18 +42,18 @@ public class DialogueManager2 : MonoBehaviour
 
     public int department;
 
-    private string[] F1 = { "ì‹œì–¸í¬", "ë…¸ì¬í˜„", "ìœ ì§€ì˜" };
-    private string[] F2 = { "ê°•ìˆ˜ì˜", "ì°¨ìš°ë¦¼", "ê¹€ë¼ë©´" };
-    private string[] F3 = { "ê¹€ìˆ˜í˜•", "ì˜¤ìë¯¼", "ê³½ë…¸ì›€" };
-    private string[] F4 = { "ê¹€ë‹ˆì€", "ë°©ì€ì§€", "ë¬¸ì¬ìˆ˜" };
-    private string[] T2 = { "ë°±í˜„ì • ì„ ìƒë‹˜", "ë°±í˜„ì • ì„ ìƒë‹˜", "ìƒˆí•˜ì–€ ì„ ìƒë‹˜" };
-    private string[] T2_1 = { "ì°¸ì„ì„±ì„ ê°€ì§€ê³  ê¸°ë‹¤ë ¤. ê³§ ë‚´ë ¤ì˜¤ì‹¤ê±°ì•¼.", "ì°¸ì„ì„±ì„ ê°€ì§€ê³  ê¸°ë‹¤ë ¤. ê³§ ë‚´ë ¤ì˜¤ì‹¤ê±°ì•¼.", "í , ë‚˜ë„ ì˜ ëª¨ë¥´ê² ë„¤. êµì¥ì„ ìƒë‹˜ì´ ì ê¹ ì–´ë”” ê°€ì…¨ë‚˜ë´." };
-    private string[] T2_2 = { "ë°¥ì„ ì™œ ì•ˆ ë¨¹ê³ ì™€! ë§ì´ ë°°ê³ í”„ë©´ ì§€ê¸ˆ ì–¼ë¥¸ ë§¤ì  ê°–ë‹¤ì™€. ì´ë”° í˜ì¨ì•¼ë˜ëŠ”ë°.", "ë°¥ì„ ì™œ ì•ˆ ë¨¹ê³ ì™€! ë§ì´ ë°°ê³ í”„ë©´ ì§€ê¸ˆ ì–¼ë¥¸ ë§¤ì  ê°–ë‹¤ì™€. ì´ë”° í˜ì¨ì•¼ë˜ëŠ”ë°.", "ì•„ì¹¨ë°¥ ì•ˆ ë¨¹ì—ˆì–´? ì˜¤ëŠ˜ê°™ì€ ë‚ ì€ ê¼­ ë¨¹ì–´ì•¼ì§€~" };
-    private string[] text1 = { "ì™€ì•„ì•„ì•„!! ì¸~ë¯¸ê³¼ ì¸ë¯¸ê³¼ ìµœê°• ì¸ë¯¸ê³¼~!", "ì™€ì•„ì•„!!!! ì›¹ì†”!!", "í—ˆì–´ì–´ì–¼! ëŒ€ì• ì• ì• ë°•!!" };
-    private string[] text2 = { "ê·¸ê°„ì˜ ë…¸ë ¥ì´ ë¹›ì„ ë°œí–ˆêµ¬ë‚˜Â·Â·Â·. ëˆˆë¬¼ë‚œë‹¤ í‘", "ë¹›ì´! ë‚˜ëŠ”! ì†”ë£¨!! ë¹›ì´ ë‚œë‹¤!", "ì™€ì•„ì•„!!!! 1ìœ„ ë¨¹ëŠ” ë””ìì¸ì´ ì±”í”¼ì–¸!!!" };
-    private string[] text3 = { "í‘í‘ ã… ã… ", "ì—­ì‹œ! ì›¹ì†”ì´ ì§ˆë¦¬ê°€ ì—†ì§€~ ìš°ë¦¬ì˜ ìœ„ìƒì€ ê³„ì†ëœë‹¤!", "ì´ì•¼~ ì—­ì‹œ ì¬ëŠ¥ë§¨ë“¤! ìš´ë™ê¹Œì§€ ì˜í•˜ë©´ ì–´ë–¡í•˜ëƒ~!" };
-    private string[] text4 = { "ì™€ ê°ë™ì‹¤í™”ã… ã…  ìˆ˜ê³ ë§ì•˜ì–´ ìµœê°• ì¸ë¯¸ê³¼~!", "ì—°ìŠµ ì£½ì–´ë¼ í•œ ë³´ìƒì´ ì—¬ê¸°ìˆë„¤ã…‹ã…‹", "ì¦ê¸°ë©° ë›´ ë³´ëŒì´ ìˆë‹¤!" };
-    private string[] text5 = { "í¸ì˜ì ì´ ì›¬ë§ì´ëƒ, ë¯¸ë¶„ ê³ !", "ëë‚˜ê³  ë¯¸ë¶„ìœ¼ë¡œ ë‹¬ë ¤! ì˜¤ëŠ˜ì€ ë¨¹ê³  ì£½ì!!", "ë‹¨ì²´ë¡œ íšŒì‹ ê°€ì~~~!!!" };
+    private string[] F1 = { "½Ã¾ğÈñ", "³ëÀçÇö", "À¯Áö¿µ" };
+    private string[] F2 = { "°­¼ö¿µ", "Â÷¿ì¸²", "±è¶ó¸é" };
+    private string[] F3 = { "±è¼öÇü", "¿ÀÀÚ¹Î", "°û³ë¿ò" };
+    private string[] F4 = { "±è´ÏÀº", "¹æÀºÁö", "¹®Àç¼ö" };
+    private string[] T2 = { "¹éÇöÁ¤ ¼±»ı´Ô", "¹éÇöÁ¤ ¼±»ı´Ô", "»õÇÏ¾á ¼±»ı´Ô" };
+    private string[] T2_1 = { "ÂüÀ»¼ºÀ» °¡Áö°í ±â´Ù·Á. °ğ ³»·Á¿À½Ç°Å¾ß.", "ÂüÀ»¼ºÀ» °¡Áö°í ±â´Ù·Á. °ğ ³»·Á¿À½Ç°Å¾ß.", "Èì, ³ªµµ Àß ¸ğ¸£°Ú³×. ±³Àå¼±»ı´ÔÀÌ Àá±ñ ¾îµğ °¡¼Ì³ªºÁ." };
+    private string[] T2_2 = { "¹äÀ» ¿Ö ¾È ¸Ô°í¿Í! ¸¹ÀÌ ¹è°íÇÁ¸é Áö±İ ¾ó¸¥ ¸ÅÁ¡ °®´Ù¿Í. ÀÌµû Èû½á¾ßµÇ´Âµ¥.", "¹äÀ» ¿Ö ¾È ¸Ô°í¿Í! ¸¹ÀÌ ¹è°íÇÁ¸é Áö±İ ¾ó¸¥ ¸ÅÁ¡ °®´Ù¿Í. ÀÌµû Èû½á¾ßµÇ´Âµ¥.", "¾ÆÄ§¹ä ¾È ¸Ô¾ú¾î? ¿À´Ã°°Àº ³¯Àº ²À ¸Ô¾î¾ßÁö~" };
+    private string[] text1 = { "¿Í¾Æ¾Æ¾Æ!! ÀÎ~¹Ì°ú ÀÎ¹Ì°ú ÃÖ°­ ÀÎ¹Ì°ú~!", "¿Í¾Æ¾Æ!!!! À¥¼Ö!!", "Çã¾î¾î¾ó! ´ë¾Ö¾Ö¾Ö¹Ú!!" };
+    private string[] text2 = { "±×°£ÀÇ ³ë·ÂÀÌ ºûÀ» ¹ßÇß±¸³ª¡¤¡¤¡¤. ´«¹°³­´Ù Èæ", "ºûÀÌ! ³ª´Â! ¼Ö·ç!! ºûÀÌ ³­´Ù!", "¿Í¾Æ¾Æ!!!! 1À§ ¸Ô´Â µğÀÚÀÎÀÌ Ã¨ÇÇ¾ğ!!!" };
+    private string[] text3 = { "ÈæÈæ ¤Ğ¤Ğ", "¿ª½Ã! À¥¼ÖÀÌ Áú¸®°¡ ¾øÁö~ ¿ì¸®ÀÇ À§»óÀº °è¼ÓµÈ´Ù!", "ÀÌ¾ß~ ¿ª½Ã Àç´É¸Çµé! ¿îµ¿±îÁö ÀßÇÏ¸é ¾î¶±ÇÏ³Ä~!" };
+    private string[] text4 = { "¿Í °¨µ¿½ÇÈ­¤Ğ¤Ğ ¼ö°í¸¹¾Ò¾î ÃÖ°­ ÀÎ¹Ì°ú~!", "¿¬½À Á×¾î¶ó ÇÑ º¸»óÀÌ ¿©±âÀÖ³×¤»¤»", "Áñ±â¸ç ¶Ú º¸¶÷ÀÌ ÀÖ´Ù!" };
+    private string[] text5 = { "ÆíÀÇÁ¡ÀÌ À¢¸»ÀÌ³Ä, ¹ÌºĞ °í!", "³¡³ª°í ¹ÌºĞÀ¸·Î ´Ş·Á! ¿À´ÃÀº ¸Ô°í Á×ÀÚ!!", "´ÜÃ¼·Î È¸½Ä °¡ÀÚ~~~!!!" };
 
     public bool isCurrentlyTyping;
     private string completeText, name;
@@ -66,8 +66,8 @@ public class DialogueManager2 : MonoBehaviour
     public Queue<DialogueBase.Info> dialogueInfo;
     public Queue<PrologueBase.Info> prologueInfo;
 
-    public bool Q1completed = false, Q2completed = false, Q3completed = false, Q4completed = false, Q5completed=false;
-    private AudioSource audio; //ì‚¬ìš©í•  ì˜¤ë””ì˜¤ ì†ŒìŠ¤ ì»´í¬ë„ŒíŠ¸
+    public bool[] Qcompleted = new bool[5];
+    private AudioSource audio; //»ç¿ëÇÒ ¿Àµğ¿À ¼Ò½º ÄÄÆ÷³ÍÆ®
 
     public void Start()
     {
@@ -76,8 +76,8 @@ public class DialogueManager2 : MonoBehaviour
 
     public void EnqueueDialogue(DialogueBase db)
     {
-        dialogueInfo = new Queue<DialogueBase.Info>();  //ë‹¤ì´ì–¼ë¡œê·¸ ì´ˆê¸°í™”
-        DialogueBox.SetActive(true); //í™”ë©´ì— ë„ì›€
+        dialogueInfo = new Queue<DialogueBase.Info>();  //´ÙÀÌ¾ó·Î±× ÃÊ±âÈ­
+        DialogueBox.SetActive(true); //È­¸é¿¡ ¶ç¿ò
         dialogueInfo.Clear();
 
         foreach (DialogueBase.Info info in db.dialogueInfo)
@@ -88,7 +88,7 @@ public class DialogueManager2 : MonoBehaviour
         DequeueDialogue();
     }
 
-    //ì„¸ì´ë¸Œëœ thisId2ë°ì´í„°ê°€ í€˜ìŠ¤íŠ¸ë¶€ë¶„ì¼ë•Œ
+    //¼¼ÀÌºêµÈ thisId2µ¥ÀÌÅÍ°¡ Äù½ºÆ®ºÎºĞÀÏ¶§
     public void QuestDialogue(DialogueBase db)
     {
         dialogueInfo = new Queue<DialogueBase.Info>();
@@ -96,42 +96,42 @@ public class DialogueManager2 : MonoBehaviour
         {
             dialogueInfo.Enqueue(info);
         }
-        for(int i=0; i<thisId2; i++)
+        for (int i = 0; i < thisId2; i++)
         {
-            dialogueInfo.Dequeue(); //thisId2ë³´ë‹¤ ì‘ì€ ìˆ˜ì˜ thisId2 ì‚­ì œ
+            dialogueInfo.Dequeue(); //thisId2º¸´Ù ÀÛÀº ¼öÀÇ thisId2 »èÁ¦
         }
         DequeueDialogue();
         DialogueBox.SetActive(false);
     }
 
-    //ì„¸ì´ë¸Œëœ thisId2ë°ì´í„° ë¡œë“œ
+    //¼¼ÀÌºêµÈ thisId2µ¥ÀÌÅÍ ·Îµå
     public void LoadDialogue(DialogueBase db)
     {
         dialogueInfo = new Queue<DialogueBase.Info>();
-        DialogueBox.SetActive(true); //í™”ë©´ì— ë„ì›€
+        DialogueBox.SetActive(true); //È­¸é¿¡ ¶ç¿ò
         foreach (DialogueBase.Info info in db.dialogueInfo)
         {
             dialogueInfo.Enqueue(info);
         }
         for (int i = 0; i < thisId2; i++)
         {
-            dialogueInfo.Dequeue(); //thisId2ë³´ë‹¤ ì‘ì€ ìˆ˜ì˜ thisId2 ì‚­ì œ
+            dialogueInfo.Dequeue(); //thisId2º¸´Ù ÀÛÀº ¼öÀÇ thisId2 »èÁ¦
         }
         DequeueDialogue();
     }
 
     public void DequeueDialogue()
     {
-        if (!isCurrentlyTyping) //ì „ ëŒ€ì‚¬ íƒ€ì´í•‘ì´ ëë‚˜ë©´ ì‹¤í–‰
+        if (!isCurrentlyTyping) //Àü ´ë»ç Å¸ÀÌÇÎÀÌ ³¡³ª¸é ½ÇÇà
         {
-            if (dialogueInfo.Count == 0) //ì±•í„° 2 ì¢…ë£Œ
+            if (dialogueInfo.Count == 0) //Ã©ÅÍ 2 Á¾·á
             {
                 DialogueBox.SetActive(false);
                 EndofDialogue();
 
             }
             else
-            { //ë‹¤ì´ì–¼ë¡œê·¸ ì§„í–‰
+            { //´ÙÀÌ¾ó·Î±× ÁøÇà
                 if (isDelayturn)
                 {
                     delayDialog(); return;
@@ -141,35 +141,35 @@ public class DialogueManager2 : MonoBehaviour
 
                 lock (dialogueInfo)
                 {
-                    if ((thisId2 == 13) && (!Q1completed)) //í€˜ìŠ¤íŠ¸ 1 ì‹œì‘
+                    if ((thisId2 == 13) && (!Qcompleted[0])) //Äù½ºÆ® 1 ½ÃÀÛ
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 1;
                         questStarter.questnum = 1;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 29) && (!Q2completed)) //í€˜ìŠ¤íŠ¸ 2 ì‹œì‘
+                    else if ((thisId2 == 29) && (!Qcompleted[1])) //Äù½ºÆ® 2 ½ÃÀÛ
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 2;
                         questStarter.questnum = 2;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 46) && (!Q3completed)) //í€˜ìŠ¤íŠ¸ 2 ì‹œì‘
+                    else if ((thisId2 == 46) && (!Qcompleted[2])) //Äù½ºÆ® 3 ½ÃÀÛ
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 3;
                         questStarter.questnum = 3;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 87) && (!Q4completed)) //í€˜ìŠ¤íŠ¸ 2 ì‹œì‘
+                    else if ((thisId2 == 87) && (!Qcompleted[3])) //Äù½ºÆ® 4 ½ÃÀÛ
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 4;
                         questStarter.questnum = 4;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 103) && (!Q5completed)) //í€˜ìŠ¤íŠ¸ 2 ì‹œì‘
+                    else if ((thisId2 == 103) && (!Qcompleted[4])) //Äù½ºÆ® 5 ½ÃÀÛ
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 5;
@@ -187,7 +187,7 @@ public class DialogueManager2 : MonoBehaviour
                     name = name.Replace("[User]", UserName);
                     int department = PlayerPrefs.GetInt("Department");
 
-                    //ê³¼ì— ë”°ë¥¸ ì´ë¦„ê°’ ë³€í˜•
+                    //°ú¿¡ µû¸¥ ÀÌ¸§°ª º¯Çü
                     completeText = completeText.Replace("[F1]", F1[department]);
                     name = name.Replace("[F1]", F1[department]);
                     completeText = completeText.Replace("[F2]", F2[department]);
@@ -207,20 +207,20 @@ public class DialogueManager2 : MonoBehaviour
 
                     dialogueName.text = name;
 
-                    //ì¸ë¬¼ portrait
+                    //ÀÎ¹° portrait
 
 
-                    /* ë°°ê²½ ì‚¬ì§„
+                    /* ¹è°æ »çÁø
                     Sprite thisBg = bg001;
-                    if (thisId2 > 1) thisBg = backgroundPortrait.sprite; //ê¸°ì¡´ ì´ë¯¸ì§€
-                    switch (thisId2) //ë³€ê²½
+                    if (thisId2 > 1) thisBg = backgroundPortrait.sprite; //±âÁ¸ ÀÌ¹ÌÁö
+                    switch (thisId2) //º¯°æ
                     {
                     }
                     backgroundPortrait.sprite = thisBg;
                     */
 
 
-                    //ì˜¤ë””ì˜¤ ì„¤ì •
+                    //¿Àµğ¿À ¼³Á¤
                     if (thisId2 == 1)
                     {
                         GetComponent<AudioSource>().clip = outcrowdSound;
@@ -329,7 +329,7 @@ public class DialogueManager2 : MonoBehaviour
             return;
         }
 
-        
+
     }
 
     IEnumerator TypeText(string completeText)
@@ -360,7 +360,7 @@ public class DialogueManager2 : MonoBehaviour
         FadeOutScript.instance.Fade();
     }
 
-    //ëŒ€ì‚¬ 2ì´ˆ ìë™ ëœ¸ë“¤ì´ê¸° í•¨ìˆ˜
+    //´ë»ç 2ÃÊ ÀÚµ¿ ¶äµéÀÌ±â ÇÔ¼ö
     private void delayDialog()
     {
         DialogueBox.SetActive(false);

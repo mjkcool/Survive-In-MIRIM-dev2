@@ -319,9 +319,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0c1efa7aa2a834c47a2b2eea9064c86a, type: 3}
   successImage: {fileID: 21300000, guid: d34d885b0b39da242a5560d109c1daad, type: 3}
   InputF_1: {fileID: 1322868892}
-  Input_1: {fileID: 1322868890}
   InputF_2: {fileID: 896354267}
-  Input_2: {fileID: 896354265}
 --- !u!4 &14760049
 Transform:
   m_ObjectHideFlags: 0

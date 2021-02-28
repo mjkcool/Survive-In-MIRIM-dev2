@@ -17,11 +17,9 @@ public class Ch1_Quest1Manager : MonoBehaviour
     public Sprite successImage;
     //Q1-1
     public TMP_InputField InputF_1;
-    public GameObject Input_1;
     //Q1-2
     public TMP_InputField InputF_2;
-    public GameObject Input_2;
-
+    
     private int dialogtotalcnt;
     public Queue<QuestBase.Info> QuestInfo;
 
@@ -76,7 +74,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
         {
             if (!flag) //문제 틀린 직후
             {
-                Input_1.SetActive(true);
+                InputF_1.gameObject.SetActive(true);
                 dialogueName.text = Qinfo_1.myName;
                 dialogueText.text = Qinfo_1.myText;
                 flag = true;
@@ -89,7 +87,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
                     dialogueName.text = info.myName;
                     dialogueText.text = info.myText;
                     Portrait.sprite = portraitImages[1];
-                    Input_1.SetActive(false);
+                    InputF_1.gameObject.SetActive(false);
                 }
                 else if ((InputF_1.text.ToString()).Equals("") || (InputF_1.text.ToString()) == null)
                 {
@@ -97,7 +95,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
                 }
                 else //오답 입력시
                 {
-                    Input_1.SetActive(false);
+                    InputF_1.gameObject.SetActive(false);
                     dialogueName.text = "에러 발생";
                     dialogueText.text = "이곳은 아닌 것 같아.";
                     flag = false;
@@ -109,7 +107,7 @@ public class Ch1_Quest1Manager : MonoBehaviour
         {
             if (!flag) //문제 틀린 직후
             {
-                Input_2.SetActive(true);
+                InputF_2.gameObject.SetActive(true);
                 dialogueName.text = Qinfo_2.myName;
                 dialogueText.text = null;
                 flag = true;
@@ -127,17 +125,17 @@ public class Ch1_Quest1Manager : MonoBehaviour
                     if (isCorrect(InputF_2.text.ToString()))
                     {
                         //정답의경우
-                        Input_2.SetActive(false);
+                        InputF_2.gameObject.SetActive(false);
                         QuestBase.Info info = QuestInfo.Dequeue();
                         dialogueName.text = info.myName;
                         dialogueText.text = info.myText;
                         SuccessPortrait.gameObject.SetActive(true);
                         Portrait.gameObject.SetActive(false);
-                        Input_2.SetActive(false);
+                        InputF_2.gameObject.SetActive(false);
                     }
                     else //오답 입력시
                     {
-                        Input_2.SetActive(false);
+                        InputF_2.gameObject.SetActive(false);
                         dialogueName.text = "·•디버깅 중•·";
                         dialogueText.text = "잘못된 문장인가봐\n제대로 작동하지 않아";
                         flag = false;
@@ -149,7 +147,6 @@ public class Ch1_Quest1Manager : MonoBehaviour
         else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
         {
             SuccessPortrait.gameObject.SetActive(false);
-            // Portrait.gameObject.SetActive(false);
             QuestManager.instance.spinStar();
             Invoke("EndofQuest", 4.5f);
             return;
@@ -159,13 +156,13 @@ public class Ch1_Quest1Manager : MonoBehaviour
             QuestBase.Info info = QuestInfo.Dequeue();
             if (QuestInfo.Count == dialogtotalcnt - 3) //input 1 최초 로드
             {
-                Input_1.SetActive(true);
+                InputF_1.gameObject.SetActive(true);
                 InputF_1.text = "";
                 Qinfo_1 = info;
             }
             else if (QuestInfo.Count == dialogtotalcnt - 5) //input 2 최초 로드 
             {
-                Input_2.SetActive(true);
+                InputF_2.gameObject.SetActive(true);
                 InputF_2.text = "";
                 Qinfo_2 = info;
             }
