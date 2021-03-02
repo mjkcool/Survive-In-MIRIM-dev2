@@ -57,6 +57,7 @@ public class Ch2_Quest2Manager : MonoBehaviour
         dialogtotalcnt = QuestInfo.Count;
         answerNumber = Random.Range(0, 5);
 
+        setChoiceText();
         DequeueQuest();
     }
     private bool flag = true; //기본값은 true
@@ -71,11 +72,16 @@ public class Ch2_Quest2Manager : MonoBehaviour
         {
             Portrait.gameObject.SetActive(true); //문제 최초 등장
         }
+        else if (QuestInfo.Count == 3)
+        {
+            Portrait.sprite = portraitImages[1]; //이미지 바꾸기
+        }
         else if (QuestInfo.Count == 1) //선택지 등장
         {
             Character.gameObject.SetActive(false);
             DialogBox.SetActive(false);
             ChoicesPack.SetActive(true);
+            return;
         }
         else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
         {
@@ -92,6 +98,16 @@ public class Ch2_Quest2Manager : MonoBehaviour
     private string[] examples = new string[4]
         {"self.defense <= 0", "self.offense >= 0", "self.defense >= 0", "self.defense == 0"};
     private string answer = "self.offense <= 0";
+
+    private void setChoiceText()
+    {
+        int j = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            if (i == answerNumber) choices[i].text = answer;
+            else choices[i].text = examples[j++]; //j<4
+        }
+    }
 
     public void chooseAnswer(int number) //Trigger choice one
     {

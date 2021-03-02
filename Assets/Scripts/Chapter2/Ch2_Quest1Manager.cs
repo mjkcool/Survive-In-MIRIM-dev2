@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,7 +14,7 @@ public class Ch2_Quest1Manager : MonoBehaviour
     public Image Portrait, Character;
     public GameObject ChoicesPack;
     public TextMeshProUGUI[] choices = new TextMeshProUGUI[5];
-    public Sprite[] portraitImages = new Sprite[2];
+    public Sprite portraitImage;
     public Sprite characterPortrait;
 
     private int answerNumber, dialogtotalcnt;
@@ -36,16 +36,16 @@ public class Ch2_Quest1Manager : MonoBehaviour
 
     public void Start()
     {
-        QuestInfo = new Queue<QuestBase.Info>();  //�ʱ�ȭ
+        QuestInfo = new Queue<QuestBase.Info>();  
     }
 
     public void EnqueueQuest(QuestBase db)
     {
-        Portrait.sprite = portraitImages[0];
+        Portrait.sprite = portraitImage;
         Character.sprite = characterPortrait;
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(0, 1243);
+        rt.sizeDelta = new Vector2(0, 938);
         Quest.SetActive(true);
         Portrait.gameObject.SetActive(false); //초기엔 코드 이미지 NOT show
         QuestInfo.Clear();
@@ -55,12 +55,13 @@ public class Ch2_Quest1Manager : MonoBehaviour
             QuestInfo.Enqueue(info);
         }
         dialogtotalcnt = QuestInfo.Count;
-        answerNumber = Random.Range(0, 5);
+        answerNumber = Random.Range(0, 5); //정답-매번 순서 섞임 / 정답 번호 부여
 
+        setChoiceText(); //선택지에 글씨 배치
         DequeueQuest();
     }
 
-    private bool flag = true; //�⺻���� true
+    private bool flag = true; //기본값 true
 
     public void DequeueQuest()
     {
@@ -68,19 +69,16 @@ public class Ch2_Quest1Manager : MonoBehaviour
         {
             Portrait.gameObject.SetActive(true); //문제 최초 등장
         }
-        else if(QuestInfo.Count == dialogtotalcnt - 2) 
+        else if (QuestInfo.Count == dialogtotalcnt - 2)
         {
             Character.gameObject.SetActive(true); //디버거 캐릭터 등장
         }
-        else if(QuestInfo.Count == 2) //대사가 2개 남았을 때
-        {
-            Portrait.sprite = portraitImages[1]; //이미지 바꾸기
-        }
-        else if(QuestInfo.Count == 1) //선택지 등장
+        else if (QuestInfo.Count == 3) //선택지 등장
         {
             Character.gameObject.SetActive(false);
             DialogBox.SetActive(false);
-            ChoicesPack.SetActive(true);
+            ChoicesPack.SetActive(true); //선택지묶음
+            return;
         }
         else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
         {
@@ -99,16 +97,16 @@ public class Ch2_Quest1Manager : MonoBehaviour
         {"opening = Part.__init__(this, t1, \"개막사\")",
             "opening = Part(self, t1, \"개막사\")",
             "opening = Part.__init__(t1, \"개막사\")",
-            "opening = Part(this, t1, \"개막사\")"} ;
+            "opening = Part(this, t1, \"개막사\")"};
     private string answer = "opening = Part(t1, \"개막사\")";
 
     private void setChoiceText()
     {
         int j = 0;
-        for(int i=0; i<5; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (i == answerNumber) choices[i].text = answer;
-            choices[i].text = examples[j++]; //j<4
+            else choices[i].text = examples[j++]; //j<4
         }
     }
 

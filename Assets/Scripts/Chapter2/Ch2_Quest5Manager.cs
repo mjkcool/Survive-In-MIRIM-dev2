@@ -14,7 +14,7 @@ public class Ch2_Quest5Manager : MonoBehaviour
     public Image Portrait, Character;
     public GameObject ChoicesPack;
     public TextMeshProUGUI[] choices = new TextMeshProUGUI[5];
-    public Sprite[] portraitImages = new Sprite[2];
+    public Sprite portraitImage;
     public Sprite characterPortrait;
 
     private int answerNumber, dialogtotalcnt;
@@ -41,7 +41,7 @@ public class Ch2_Quest5Manager : MonoBehaviour
 
     public void EnqueueQuest(QuestBase db)
     {
-        Portrait.sprite = portraitImages[0];
+        Portrait.sprite = portraitImage;
         Character.sprite = characterPortrait;
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
@@ -57,6 +57,7 @@ public class Ch2_Quest5Manager : MonoBehaviour
         dialogtotalcnt = QuestInfo.Count;
         answerNumber = Random.Range(0, 5);
 
+        setChoiceText();
         DequeueQuest();
     }
 
@@ -64,10 +65,28 @@ public class Ch2_Quest5Manager : MonoBehaviour
 
     public void DequeueQuest()
     {
-        if (QuestInfo.Count == dialogtotalcnt - 1)
+        if (QuestInfo.Count == dialogtotalcnt)
+        {
+            Character.gameObject.SetActive(true);
+        }
+        else if(QuestInfo.Count == dialogtotalcnt-4)
         {
             Portrait.gameObject.SetActive(true);
         }
+        else if (QuestInfo.Count == 2) //선택지
+        {
+            Character.gameObject.SetActive(false);
+            DialogBox.SetActive(false);
+            ChoicesPack.SetActive(true);
+            return;
+        }
+        else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
+        {
+            QuestManager.instance.spinStar();
+            Invoke("EndofQuest", 4.5f);
+            return;
+        }
+
 
         QuestBase.Info info = QuestInfo.Dequeue();
         dialogueName.text = info.myName;
@@ -77,6 +96,16 @@ public class Ch2_Quest5Manager : MonoBehaviour
     private string[] examples = new string[4]
         {"scores.item", "scores.item()", "scores.key()", "scores.keys()"};
     private string answer = "scores.items()";
+
+    private void setChoiceText()
+    {
+        int j = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            if (i == answerNumber) choices[i].text = answer;
+            else choices[i].text = examples[j++]; //j<4
+        }
+    }
 
     public void chooseAnswer(int number) //Trigger choice one
     {
@@ -93,10 +122,18 @@ public class Ch2_Quest5Manager : MonoBehaviour
         else
         {
             ChoicesPack.gameObject.SetActive(false);
-            Quest.SetActive(true);
+            DialogBox.SetActive(true);
             dialogueName.text = "디버거";
             dialogueText.text = "잘못된 정답인것같아!";
             flag = false;
         }
+    }
+
+    private void EndofQuest()
+    {
+        Quest.SetActive(false);
+        DialogueManager2.instance.Qcompleted[0] = true;
+        (DialogueManager.instance.DialogueBox).SetActive(true);
+        DialogueManager.instance.DequeueDialogue();
     }
 }

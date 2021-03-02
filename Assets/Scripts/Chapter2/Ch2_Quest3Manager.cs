@@ -59,6 +59,7 @@ public class Ch2_Quest3Manager : MonoBehaviour
         dialogtotalcnt = QuestInfo.Count;
         answerNumber = Random.Range(0, 5);
 
+        setChoiceText();
         DequeueQuest();
     }
 
@@ -74,11 +75,16 @@ public class Ch2_Quest3Manager : MonoBehaviour
         {
             Character.gameObject.SetActive(true);
         }
-        else if (QuestInfo.Count == 1)
+        else if (QuestInfo.Count == 2)
+        {
+            Portrait.sprite = portraitImages[1]; //이미지 바꾸기
+        }
+        else if (QuestInfo.Count == 1) //문제
         {
             Character.gameObject.SetActive(false);
             DialogBox.SetActive(false);
             ChoicesPack.SetActive(true);
+            return;
         }
         else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
         {
@@ -96,6 +102,16 @@ public class Ch2_Quest3Manager : MonoBehaviour
         {"range(player)-1", "len(player)-1", "range(len(player-1))", "range(player.length-1)"};
     private string answer = "range(len(player)-1)";
 
+    private void setChoiceText()
+    {
+        int j = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            if (i == answerNumber) choices[i].text = answer;
+            else choices[i].text = examples[j++]; //j<4
+        }
+    }
+
     public void chooseAnswer(int number) //Trigger choice one
     {
         QuestManager.instance.startLoading(number == answerNumber);
@@ -111,7 +127,7 @@ public class Ch2_Quest3Manager : MonoBehaviour
         else
         {
             ChoicesPack.gameObject.SetActive(false);
-            Quest.SetActive(true);
+            DialogBox.SetActive(true);
             dialogueName.text = "디버거";
             dialogueText.text = "잘못된 정답인것같아!";
             flag = false;
