@@ -135,7 +135,7 @@ public class PrologueManager : MonoBehaviour
 
     public void DequeueDialogue()
     {
-        if (prologueInfo.Count == 0) //프롤로그 종료
+        if (prologueInfo.Count.Equals(0)) //프롤로그 종료
         {
             DialogueBox.SetActive(false);
             EndofDialogue();
@@ -150,7 +150,7 @@ public class PrologueManager : MonoBehaviour
 
             lock (prologueInfo)
             {
-                if (isCurrentlyTyping == true)
+                if (isCurrentlyTyping.Equals(true))
                 {
                     CompleteText();
                     StopAllCoroutines();
@@ -190,7 +190,7 @@ public class PrologueManager : MonoBehaviour
                 backgroundPortrait.sprite = thisBg;
 
                 ////////오디오 설정
-                // if (prologueId==7)
+                // if (prologueId.Equals(7))
                 // {
                 //     GetComponent<AudioSource>().clip = paperSound;
                 //     GetComponent<AudioSource>().Play();
@@ -232,7 +232,7 @@ public class PrologueManager : MonoBehaviour
         Debug.Log("프롤로그 매니저 끝");
         
         DialogueStarter.SetActive(true);
-        if(isDialogueOption == true)
+        if(isDialogueOption.Equals(true))
         {
             dialogueOptionsUI.SetActive(true);
         }

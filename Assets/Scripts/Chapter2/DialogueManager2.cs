@@ -124,7 +124,7 @@ public class DialogueManager2 : MonoBehaviour
     {
         if (!isCurrentlyTyping) //전 대사 타이핑이 끝나면 실행
         {
-            if (dialogueInfo.Count == 0) //챕터 2 종료
+            if (dialogueInfo.Count.Equals(0)) //챕터 2 종료
             {
                 DialogueBox.SetActive(false);
                 EndofDialogue();
@@ -141,35 +141,35 @@ public class DialogueManager2 : MonoBehaviour
 
                 lock (dialogueInfo)
                 {
-                    if ((thisId2 == 13) && (!Qcompleted[0])) //퀘스트 1 시작
+                    if ((thisId2.Equals(13)) && (!Qcompleted[0])) //퀘스트 1 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 1;
                         questStarter.questnum = 1;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 29) && (!Qcompleted[1])) //퀘스트 2 시작
+                    else if ((thisId2.Equals(29)) && (!Qcompleted[1])) //퀘스트 2 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 2;
                         questStarter.questnum = 2;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 46) && (!Qcompleted[2])) //퀘스트 3 시작
+                    else if ((thisId2.Equals(46)) && (!Qcompleted[2])) //퀘스트 3 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 3;
                         questStarter.questnum = 3;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 87) && (!Qcompleted[3])) //퀘스트 4 시작
+                    else if ((thisId2.Equals(87)) && (!Qcompleted[3])) //퀘스트 4 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 4;
                         questStarter.questnum = 4;
                         questStarter.start();
                     }
-                    else if ((thisId2 == 103) && (!Qcompleted[4])) //퀘스트 5 시작
+                    else if ((thisId2.Equals(103)) && (!Qcompleted[4])) //퀘스트 5 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 5;
@@ -221,77 +221,77 @@ public class DialogueManager2 : MonoBehaviour
 
 
                     //오디오 설정
-                    if (thisId2 == 1)
+                    if (thisId2.Equals(1))
                     {
                         GetComponent<AudioSource>().clip = outcrowdSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 13) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 56)
+                    if (thisId2.Equals(56))
                     {
                         GetComponent<AudioSource>().clip = wheeSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 56) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 59)
+                    if (thisId2.Equals(59))
                     {
                         GetComponent<AudioSource>().clip = jumpropeSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 59) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 62)
+                    if (thisId2.Equals(62))
                     {
                         GetComponent<AudioSource>().clip = duguduguSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 62) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 70)
+                    if (thisId2.Equals(70))
                     {
                         GetComponent<AudioSource>().clip = crowdshoutSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 73) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 74)
+                    if (thisId2.Equals(74))
                     {
                         GetComponent<AudioSource>().clip = wheeSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 74) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 75)
+                    if (thisId2.Equals(75))
                     {
                         GetComponent<AudioSource>().clip = crowdshoutSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 77) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 80)
+                    if (thisId2.Equals(80))
                     {
                         GetComponent<AudioSource>().clip = twothreeSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 80) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 102)
+                    if (thisId2.Equals(102))
                     {
                         GetComponent<AudioSource>().clip = duguduguSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 102) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 104)
+                    if (thisId2.Equals(104))
                     {
                         GetComponent<AudioSource>().clip = duguduguSound;
                         GetComponent<AudioSource>().Play();
                     }
                     else if (thisId2 > 104) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2 == 106)
+                    if (thisId2.Equals(106))
                     {
                         GetComponent<AudioSource>().clip = crowdshoutSound;
                         GetComponent<AudioSource>().Play();

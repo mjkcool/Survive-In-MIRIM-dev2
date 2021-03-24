@@ -18,7 +18,7 @@ public class DialogStarter2 : MonoBehaviour
     {
         Debug.Log(Screen.width);
         //아이디 값이 0, 즉 세이브가 없는 경우
-        if(DialogueManager2.instance.thisId2 == 0)
+        if(DialogueManager2.instance.thisId2.Equals(0))
         {
             chapterIndex.SetActive(true);
             Invoke("TriggerDialogue", 5f);

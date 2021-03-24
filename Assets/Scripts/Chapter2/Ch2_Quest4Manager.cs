@@ -66,19 +66,19 @@ public class Ch2_Quest4Manager : MonoBehaviour
 
     public void DequeueQuest()
     {
-        if (QuestInfo.Count == dialogtotalcnt - 1)
+        if (QuestInfo.Count.Equals(dialogtotalcnt - 1))
         {
             Portrait.gameObject.SetActive(true);
             Character.gameObject.SetActive(true);
         }
-        else if(QuestInfo.Count == 2) //선택지
+        else if(QuestInfo.Count.Equals(2)) //선택지
         {
             Character.gameObject.SetActive(false);
             DialogBox.SetActive(false);
             ChoicesPack.SetActive(true);
             return;
         }
-        else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
+        else if (QuestInfo.Count.Equals(0)) //Quest 다이얼로그 끝나면
         {
             QuestManager.instance.spinStar();
             Invoke("EndofQuest", 4.5f);
@@ -99,17 +99,17 @@ public class Ch2_Quest4Manager : MonoBehaviour
         int j = 0;
         for (int i = 0; i < 5; i++)
         {
-            if (i == answerNumber) choices[i].text = answer;
+            if (i.Equals(answerNumber)) choices[i].text = answer;
             else choices[i].text = examples[j++]; //j<4
         }
     }
 
     public void chooseAnswer(int number) //Trigger choice one
     {
-        QuestManager.instance.startLoading(number == answerNumber);
+        QuestManager.instance.startLoading(number.Equals(answerNumber));
 
         //컴파일 애니메이션
-        if (number == answerNumber) //정답 맞춘 경우
+        if (number.Equals(answerNumber)) //정답 맞춘 경우
         {
             QuestBase.Info info = QuestInfo.Dequeue();
             dialogueName.text = info.myName;

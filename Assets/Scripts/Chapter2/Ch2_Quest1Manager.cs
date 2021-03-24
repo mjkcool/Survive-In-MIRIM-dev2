@@ -65,22 +65,22 @@ public class Ch2_Quest1Manager : MonoBehaviour
 
     public void DequeueQuest()
     {
-        if (QuestInfo.Count == dialogtotalcnt - 1)
+        if (QuestInfo.Count.Equals(dialogtotalcnt - 1))
         {
             Portrait.gameObject.SetActive(true); //문제 최초 등장
         }
-        else if (QuestInfo.Count == dialogtotalcnt - 2)
+        else if (QuestInfo.Count.Equals(dialogtotalcnt - 2))
         {
             Character.gameObject.SetActive(true); //디버거 캐릭터 등장
         }
-        else if (QuestInfo.Count == 3) //선택지 등장
+        else if (QuestInfo.Count.Equals(3)) //선택지 등장
         {
             Character.gameObject.SetActive(false);
             DialogBox.SetActive(false);
             ChoicesPack.SetActive(true); //선택지묶음
             return;
         }
-        else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
+        else if (QuestInfo.Count.Equals(0)) //Quest 다이얼로그 끝나면
         {
             QuestManager.instance.spinStar();
             Invoke("EndofQuest", 4.5f);
@@ -105,17 +105,17 @@ public class Ch2_Quest1Manager : MonoBehaviour
         int j = 0;
         for (int i = 0; i < 5; i++)
         {
-            if (i == answerNumber) choices[i].text = answer;
+            if (i.Equals(answerNumber)) choices[i].text = answer;
             else choices[i].text = examples[j++]; //j<4
         }
     }
 
     public void chooseAnswer(int number) //Trigger choice one
     {
-        QuestManager.instance.startLoading(number == answerNumber);
+        QuestManager.instance.startLoading(number.Equals(answerNumber));
 
         //컴파일 애니메이션
-        if (number == answerNumber) //정답 맞춘 경우
+        if (number.Equals(answerNumber)) //정답 맞춘 경우
         {
             Character.gameObject.SetActive(true);
             QuestBase.Info info = QuestInfo.Dequeue();

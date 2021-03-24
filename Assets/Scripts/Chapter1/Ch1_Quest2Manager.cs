@@ -74,7 +74,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
 
     public void DequeueQuest()
     {
-        if (QuestInfo.Count == dialogtotalcnt - 4)
+        if (QuestInfo.Count.Equals(dialogtotalcnt - 4))
         {
             if (!flag) //문제 틀린 직후
             {
@@ -93,7 +93,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
                     Portrait.sprite = portraitImages[1];
                     Input_1.SetActive(false);
                 }
-                else if ((InputF_1.text.ToString()).Equals("") || (InputF_1.text.ToString()) == null)
+                else if ((InputF_1.text.ToString()).Equals("") || (InputF_1.text.ToString()).Equals(null))
                 {
                     return; //미입력시 아무 반응 안함
                 }
@@ -108,7 +108,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
             }
             InputF_1.text = null;
         }
-        else if (QuestInfo.Count == dialogtotalcnt - 7)
+        else if (QuestInfo.Count.Equals(dialogtotalcnt - 7))
         {
             if (!flag) //문제 틀린 직후
             {
@@ -120,7 +120,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
             else //문제 답 입력
             {
 
-                if ((InputF_2.text.ToString()).Trim().Equals("") || (InputF_2.text.ToString()) == null) //
+                if ((InputF_2.text.ToString()).Trim().Equals("") || (InputF_2.text.ToString()).Equals(null)) 
                 {
                     return; //미입력시 아무 반응 안함
                 }
@@ -149,7 +149,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
                 }
             }
         }
-        else if (QuestInfo.Count == 0) //Quest 다이얼로그 끝나면
+        else if (QuestInfo.Count.Equals(0)) //Quest 다이얼로그 끝나면
         {
             SuccessPortrait.gameObject.SetActive(false);
             Portrait.gameObject.SetActive(false);
@@ -160,13 +160,13 @@ public class Ch1_Quest2Manager : MonoBehaviour
         else
         {
             QuestBase.Info info = QuestInfo.Dequeue();
-            if (QuestInfo.Count == dialogtotalcnt - 4) //input 1 최초 로드
+            if (QuestInfo.Count.Equals(dialogtotalcnt - 4)) //input 1 최초 로드
             {
                 Input_1.SetActive(true);
                 InputF_1.text = "";
                 Qinfo_1 = info;
             }
-            else if (QuestInfo.Count == dialogtotalcnt - 7) //input 2 최초 로드 
+            else if (QuestInfo.Count.Equals(dialogtotalcnt - 7)) //input 2 최초 로드 
             {
                 Input_2.SetActive(true);
                 InputF_2.text = "";
@@ -186,7 +186,7 @@ public class Ch1_Quest2Manager : MonoBehaviour
 
         string[] raw_list = Qinfo_2_CorrectA.Split('\x020');
         //필수 단어들이 들어가 있는지
-        if (answer.IndexOf(raw_list[0]) == -1 || answer.IndexOf(raw_list[1]) == -1 || answer.IndexOf(raw_list[2]) == -1)
+        if (answer.IndexOf(raw_list[0]).Equals(-1) || answer.IndexOf(raw_list[1]).Equals(-1) || answer.IndexOf(raw_list[2]).Equals(-1))
         {
             return false;
         }
