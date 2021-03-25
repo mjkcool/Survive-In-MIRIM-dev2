@@ -1,5 +1,5 @@
 # Unity game project 'Survive in Mirim'⚔
-### Find out errors of MIRIM highschool!
+### Find out errors in MIRIM highschool!
 * latest version: 0.1.7
 * On developing now
 
