@@ -15,7 +15,7 @@ public class MovingScene2 : MonoBehaviour
     
     public void move()
     {
-        SceneManager.LoadScene(NextSceneNumber);
+        LoadingSceneManager.LoadScene(NextSceneNumber);
     }
     
     public int nowQuestNum;

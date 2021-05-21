@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class DialogueManager : MonoBehaviour
         {
             instance = this;
         }
-        
+
     }
 
     public static string UserName = "User";
@@ -33,13 +34,14 @@ public class DialogueManager : MonoBehaviour
     public AudioClip messengerSound;
 
     public Sprite[] bg = new Sprite[12];
-    public Sprite[] portraits;
 
     public GameObject DialogueBox;
     public TextMeshProUGUI dialogueName;
     public TextMeshProUGUI dialogueText;
     public Image dialoguePortrait;
     public Image backgroundPortrait;
+    public Sprite emptySprite;
+
     public float delay = 2f;
     public QuestStarter questStarter;
     public DialogueButton DialogBtn;
@@ -179,47 +181,22 @@ public class DialogueManager : MonoBehaviour
 
                     dialogueName.text = name;
 
-                    Sprite thisPortrait = null;
                     dialoguePortrait.gameObject.SetActive(true);
-                    switch (thisId) //포트레잇
+
+                    
+                    if (info.portrait == null)
                     {
-                        case 1: case 2: thisPortrait = portraits[0]; break; //F1_1
-                        case 3: thisPortrait = portraits[1]; break; //F1_2
-                        case 5: thisPortrait = portraits[18]; break; //T1_1
-                        case 7: thisPortrait = portraits[15]; break; //mathPaper
-                        case 8: case 9: case 16: thisPortrait = portraits[19]; break; //T1_2
-                        case 13: thisPortrait = portraits[14]; break; //koreanPaper
-                        case 20: case 25: case 39: case 41: case 87: thisPortrait = portraits[3]; break; //F2_1
-                        case 23: case 28: thisPortrait = portraits[7]; break; //F3_1
-                        case 26: thisPortrait = portraits[8]; break; //F3_2
-                        case 31: thisPortrait = portraits[6]; break; //F2_4
-                        case 33: thisPortrait = portraits[4]; break; //F2_2
-                        case 35: thisPortrait = portraits[5]; break; //F2_3
-                        case 45: case 46: case 48: case 50: case 51: case 97: thisPortrait = portraits[2]; break; //F1_3
-                        case 47: case 59: case 60: thisPortrait = portraits[24]; break;
-                        case 52: case 53: case 55: case 69: thisPortrait = portraits[25]; break;
-                        case 54: thisPortrait = portraits[17]; break;
-                        case 74: case 75: case 78: thisPortrait = portraits[23]; break;
-                        case 76: case 77: thisPortrait = portraits[22]; break;
-                        case 89: case 90: case 91: case 92: case 94: thisPortrait = portraits[20]; break;
-                        case 99: thisPortrait = portraits[12]; break;
-                        case 109: case 110: case 111: case 112: thisPortrait = portraits[9]; break;
-                        case 113: case 114: thisPortrait = portraits[10]; break;
-                        case 115: thisPortrait = portraits[11]; break;
-                        default:
-                            dialoguePortrait.gameObject.SetActive(false); break;
+                        dialoguePortrait.sprite = emptySprite;
                     }
-                    if (thisId >= 100 && thisId <= 108)
+                    else
                     {
-                        dialoguePortrait.gameObject.SetActive(true);
-                        thisPortrait = portraits[21];
+                        dialoguePortrait.sprite = info.portrait;
                     }
 
-                    dialoguePortrait.sprite = thisPortrait;
 
 
                     Sprite thisBg = backgroundPortrait.sprite; //기존 이미지
-                    switch (thisId) //배경사진
+                    switch (thisId)
                     {
                         case 1: case 43: case 85:
                             thisBg = bg[0]; break;

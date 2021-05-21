@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using System.Linq;
 
 public class DialogueManager2 : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class DialogueManager2 : MonoBehaviour
     public AudioClip jumpropeSound;
     public AudioClip duguduguSound;
 
-    public Sprite bg001; //배경이미지
+   public Sprite[] bg = new Sprite[13]; //배경이미지
 
     public GameObject DialogueBox;
     public TextMeshProUGUI dialogueName;
@@ -42,6 +43,8 @@ public class DialogueManager2 : MonoBehaviour
 
     public int department;
 
+    private string[] major = { "소프트", "웹솔", "디자인"};
+    private string[] sub = { "", "빛이 나는 웹솔♬", "" };
     private string[] F1 = { "시언희", "노재현", "유지영" };
     private string[] F2 = { "강수영", "차우림", "김라면" };
     private string[] F3 = { "김수형", "오자민", "곽노움" };
@@ -55,9 +58,15 @@ public class DialogueManager2 : MonoBehaviour
     private string[] text4 = { "와 감동실화ㅠㅠ 수고많았어 최강 인미과~!", "연습 죽어라 한 보상이 여기있네ㅋㅋ", "즐기며 뛴 보람이 있다!" };
     private string[] text5 = { "편의점이 웬말이냐, 미분 고!", "끝나고 미분으로 달려! 오늘은 먹고 죽자!!", "단체로 회식 가자~~~!!!" };
 
+    public Sprite[] F1_1, F1_2, F1_3, F1_4, F1_5;
+    public Sprite[] F2_1, F2_2, F2_3;
+    public Sprite[] F3_1, F3_2, F4_1, F4_2;
+    public Sprite[] T1;
+    public Sprite empty;
+
     public bool isCurrentlyTyping;
     private string completeText, name;
-    public int thisId2;
+    public int thisId;
     private bool isDelayturn;
     public GameObject MedalAnimation;
     public GameObject endingAnimation;
@@ -88,7 +97,7 @@ public class DialogueManager2 : MonoBehaviour
         DequeueDialogue();
     }
 
-    //세이브된 thisId2데이터가 퀘스트부분일때
+    //세이브된 thisId데이터가 퀘스트부분일때
     public void QuestDialogue(DialogueBase db)
     {
         dialogueInfo = new Queue<DialogueBase.Info>();
@@ -96,15 +105,15 @@ public class DialogueManager2 : MonoBehaviour
         {
             dialogueInfo.Enqueue(info);
         }
-        for (int i = 0; i < thisId2; i++)
+        for (int i = 0; i < thisId; i++)
         {
-            dialogueInfo.Dequeue(); //thisId2보다 작은 수의 thisId2 삭제
+            dialogueInfo.Dequeue(); //thisId보다 작은 수의 thisId 삭제
         }
         DequeueDialogue();
         DialogueBox.SetActive(false);
     }
 
-    //세이브된 thisId2데이터 로드
+    //세이브된 thisId데이터 로드
     public void LoadDialogue(DialogueBase db)
     {
         dialogueInfo = new Queue<DialogueBase.Info>();
@@ -113,9 +122,9 @@ public class DialogueManager2 : MonoBehaviour
         {
             dialogueInfo.Enqueue(info);
         }
-        for (int i = 0; i < thisId2; i++)
+        for (int i = 0; i < thisId; i++)
         {
-            dialogueInfo.Dequeue(); //thisId2보다 작은 수의 thisId2 삭제
+            dialogueInfo.Dequeue(); //thisId보다 작은 수의 thisId 삭제
         }
         DequeueDialogue();
     }
@@ -141,35 +150,35 @@ public class DialogueManager2 : MonoBehaviour
 
                 lock (dialogueInfo)
                 {
-                    if ((thisId2.Equals(13)) && (!Qcompleted[0])) //퀘스트 1 시작
+                    if ((thisId.Equals(13)) && (!Qcompleted[0])) //퀘스트 1 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 1;
                         questStarter.questnum = 1;
                         questStarter.start();
                     }
-                    else if ((thisId2.Equals(29)) && (!Qcompleted[1])) //퀘스트 2 시작
+                    else if ((thisId.Equals(29)) && (!Qcompleted[1])) //퀘스트 2 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 2;
                         questStarter.questnum = 2;
                         questStarter.start();
                     }
-                    else if ((thisId2.Equals(46)) && (!Qcompleted[2])) //퀘스트 3 시작
+                    else if ((thisId.Equals(45)) && (!Qcompleted[2])) //퀘스트 3 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 3;
                         questStarter.questnum = 3;
                         questStarter.start();
                     }
-                    else if ((thisId2.Equals(87)) && (!Qcompleted[3])) //퀘스트 4 시작
+                    else if ((thisId.Equals(87)) && (!Qcompleted[3])) //퀘스트 4 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 4;
                         questStarter.questnum = 4;
                         questStarter.start();
                     }
-                    else if ((thisId2.Equals(103)) && (!Qcompleted[4])) //퀘스트 5 시작
+                    else if ((thisId.Equals(102)) && (!Qcompleted[4])) //퀘스트 5 시작
                     {
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 5;
@@ -180,7 +189,7 @@ public class DialogueManager2 : MonoBehaviour
                     dialogueText.text = "";
 
                     DialogueBase.Info info = dialogueInfo.Dequeue();
-                    thisId2 = info.id;
+                    thisId = info.id;
                     completeText = info.myText;
                     name = info.myName;
                     completeText = completeText.Replace("[User]", UserName);
@@ -204,103 +213,156 @@ public class DialogueManager2 : MonoBehaviour
                     completeText = completeText.Replace("[text3]", text3[department]);
                     completeText = completeText.Replace("[text4]", text4[department]);
                     completeText = completeText.Replace("[text5]", text5[department]);
+                    completeText = completeText.Replace("[major]", major[department]);
+                    completeText = completeText.Replace("[sub]", sub[department]);
 
                     dialogueName.text = name;
 
+                    Sprite p = empty;
+                    int other = 0;
+                    if (department >= 3) other = department - 1;
+                    else other = department + 1;
+
+                    //Array.Exists(language, element => element == "Ruby")
                     //인물 portrait
+                    if ((new int[] { 0, 1, 106 }).Contains(thisId)) p = F1_2[department];
+                    else if ((new int[] { 2, 3, 4, 16, 79 }).Contains(thisId)) p = F1_4[department];
+                    else if ((new int[] { 21, 23, 92 }).Contains(thisId)) p = F4_1[department];
+                    else if ((new int[] { 35, 48, 48, 49, 50, 38, 43, 45, 99 }).Contains(thisId)) p = F3_1[department];
+                    //else if ((new int[] { }))
+                    else if ((new int[] { 58, 80, 85, 87 }).Contains(thisId)) p = F2_2[department];
+                    else if ((new int[] { 62, 66, 75 }).Contains(thisId)) p = F1_1[department];
+                    else if ((new int[] { 63, 77, 91, 114 }).Contains(thisId)) p = F2_1[department];
+                    else if ((new int[] { 7, 9 }).Contains(thisId)) p = T1[department];
+                    else if ((new int[] { 94, 109, 113 }).Contains(thisId)) p = F4_2[department];
+                    else if ((new int[] { 99, 115, 117 }).Contains(thisId)) p = F1_3[department];
+                    else if ((new int[] { 107 }).Contains(thisId)) p = F3_2[department];
+                    else if ((new int[] { 110 }).Contains(thisId)) p = F2_3[department];
+                    else p = info.portrait;
 
+                    dialoguePortrait.sprite = p;
 
-                    /* 배경 사진
-                    Sprite thisBg = bg001;
-                    if (thisId2 > 1) thisBg = backgroundPortrait.sprite; //기존 이미지
-                    switch (thisId2) //변경
+                    // 배경 사진
+                    Sprite thisBg = backgroundPortrait.sprite;
+                    switch (thisId) //변경
                     {
+                        case 0:
+                            thisBg = bg[0]; break;
+                        case 10:
+                            thisBg = bg[1]; break;
+                        case 15:
+                            thisBg = bg[2]; break;
+                        case 17: 
+                            thisBg = bg[3]; break;
+                        case 32:
+                        case 46:
+                            thisBg = bg[4]; break;
+                        case 36:
+                            thisBg = bg[5]; break;
+                        case 51:
+                            thisBg = bg[10]; break;
+                        case 56:
+                            thisBg = bg[6]; break;
+                        case 61:
+                            thisBg = bg[7]; break;
+                        case 68:
+                        case 89:
+                            thisBg = bg[12]; break;
+                        case 74:
+                            thisBg = bg[8]; break;
+                        case 92: 
+                            thisBg = bg[11]; break;
+                        case 97: 
+                            thisBg = bg[9]; break;
+                        case 105: 
+                            thisBg = bg[10]; break;
+                        default: break;
                     }
                     backgroundPortrait.sprite = thisBg;
-                    */
+                    
 
 
                     //오디오 설정
-                    if (thisId2.Equals(1))
+                    if (thisId.Equals(1))
                     {
                         GetComponent<AudioSource>().clip = outcrowdSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 13) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 13) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(56))
+                    if (thisId.Equals(56))
                     {
                         GetComponent<AudioSource>().clip = wheeSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 56) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 56) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(59))
+                    if (thisId.Equals(59))
                     {
                         GetComponent<AudioSource>().clip = jumpropeSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 59) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 59) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(62))
+                    if (thisId.Equals(62))
                     {
                         GetComponent<AudioSource>().clip = duguduguSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 62) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 62) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(70))
+                    if (thisId.Equals(70))
                     {
                         GetComponent<AudioSource>().clip = crowdshoutSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 73) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 73) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(74))
+                    if (thisId.Equals(74))
                     {
                         GetComponent<AudioSource>().clip = wheeSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 74) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 74) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(75))
+                    if (thisId.Equals(75))
                     {
                         GetComponent<AudioSource>().clip = crowdshoutSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 77) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 77) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(80))
+                    if (thisId.Equals(80))
                     {
                         GetComponent<AudioSource>().clip = twothreeSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 80) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 80) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(102))
+                    if (thisId.Equals(102))
                     {
                         GetComponent<AudioSource>().clip = duguduguSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 102) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 102) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(104))
+                    if (thisId.Equals(104))
                     {
                         GetComponent<AudioSource>().clip = duguduguSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 104) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 104) { GetComponent<AudioSource>().Stop(); }
 
-                    if (thisId2.Equals(106))
+                    if (thisId.Equals(106))
                     {
                         GetComponent<AudioSource>().clip = crowdshoutSound;
                         GetComponent<AudioSource>().Play();
                     }
-                    else if (thisId2 > 111) { GetComponent<AudioSource>().Stop(); }
+                    else if (thisId > 111) { GetComponent<AudioSource>().Stop(); }
 
                     StartCoroutine(TypeText(completeText));
 
-                    switch (thisId2)
+                    switch (thisId)
                     {
                         case 10:
                         case 16:

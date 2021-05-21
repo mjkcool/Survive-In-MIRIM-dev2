@@ -6563,38 +6563,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bfb138457f68ec14888e388c3c7c39f6, type: 3}
   - {fileID: 21300000, guid: d592573836b2e8948b68c4fab6547ad3, type: 3}
   - {fileID: 21300000, guid: 931ad29584140ed4b9f69f7db98e8139, type: 3}
-  portraits:
-  - {fileID: 21300000, guid: 33324762798cd3b4e80413394c726888, type: 3}
-  - {fileID: 21300000, guid: ab6b5327bef2acb47abfc141d93e8fa3, type: 3}
-  - {fileID: 21300000, guid: 79260cff9500ec5459e5a9e3d0c7823a, type: 3}
-  - {fileID: 21300000, guid: 9f5cc0787e1b4384aa0f4c812b65c581, type: 3}
-  - {fileID: 21300000, guid: 50d0a9923917b0948b84d27b2623400e, type: 3}
-  - {fileID: 21300000, guid: c9838fa8d18d0e14195ec72c9489ced6, type: 3}
-  - {fileID: 21300000, guid: a44faf17aab16464c854f3a06580a4f7, type: 3}
-  - {fileID: 21300000, guid: f49c85bd85cc1b64cbcd1bc8046b0982, type: 3}
-  - {fileID: 21300000, guid: 4c5e064b53841934589a3811c846bdb3, type: 3}
-  - {fileID: 21300000, guid: f2b5bb86edaf1a14888ad6d61791335e, type: 3}
-  - {fileID: 21300000, guid: 777795d04ba028c418e8b97e37d77ea8, type: 3}
-  - {fileID: 21300000, guid: 2ea399f39ced90444af814c95d88fb8d, type: 3}
-  - {fileID: 21300000, guid: e45101a7db359f343919a900a38c392c, type: 3}
-  - {fileID: 21300000, guid: 2a53c04651c2dd6459e49b7a4b840bb7, type: 3}
-  - {fileID: 21300000, guid: d34d885b0b39da242a5560d109c1daad, type: 3}
-  - {fileID: 21300000, guid: 9694efc6cdc46f04e9bfc51a946f416b, type: 3}
-  - {fileID: 21300000, guid: a0281a89730d78841a05a3fbb6831ae4, type: 3}
-  - {fileID: 21300000, guid: 70b710d5ced594244bdcc594082c7d80, type: 3}
-  - {fileID: 21300000, guid: 6c38f2a055abe684d9ef9c1a0dafa8fa, type: 3}
-  - {fileID: 21300000, guid: 8f227277c69ee95448776a41b5682f56, type: 3}
-  - {fileID: 21300000, guid: 26708e61a2a248a45b01ba2175a9f660, type: 3}
-  - {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
-  - {fileID: 21300000, guid: 4dda06b6bd63dbb489daac9b1516497c, type: 3}
-  - {fileID: 21300000, guid: 2f14ce363e6ad2d49b66393b34d15b5a, type: 3}
-  - {fileID: 21300000, guid: 3c21dec44717b09419d04c512f6e7b23, type: 3}
-  - {fileID: 21300000, guid: 2ca697424d5f365499d8e6019d99f1af, type: 3}
   DialogueBox: {fileID: 713540902}
   dialogueName: {fileID: 1937568467}
   dialogueText: {fileID: 1374111550}
   dialoguePortrait: {fileID: 828302626}
   backgroundPortrait: {fileID: 1130968851}
+  emptySprite: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
   delay: 0.07
   questStarter: {fileID: 5365708}
   DialogBtn: {fileID: 331953019}

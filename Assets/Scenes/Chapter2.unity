@@ -1371,7 +1371,20 @@ MonoBehaviour:
   twothreeSound: {fileID: 8300000, guid: cbc97b9d270e8d143af6cdcc224de666, type: 3}
   jumpropeSound: {fileID: 8300000, guid: 84bc54ea51cd0f5459aa10a73ed8e4a1, type: 3}
   duguduguSound: {fileID: 8300000, guid: 8753bcf08942f2c4bb1853f564c1a9d5, type: 3}
-  bg001: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+  bg:
+  - {fileID: 21300000, guid: b08c686583caac74cb0ce8022e0a0317, type: 3}
+  - {fileID: 21300000, guid: fd7eb83b3c0c5d243a1664627f30a1fd, type: 3}
+  - {fileID: 21300000, guid: 2a2bd12a2f8cb124cb8acbb4b6ddea66, type: 3}
+  - {fileID: 21300000, guid: 02c788f0a9b7a4d438ced1e0b714f634, type: 3}
+  - {fileID: 21300000, guid: d552087cfa1094c4491b10f864260369, type: 3}
+  - {fileID: 21300000, guid: 406288019bf93b14db2f691f1df157f1, type: 3}
+  - {fileID: 21300000, guid: 53aad0228d330fc4197828a25f9abbeb, type: 3}
+  - {fileID: 21300000, guid: 67acbb9a3716e9a498bc7fb56c8d0cd5, type: 3}
+  - {fileID: 21300000, guid: 407260f525e327e4a8437fff05666b14, type: 3}
+  - {fileID: 21300000, guid: 438c45018344be1429df4f10077c5704, type: 3}
+  - {fileID: 21300000, guid: 1c6bb747f2c19424a891f171930e2348, type: 3}
+  - {fileID: 21300000, guid: 492afbb268f071f4abe8df92b8c1793d, type: 3}
+  - {fileID: 21300000, guid: 6a935d7d4380697498b728828e2e7e18, type: 3}
   DialogueBox: {fileID: 659429563}
   dialogueName: {fileID: 1567119942}
   dialogueText: {fileID: 547642167}
@@ -1381,8 +1394,61 @@ MonoBehaviour:
   questStarter: {fileID: 753544319}
   DialogBtn: {fileID: 1016395954}
   department: 0
+  F1_1:
+  - {fileID: 21300000, guid: 3ceaa7914c42d164687765ea34c99343, type: 3}
+  - {fileID: 21300000, guid: 2308735d8516717428ca99579166f23a, type: 3}
+  - {fileID: 21300000, guid: 73518b0cba90c234e908f314f45265bf, type: 3}
+  F1_2:
+  - {fileID: 21300000, guid: 917fe586bd396e841bad26c7d953b4d9, type: 3}
+  - {fileID: 21300000, guid: 4dba4101231e13049a6ccd7bd57bfc98, type: 3}
+  - {fileID: 21300000, guid: 56de3c374c4576f40b5bdb071884dc3c, type: 3}
+  F1_3:
+  - {fileID: 21300000, guid: 36eef8ca6f11059489c7420e3d78f031, type: 3}
+  - {fileID: 21300000, guid: 8bcd7087fdb0cc348a5e45068338c2c4, type: 3}
+  - {fileID: 21300000, guid: 99679cd950dfbc44790fd2d0467b4a52, type: 3}
+  F1_4:
+  - {fileID: 21300000, guid: 15817c914726d144c843f6294b459b9c, type: 3}
+  - {fileID: 21300000, guid: d56780b52f19f9443bf6c33744666b9b, type: 3}
+  - {fileID: 21300000, guid: fd077a41121e75f469260c24e45f30e0, type: 3}
+  F1_5:
+  - {fileID: 21300000, guid: 7787b3f5a99cc6c4fa3923f8a8e41f82, type: 3}
+  - {fileID: 21300000, guid: 4dba4101231e13049a6ccd7bd57bfc98, type: 3}
+  - {fileID: 21300000, guid: 47d3803b2d6e03043b12d69f38c71958, type: 3}
+  F2_1:
+  - {fileID: 21300000, guid: 221be8eec1844fd45a4b38e0015cea03, type: 3}
+  - {fileID: 21300000, guid: 69d1ae24d7ef31242b693bf1ee548a4f, type: 3}
+  - {fileID: 21300000, guid: 30611ebca38f0f149bda98b138fc8869, type: 3}
+  F2_2:
+  - {fileID: 21300000, guid: 4ee9214178b777b4cba0491e49c0bfb2, type: 3}
+  - {fileID: 21300000, guid: 0fafc497bc0d7284b8a1db7542e12f40, type: 3}
+  - {fileID: 21300000, guid: 082fb0a5dc591b947874c3055019777a, type: 3}
+  F2_3:
+  - {fileID: 21300000, guid: 221be8eec1844fd45a4b38e0015cea03, type: 3}
+  - {fileID: 21300000, guid: f59457f8b00d6c243b43737bbfb2bdd7, type: 3}
+  - {fileID: 21300000, guid: 30611ebca38f0f149bda98b138fc8869, type: 3}
+  F3_1:
+  - {fileID: 21300000, guid: 1678e0c636c9fd746886f01cbd076bf2, type: 3}
+  - {fileID: 21300000, guid: f4df9683b0258bb4f831277b69601fd8, type: 3}
+  - {fileID: 21300000, guid: 8d126adee7069db449d327082fba807e, type: 3}
+  F3_2:
+  - {fileID: 21300000, guid: 546106525c7a6014ab1fe094913b5d3f, type: 3}
+  - {fileID: 21300000, guid: 126fab39208793c41b81278b0fc62fbb, type: 3}
+  - {fileID: 21300000, guid: 19d56645b54c00945ade630b164e5877, type: 3}
+  F4_1:
+  - {fileID: 21300000, guid: f63f5d54798836d40b33efc4b968d27b, type: 3}
+  - {fileID: 21300000, guid: 60b913109200ea148ba01a3a476088bc, type: 3}
+  - {fileID: 21300000, guid: 7082b3069699bec4cb8da92e38d4a9a7, type: 3}
+  F4_2:
+  - {fileID: 21300000, guid: 912592859fab77045affe1b74bcbd2da, type: 3}
+  - {fileID: 21300000, guid: 66eb01e7b034b8d47b83408e2fcc2671, type: 3}
+  - {fileID: 21300000, guid: 0f4b7db66a93a1d419e737300266191f, type: 3}
+  T1:
+  - {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
+  - {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
+  - {fileID: 21300000, guid: 23e7cc5011c707e4abb611e488810670, type: 3}
+  empty: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
   isCurrentlyTyping: 0
-  thisId2: 0
+  thisId: 0
   MedalAnimation: {fileID: 737315974}
   endingAnimation: {fileID: 1522307619}
   MedalGround: {fileID: 1910813556}
@@ -2432,8 +2498,8 @@ GameObject:
   - component: {fileID: 331761171}
   - component: {fileID: 331761174}
   - component: {fileID: 331761173}
-  - component: {fileID: 331761175}
   - component: {fileID: 331761172}
+  - component: {fileID: 331761175}
   m_Layer: 5
   m_Name: choice1
   m_TagString: Untagged
@@ -2507,13 +2573,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 331761175}
-        m_TargetAssemblyTypeName: DialogueButton2, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChoiceButton, Assembly-CSharp
         m_MethodName: TriggerChoosing
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2565,10 +2631,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 331761170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c920d1f4653109f4a9040712ef61cfb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ee012e823339f49828c713b779edf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questnum: 0
+  questStarter: {fileID: 753544319}
 --- !u!1 &342917058
 GameObject:
   m_ObjectHideFlags: 0
@@ -4127,7 +4193,11 @@ MonoBehaviour:
   splashImage: {fileID: 1592531273}
   IndexImage: {fileID: 1592531275}
   idxs:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 47a341918ff058f4cb72ba95243a51b0, type: 3}
+  - {fileID: 21300000, guid: 534353557213bf14ab6b116495c329a1, type: 3}
+  - {fileID: 21300000, guid: 6fa82829bdefca748a169cf73e524a01, type: 3}
+  - {fileID: 21300000, guid: 67b65987206683346a157564e73f9715, type: 3}
+  - {fileID: 21300000, guid: e11c1c0296c4410418e54daa74e9addd, type: 3}
   QuestObject: {fileID: 1530766593}
   questnum: 0
   quest_effectSound: {fileID: 8300000, guid: 3a71e01b5bd815a4397078f9bfbe2624, type: 3}
@@ -4636,13 +4706,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 824733419}
-        m_TargetAssemblyTypeName: DialogueButton2, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChoiceButton, Assembly-CSharp
         m_MethodName: TriggerChoosing
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4694,10 +4764,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 824733414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c920d1f4653109f4a9040712ef61cfb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ee012e823339f49828c713b779edf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questnum: 0
+  questStarter: {fileID: 753544319}
 --- !u!1 &858278471
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,13 +6614,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1090872313}
-        m_TargetAssemblyTypeName: DialogueButton2, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChoiceButton, Assembly-CSharp
         m_MethodName: TriggerChoosing
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6602,10 +6672,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1090872308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c920d1f4653109f4a9040712ef61cfb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ee012e823339f49828c713b779edf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questnum: 0
+  questStarter: {fileID: 753544319}
 --- !u!1 &1092984467
 GameObject:
   m_ObjectHideFlags: 0
@@ -6826,13 +6896,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1120223803}
-        m_TargetAssemblyTypeName: DialogueButton2, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChoiceButton, Assembly-CSharp
         m_MethodName: TriggerChoosing
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6884,10 +6954,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1120223798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c920d1f4653109f4a9040712ef61cfb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ee012e823339f49828c713b779edf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questnum: 0
+  questStarter: {fileID: 753544319}
 --- !u!1 &1121778513
 GameObject:
   m_ObjectHideFlags: 0
@@ -8492,7 +8562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aaa52f82c9d9b5540b0128238db2ce72, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9391,7 +9461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0d2eb28e79431d458302940270f3258, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4870a7d60877364cbb318c290f7d88a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9600,7 +9670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3626f7a32cde95946bfc578894bfb55d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7720b6f54a518f0489938e2918075b99, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9773,13 +9843,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1848189993}
-        m_TargetAssemblyTypeName: DialogueButton2, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChoiceButton, Assembly-CSharp
         m_MethodName: TriggerChoosing
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9831,10 +9901,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1848189988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c920d1f4653109f4a9040712ef61cfb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ee012e823339f49828c713b779edf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questnum: 0
+  questStarter: {fileID: 753544319}
 --- !u!1 &1851566954
 GameObject:
   m_ObjectHideFlags: 0
@@ -9998,7 +10068,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d436e8eb3e866854db6adba8f3f63633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bg001: {fileID: 21300000, guid: 696b810e5663e054a83b6962e5fb7a7a, type: 3}
+  bg:
+  - {fileID: 21300000, guid: 03a4c159b317859468f33e87163c3978, type: 3}
+  - {fileID: 21300000, guid: 9af8e83d2c6211641ab348af26418b48, type: 3}
+  - {fileID: 21300000, guid: 1c6bb747f2c19424a891f171930e2348, type: 3}
   DialogueStarter: {fileID: 1423300009}
   DialogueBox: {fileID: 1923019254}
   dialogueName: {fileID: 923398840}

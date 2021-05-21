@@ -42,7 +42,7 @@ public class FadeOutScript : MonoBehaviour
             yield return null;
         }
         yield return null;
-        yield return new WaitForSeconds(1.6f);
-        SceneManager.LoadScene(NextSceneNumber);
+        yield return new WaitForSeconds(0.5f);
+        LoadingSceneManager.LoadScene(NextSceneNumber);
     }
 }

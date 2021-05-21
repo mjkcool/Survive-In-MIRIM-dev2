@@ -57,7 +57,8 @@ public class Ch2_Quest3Manager : MonoBehaviour
             QuestInfo.Enqueue(info);
         }
         dialogtotalcnt = QuestInfo.Count;
-        answerNumber = Random.Range(0, 5);
+        answerNumber = Random.Range(0, 4); //정답-매번 순서 섞임 / 정답 번호 부여
+        Debug.Log("정답은 "+answerNumber);
 
         setChoiceText();
         DequeueQuest();
@@ -88,6 +89,7 @@ public class Ch2_Quest3Manager : MonoBehaviour
         }
         else if (QuestInfo.Count.Equals(0)) //Quest 다이얼로그 끝나면
         {
+            Character.gameObject.SetActive(false);
             QuestManager.instance.spinStar();
             Invoke("EndofQuest", 4.5f);
             return;
@@ -112,14 +114,17 @@ public class Ch2_Quest3Manager : MonoBehaviour
         }
     }
 
-    public void chooseAnswer(int number) //Trigger choice one
+    public void chooseAnswer(int choiceNumber) //Trigger choice one
     {
-        QuestManager.instance.startLoading(number.Equals(answerNumber));
+        QuestManager.instance.startLoading(choiceNumber.Equals(answerNumber));
 
         //컴파일 애니메이션
-        if (number.Equals(answerNumber)) //정답 맞춘 경우
+        if (choiceNumber.Equals(answerNumber)) //정답 맞춘 경우
         {
+            Portrait.gameObject.SetActive(false);
+            Character.gameObject.SetActive(true);
             QuestBase.Info info = QuestInfo.Dequeue();
+            DialogBox.SetActive(true);
             dialogueName.text = info.myName;
             dialogueText.text = info.myText;
             ChoicesPack.gameObject.SetActive(false);
@@ -136,9 +141,9 @@ public class Ch2_Quest3Manager : MonoBehaviour
     private void EndofQuest()
     {
         Quest.SetActive(false);
-        DialogueManager2.instance.Qcompleted[0] = true;
-        (DialogueManager.instance.DialogueBox).SetActive(true);
-        DialogueManager.instance.DequeueDialogue();
+        DialogueManager2.instance.Qcompleted[2] = true;
+        (DialogueManager2.instance.DialogueBox).SetActive(true);
+        DialogueManager2.instance.DequeueDialogue();
     }
 
 }

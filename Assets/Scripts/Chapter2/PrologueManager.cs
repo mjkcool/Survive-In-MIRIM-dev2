@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using System.Linq;
+
 public class PrologueManager : MonoBehaviour
 {
-
     public static PrologueManager prologueInstance;
     private void Awake()
     {
@@ -23,7 +24,8 @@ public class PrologueManager : MonoBehaviour
     public static string PrologueUserName = "User";
     //public AudioClip doorSound; //사용오디오
 
-    public Sprite bg001; //배경이미지
+    public Sprite[] bg = new Sprite[3]; //배경이미지
+
     public GameObject DialogueStarter;
     public GameObject DialogueBox;
     public TextMeshProUGUI dialogueName;
@@ -175,19 +177,21 @@ public class PrologueManager : MonoBehaviour
                 name = name.Replace("[F3]", F3[department]);
                 completeText = completeText.Replace("[F4]", F4[department]);
                 name = name.Replace("[F4]", F4[department]);
+
+                if(department == 0){
+                    backgroundPortrait.sprite = bg[0];
+                } else if(department == 1){
+                    backgroundPortrait.sprite = bg[1];
+                } else if(department == 2){
+                    backgroundPortrait.sprite = bg[2];
+                }
+                
             
                 dialogueText.text = completeText;
                 dialogueName.text = name;
                 dialoguePortrait.sprite = info.portrait;
-                Sprite thisBg = bg001; //기존배경, 임시값 bg001
-                if(prologueId>1) thisBg = backgroundPortrait.sprite; //기존 이미지
-                switch (prologueId) //변경
-                {
-                    //배경 설정
-                    // case 1: case 43: case 85: thisBg = bg001; break;
-                    // case 4: case 8: case 15: thisBg = bg002; break;
-                }
-                backgroundPortrait.sprite = thisBg;
+
+                
 
                 ////////오디오 설정
                 // if (prologueId.Equals(7))

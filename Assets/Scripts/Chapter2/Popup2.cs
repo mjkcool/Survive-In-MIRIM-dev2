@@ -32,18 +32,18 @@ public class Popup2 : MonoBehaviour
 
     //로드/세이브
     public void GameSave(){
-        PlayerPrefs.SetInt("LoadId2",DialogueManager2.instance.thisId2);
+        PlayerPrefs.SetInt("LoadId2",DialogueManager2.instance.thisId);
         PlayerPrefs.Save(); 
-        Debug.Log("저장된 아이디: " + DialogueManager2.instance.thisId2);
+        Debug.Log("저장된 아이디: " + DialogueManager2.instance.thisId);
     }
 
     public void GameLoad(){
         if (!PlayerPrefs.HasKey("LoadId2")){
             return;
         } 
-        int thisId2 = PlayerPrefs.GetInt("LoadId2");
-        DialogueManager2.instance.thisId2 = thisId2;
-        Debug.Log("현재 위치 아이디: " + DialogueManager2.instance.thisId2);
+        int thisId = PlayerPrefs.GetInt("LoadId2");
+        DialogueManager2.instance.thisId = thisId;
+        Debug.Log("현재 위치 아이디: " + DialogueManager2.instance.thisId);
     }
    
    //데이터 초기화 = 새로시작

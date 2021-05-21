@@ -12,6 +12,7 @@ public class DialogueBase : ScriptableObject
         public string myName;
         [TextArea(3, 8)]
         public string myText;
+        public Sprite portrait;
     }
 
     [Header("Insert Dialogue Information Below")]
