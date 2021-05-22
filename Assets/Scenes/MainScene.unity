@@ -518,7 +518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v0.1.7
+  m_text: v0.1.8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06cf37003b4c03544b1bdecea0c1bcae, type: 2}
   m_sharedMaterial: {fileID: 7123120372600663173, guid: 06cf37003b4c03544b1bdecea0c1bcae, type: 2}
@@ -7136,7 +7136,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2020 \uAD50\uB0B4 \uC18C\uD504\uD2B8\uC6E8\uC5B4 \uCC4C\uB9B0\uC9C0 \uAC1C\uBC1C\uBD80\uBB38
+  m_text: "\uBBF8\uB9BC\uB9C8\uC774\uC2A4\uD130\uACE0\n2020\uD559\uB144\uB3C4 \uC81C
+    4\uD68C \uC18C\uD504\uD2B8\uC6E8\uC5B4 \uCC4C\uB9B0\uC9C0\n\uAC1C\uBC1C\uBD80\uBB38
     1\uC704 \uC218\uC0C1\uC791\n\n\uC81C\uC791\uC5F0\uB3C4\n2020-2021\n\n\uAC1C\uBC1C\uC790\n\uC608\uBC1C\uC774\uC640
     \uAE40\uC679\uC838\ns2019w01 & s2019w05\n\nContact\nkangyeson@naver.com\nmjkimdelta@gmail.com\n\n\nAttributions
     /flaticon\n@Smashicons, @Freepik, @Kiranshastry, @Pixelmeetup"

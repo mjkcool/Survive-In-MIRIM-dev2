@@ -15,33 +15,33 @@ MonoBehaviour:
   prologueInfo:
   - prologueId: 0
     prologueName: '[User]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 7f0245b87204ddb45b1a35053aabf1c0, type: 3}
     prologueText: "\uB108 DD \uACFC\uC81C \uB05D\uB0C8\uC74C?"
   - prologueId: 1
     prologueName: '[F3]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 0ae5cc1166c04904a82c29b7c5326219, type: 3}
     prologueText: "\u3134\u3134\uC544\uC9C1."
   - prologueId: 2
     prologueName: '[F4]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: af9e80a6dd3301346bb32c0daf9cd20f, type: 3}
     prologueText: "\uC120\uBC30\uB4E4\uC774 \uC6B0\uB9AC\uB294 \uC5F0\uC2B5 \uB354\uC774\uC0C1
       \uC548\uD55C\uB300! \uBC18\uD2F0 \uB098\uB791 \uC0AC\uC774\uC988 \uAD50\uD658\uD560\uC0AC\uB78C~"
   - prologueId: 3
     prologueName: '[User]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 7f0245b87204ddb45b1a35053aabf1c0, type: 3}
     prologueText: "\uACFC\uC81C\uAC00 \uC0B0\uB354\uBBF8\uC778\uB370 \uC751\uC6D0\uC5F0\uC2B5
       \uC5B8\uC81C \uD574\uC57C\uB418\uB098?"
   - prologueId: 4
     prologueName: '[F4]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 42a6e84af4d11774d806aa5859563ad3, type: 3}
     prologueText: "\uC774\uAC74 \uAD50\uC0DD\uC324\uAEBC. \uADF8\uAC70 \uC637\uAC78\uC774\uC5D0
       \uAC78\uC5B4 \uB194."
   - prologueId: 5
     prologueName: '[F4]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: af9e80a6dd3301346bb32c0daf9cd20f, type: 3}
     prologueText: "\uC57C \uACFC\uC81C \uC548\uD558\uB294 \uC560\uB4E4 \uBAA8\uC544\uC11C
       \uC751\uC6D0\uC5F0\uC2B5\uD558\uC790!!"
   - prologueId: 6
     prologueName: '[User]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 7f0245b87204ddb45b1a35053aabf1c0, type: 3}
     prologueText: "6\uBC18\uC73C\uB85C \uBAA8\uC5EC!"

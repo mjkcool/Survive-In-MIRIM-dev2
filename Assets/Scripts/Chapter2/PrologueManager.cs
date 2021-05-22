@@ -53,8 +53,6 @@ public class PrologueManager : MonoBehaviour
     private int optionsAmount;
     public TMP_Text choiceText;
     public Queue<PrologueBase.Info> prologueInfo;
-    public PrologueBase prologue;
-    public DialogueBase dialogue;
     private AudioSource audio; 
 
      public void Start()

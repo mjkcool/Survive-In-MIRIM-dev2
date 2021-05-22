@@ -3755,7 +3755,9 @@ MonoBehaviour:
   - {fileID: 1851566956}
   - {fileID: 197145736}
   - {fileID: 1057356882}
-  portraitImage: {fileID: 21300000, guid: 4814696ab449c4740a182adda9632327, type: 3}
+  portraitImages:
+  - {fileID: 21300000, guid: 756e9202ad9fde24bb864aa84f1deeab, type: 3}
+  - {fileID: 21300000, guid: 4814696ab449c4740a182adda9632327, type: 3}
   characterPortrait:
   - {fileID: 21300000, guid: 72c734a42fd2ee44b9e0b5cae02339e2, type: 3}
   - {fileID: 21300000, guid: 68fd24825267a0543ad4e51763749a5e, type: 3}
@@ -8195,7 +8197,9 @@ MonoBehaviour:
   - {fileID: 1851566956}
   - {fileID: 197145736}
   - {fileID: 1057356882}
-  portraitImage: {fileID: 0}
+  portraitImages:
+  - {fileID: 21300000, guid: 4fee2ee20b2c54c459601fba5e27a297, type: 3}
+  - {fileID: 21300000, guid: 8474e73ee1809424cbb8b68821dffe83, type: 3}
   characterPortrait: {fileID: 21300000, guid: 72c734a42fd2ee44b9e0b5cae02339e2, type: 3}
 --- !u!4 &1419482484
 Transform:
@@ -10089,8 +10093,6 @@ MonoBehaviour:
   - {fileID: 1160525211}
   - {fileID: 958786030}
   choiceText: {fileID: 342917060}
-  prologue: {fileID: 11400000, guid: 63ebd577770e43f43b9f9d272854351c, type: 2}
-  dialogue: {fileID: 0}
 --- !u!4 &1895350801
 Transform:
   m_ObjectHideFlags: 0

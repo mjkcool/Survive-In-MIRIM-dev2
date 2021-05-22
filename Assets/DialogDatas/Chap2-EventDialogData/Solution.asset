@@ -15,38 +15,38 @@ MonoBehaviour:
   prologueInfo:
   - prologueId: 0
     prologueName: '[User]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 7f0245b87204ddb45b1a35053aabf1c0, type: 3}
     prologueText: "\uD5C9\xB7\xB7\xB7\uD5C9\xB7\xB7\xB7."
   - prologueId: 1
     prologueName: "\uC120\uBC30"
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 051735836ee0116488cdfee696fe8d73, type: 3}
     prologueText: "\uC598\uB4E4\uC544! \uC870\uAE08 \uB354 \uBE60\uB974\uAC8C \uD574\uC57C
       \uB3FC! \uC77C\uB2E8 7\uC2DC \uBC18\uAE4C\uC9C0 \uC26C\uACE0 \uD558\uC790."
   - prologueId: 2
     prologueName: '[User]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 7f0245b87204ddb45b1a35053aabf1c0, type: 3}
     prologueText: "\uC774\uAC74\xB7\xB7\xB7. \uD0DC\uB989\uC120\uC218\uCD0C\uC5D0
       \uC628 \uAC83 \uAC19\uB2E4."
   - prologueId: 3
     prologueName: '[F3]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: b49d143090c11374d929cc3d2fbf064a, type: 3}
     prologueText: "\uC6B0\uC2B9\uC744 \uC704\uD574\uC120 \uD53C\uB540\uC774 \uD544\uC694\uD55C
       \uAC70 \uC544\uB2C8\uACA0\uB2C8."
   - prologueId: 4
     prologueName: '[F2]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: fbb5e11e36eafc247a7ade494b818fdd, type: 3}
     prologueText: "\uC77C\uC8FC\uC77C\uB3D9\uC548 \uCCB4\uC721\uB300\uD68C \uC5F0\uC2B5\uC774\uB77C\uB2C8.
       \uC6B0\uB9AC \uADF8\uB798\uC11C \uC751\uC6D0\uAC00 \uAC00\uC0AC \uB2E4 \uC37C\uB300?"
   - prologueId: 5
     prologueName: '[F3]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: b49d143090c11374d929cc3d2fbf064a, type: 3}
     prologueText: "\uC751. \uC774\uAC83\uB3C4 \uB0B4\uC77C \uCD94\uAC00\uB85C \uC5F0\uC2B5\uD574\uC57C
-      \uB428."
+      \uB3FC."
   - prologueId: 6
     prologueName: '[User]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
+    portrait: {fileID: 21300000, guid: 7f0245b87204ddb45b1a35053aabf1c0, type: 3}
     prologueText: "\uBE5B\uC774 \uB098\uB294 \uC194\uB8E8\U0001F3B5~"
   - prologueId: 7
-    prologueName: '[F2]'
-    portrait: {fileID: 21300000, guid: 35a2145c4d8920341931903d89bd932f, type: 3}
-    prologueText: "\uC190\uB3D9\uC791 \uC5B8\uC81C\uAE4C\uC9C0 \uD2C0\uB9B4\uAC70\uC57C\u314B\u314B"
+    prologueName: '[F3]'
+    portrait: {fileID: 21300000, guid: 3465a396a561b264baf587a106c8551e, type: 3}
+    prologueText: "\uC190\uB3D9\uC791 \uC5B8\uC81C\uAE4C\uC9C0 \uD2C0\uB9B4\uAC70\uC57C!"

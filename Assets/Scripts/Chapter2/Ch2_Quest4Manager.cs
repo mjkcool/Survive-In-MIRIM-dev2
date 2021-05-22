@@ -14,8 +14,10 @@ public class Ch2_Quest4Manager : MonoBehaviour
     public Image Portrait, Character;
     public GameObject ChoicesPack;
     public TextMeshProUGUI[] choices = new TextMeshProUGUI[5];
-    public Sprite portraitImage;
+    public Sprite[] portraitImages = new Sprite[2];
     public Sprite[] characterPortrait = new Sprite[2];
+
+    public static string UserName = "User";
 
     private int answerNumber, dialogtotalcnt;
     public Queue<QuestBase.Info> QuestInfo;
@@ -42,11 +44,11 @@ public class Ch2_Quest4Manager : MonoBehaviour
 
     public void EnqueueQuest(QuestBase db)
     {
-        Portrait.sprite = portraitImage;
+        Portrait.sprite = portraitImages[0];
         Character.sprite = characterPortrait[1];
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(0, 1243);
+        rt.sizeDelta = new Vector2(0, 1275);
         Quest.SetActive(true);
         Portrait.gameObject.SetActive(false); //초기엔 코드 이미지 NOT show
         QuestInfo.Clear();
@@ -72,6 +74,10 @@ public class Ch2_Quest4Manager : MonoBehaviour
             Portrait.gameObject.SetActive(true);
             Character.gameObject.SetActive(true);
         }
+        else if(QuestInfo.Count.Equals(dialogtotalcnt - 2))
+        {
+            Portrait.sprite = portraitImages[1];
+        }
         else if(QuestInfo.Count.Equals(2)) //선택지
         {
             Character.gameObject.SetActive(false);
@@ -88,8 +94,11 @@ public class Ch2_Quest4Manager : MonoBehaviour
         }
 
         QuestBase.Info info = QuestInfo.Dequeue();
-        dialogueName.text = info.myName;
-        dialogueText.text = info.myText;
+        string username = (string)DialogueManager2.UserName;
+        string name = (info.myName).Replace("[User]", username);
+        dialogueName.text = name;
+        string txt = (info.myText).Replace("[User]", username);
+        dialogueText.text = txt;
     }
 
     private string[] examples = new string[4]

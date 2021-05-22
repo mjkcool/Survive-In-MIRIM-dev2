@@ -47,7 +47,7 @@ public class Ch2_Quest3Manager : MonoBehaviour
         Character.sprite = characterPortrait;
         //이미지 사이즈 지정
         RectTransform rt = (RectTransform)Portrait.transform;
-        rt.sizeDelta = new Vector2(0, 1243);
+        rt.sizeDelta = new Vector2(0, 426);
         Quest.SetActive(true);
         Portrait.gameObject.SetActive(false); //초기엔 코드 이미지 NOT show
         QuestInfo.Clear();
@@ -96,8 +96,11 @@ public class Ch2_Quest3Manager : MonoBehaviour
         }
 
         QuestBase.Info info = QuestInfo.Dequeue();
-        dialogueName.text = info.myName;
-        dialogueText.text = info.myText;
+        string username = (string)DialogueManager2.UserName;
+        string name = (info.myName).Replace("[User]", username);
+        dialogueName.text = name;
+        string txt = (info.myText).Replace("[User]", username);
+        dialogueText.text = txt;
     }
 
     private string[] examples = new string[4]

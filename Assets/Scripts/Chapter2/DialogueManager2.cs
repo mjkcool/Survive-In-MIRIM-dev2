@@ -62,7 +62,7 @@ public class DialogueManager2 : MonoBehaviour
     public Sprite[] F2_1, F2_2, F2_3;
     public Sprite[] F3_1, F3_2, F4_1, F4_2;
     public Sprite[] T1;
-    public Sprite empty;
+    public Sprite emptySprite;
 
     public bool isCurrentlyTyping;
     private string completeText, name;
@@ -218,10 +218,11 @@ public class DialogueManager2 : MonoBehaviour
 
                     dialogueName.text = name;
 
-                    Sprite p = empty;
+                    Sprite p;
                     int other = 0;
                     if (department >= 3) other = department - 1;
                     else other = department + 1;
+
 
                     //Array.Exists(language, element => element == "Ruby")
                     //인물 portrait
@@ -240,6 +241,8 @@ public class DialogueManager2 : MonoBehaviour
                     else if ((new int[] { 110 }).Contains(thisId)) p = F2_3[department];
                     else p = info.portrait;
 
+                    if (p == null) p = emptySprite;
+                    
                     dialoguePortrait.sprite = p;
 
                     // 배경 사진

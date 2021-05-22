@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DepartmentChoice
   m_EditorClassIdentifier: 
   prologueInfo: []
-  choiceText: "\uC5B4\uB290 \uACFC??"
+  choiceText: "\uD50C\uB808\uC774\uD560 \uACFC\uB97C \uC120\uD0DD\uD558\uC138\uC694"
   optionsInfo:
   - choiceBtn: "\uC18C\uD504\uD2B8\uC6E8\uC5B4\uACFC"
     nextDialogue: {fileID: 11400000, guid: aeca3f431d5388c44b9f91e1fa4ec4ee, type: 2}
