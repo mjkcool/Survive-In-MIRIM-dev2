@@ -80,6 +80,14 @@ public class DialogueManager2 : MonoBehaviour
 
     public void Start()
     {
+        if(PlayerPrefs.HasKey("Name"))
+        {
+            UserName = PlayerPrefs.GetString("Name");
+        }
+        else
+        {
+            UserName = "User";
+        }
         audio = GetComponent<AudioSource>();
     }
 

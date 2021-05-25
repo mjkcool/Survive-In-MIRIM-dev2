@@ -22,17 +22,6 @@ public class MovingScene : MonoBehaviour
     {
         PlayerPrefs.SetString("Name", UserName.text);
         PlayerPrefs.Save(); 
-
-        if(PlayerPrefs.HasKey("Name"))
-        {
-            UserName.text = PlayerPrefs.GetString("Name");
-            DialogueManager.UserName = UserName.text; 
-            Debug.Log("유저내임 첨 입력: " +  UserName.text);
-        }
-        else
-        {
-            DialogueManager.UserName = "User";
-        }
     }
 
 }

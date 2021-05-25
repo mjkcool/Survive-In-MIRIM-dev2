@@ -62,6 +62,14 @@ public class DialogueManager : MonoBehaviour
     public void Start()
     {
         audio = GetComponent<AudioSource>();
+        if(PlayerPrefs.HasKey("Name"))
+        {
+            UserName = PlayerPrefs.GetString("Name");
+        }
+        else
+        {
+            UserName = "User";
+        }
     }
 
 
@@ -196,6 +204,43 @@ public class DialogueManager : MonoBehaviour
 
 
                     Sprite thisBg = backgroundPortrait.sprite; //기존 이미지
+                    if (thisId < 4) thisBg = bg[0];
+                    else if (thisId < 6) thisBg = bg[1];
+                    else if (thisId < 8) thisBg = bg[5];
+                    else if (thisId < 10) thisBg = bg[1];
+                    else if (thisId < 11) thisBg = bg[5];
+                    else if (thisId < 12) thisBg = bg[10];
+                    else if (thisId < 15) thisBg = bg[5];
+                    else if (thisId < 16) thisBg = bg[1];
+                    else if (thisId < 19) thisBg = bg[9];
+                    else if (thisId < 22) thisBg = bg[7];
+                    else if (thisId < 26) thisBg = bg[4];
+                    else if (thisId < 27) thisBg = bg[2];
+                    else if (thisId < 28) thisBg = bg[5];
+                    else if (thisId < 29) thisBg = bg[2];
+                    else if (thisId < 43) thisBg = bg[7];
+                    else if (thisId < 47) thisBg = bg[0];
+                    else if (thisId < 49) thisBg = bg[4];
+                    else if (thisId < 52) thisBg = bg[2];
+                    else if (thisId < 56) thisBg = bg[3];
+                    else if (thisId < 58) thisBg = bg[5];
+                    else if (thisId < 61) thisBg = bg[2];
+                    else if (thisId < 66) thisBg = bg[5];
+                    else if (thisId < 68) thisBg = bg[6];
+                    else if (thisId < 70) thisBg = bg[2];
+                    else if (thisId < 71) thisBg = bg[10];
+                    else if (thisId < 73) thisBg = bg[6];
+                    else if (thisId < 80) thisBg = bg[8];
+                    else if (thisId < 83) thisBg = bg[7];
+                    else if (thisId < 85) thisBg = bg[6];
+                    else if (thisId < 87) thisBg = bg[0];
+                    else if (thisId < 96) thisBg = bg[4];
+                    else if (thisId < 98) thisBg = bg[7];
+                    else if (thisId < 100) thisBg = bg[5];
+                    else if (thisId < 109) thisBg = bg[3];
+                    else thisBg = bg[11];
+
+                    /*
                     switch (thisId)
                     {
                         case 1: case 43: case 85:
@@ -204,7 +249,8 @@ public class DialogueManager : MonoBehaviour
                         case 8:
                         case 15:
                             thisBg = bg[1]; break;
-                        case 16: thisBg = bg[9]; break;
+                        case 16: 
+                            thisBg = bg[9]; break;
                         case 6:
                         case 10:
                         case 12:
@@ -242,6 +288,7 @@ public class DialogueManager : MonoBehaviour
                         case 109: thisBg = bg[11]; break;
                         default: break;
                     }
+                    */
                     backgroundPortrait.sprite = thisBg;
 
 

@@ -62,6 +62,14 @@ public class PrologueManager : MonoBehaviour
             DialogueBox.SetActive(false);
             GoEnd();
         } 
+        if(PlayerPrefs.HasKey("PrologueName"))
+        {
+            PrologueUserName = PlayerPrefs.GetString("PrologueName");
+        }
+        else
+        {
+            PrologueUserName = "User";
+        }
         audio = GetComponent<AudioSource>();
     }
 
