@@ -59,10 +59,27 @@ public class DialogueManager2 : MonoBehaviour
     private string[] text5 = { "편의점이 웬말이냐, 미분 고!", "끝나고 미분으로 달려! 오늘은 먹고 죽자!!", "단체로 회식 가자~~~!!!" };
 
     public Sprite[] F1_1, F1_2, F1_3, F1_4, F1_5;
-    public Sprite[] F2_1, F2_2, F2_3;
+    public Sprite[] F2_1, F2_2_1, F2_2, F2_3;
     public Sprite[] F3_1, F3_2, F4_1, F4_2;
     public Sprite[] T1;
     public Sprite emptySprite;
+
+    private int[] pos_F1_1 = new int[] { 62, 66, 75 };
+    private int[] pos_F1_2 = new int[] { 0, 1, 105 };
+    private int[] pos_F1_3 = new int[] { 99, 115, 116 };
+    private int[] pos_F1_4 = new int[] { 2, 3, 4, 16};
+    private int[] pos_F2_1 = new int[] { 63, 76, 89, 113 };
+    private int[] pos_F2_2 = new int[] { 80, 85, 86 };
+    private int[] pos_F2_2_1 = new int[] { 59 };
+    private int[] pos_F2_3 = new int[] { 109 };
+    private int[] pos_F3_1 = new int[] { 34, 47, 48, 49, 98 };
+    private int[] pos_other_team = new int[] { 38, 42, 44 };
+    private int[] pos_F3_2 = new int[] { 106 };
+    private int[] pos_F4_1 = new int[] { 21, 23, 92 };
+    private int[] pos_F4_2 = new int[] { 94, 108, 112 };
+    private int[] pos_T1 = new int[] { 7, 9 };
+
+
 
     public bool isCurrentlyTyping;
     private string completeText, name;
@@ -232,29 +249,55 @@ public class DialogueManager2 : MonoBehaviour
                     else other = department + 1;
 
 
+
                     //Array.Exists(language, element => element == "Ruby")
                     //인물 portrait
-                    if ((new int[] { 0, 1, 106 }).Contains(thisId)) p = F1_2[department];
-                    else if ((new int[] { 2, 3, 4, 16, 79 }).Contains(thisId)) p = F1_4[department];
-                    else if ((new int[] { 21, 23, 92 }).Contains(thisId)) p = F4_1[department];
-                    else if ((new int[] { 35, 48, 48, 49, 50, 38, 43, 45, 99 }).Contains(thisId)) p = F3_1[department];
-                    //else if ((new int[] { }))
-                    else if ((new int[] { 58, 80, 85, 87 }).Contains(thisId)) p = F2_2[department];
-                    else if ((new int[] { 62, 66, 75 }).Contains(thisId)) p = F1_1[department];
-                    else if ((new int[] { 63, 77, 91, 114 }).Contains(thisId)) p = F2_1[department];
-                    else if ((new int[] { 7, 9 }).Contains(thisId)) p = T1[department];
-                    else if ((new int[] { 94, 109, 113 }).Contains(thisId)) p = F4_2[department];
-                    else if ((new int[] { 99, 115, 117 }).Contains(thisId)) p = F1_3[department];
-                    else if ((new int[] { 107 }).Contains(thisId)) p = F3_2[department];
-                    else if ((new int[] { 110 }).Contains(thisId)) p = F2_3[department];
+                    if (pos_F1_1.Contains(thisId)) p = F1_1[department];
+                    else if (pos_F1_2.Contains(thisId)) p = F1_2[department];
+                    else if (pos_F1_3.Contains(thisId)) p = F1_3[department];
+                    else if (pos_F1_4.Contains(thisId)) p = F1_4[department];
+                    else if (pos_F2_1.Contains(thisId)) p = F2_1[department];
+                    else if (pos_F2_2.Contains(thisId)) p = F2_2[department];
+                    else if (pos_F2_2_1.Contains(thisId)) p = F2_2_1[department];
+                    else if (pos_F2_3.Contains(thisId)) p = F2_3[department];
+                    else if (pos_F3_1.Contains(thisId)) p = F3_1[department];
+                    else if (pos_F3_2.Contains(thisId)) p = F3_2[department];
+                    else if (pos_F4_1.Contains(thisId)) p = F4_1[department];
+                    else if (pos_F4_2.Contains(thisId)) p = F4_2[department];
+                    else if (pos_T1.Contains(thisId)) p = T1[department];
+                    else if (pos_other_team.Contains(thisId))
+                    {
+                        int other_ = 0;
+                        if (department == 2) other_ = 1;
+                        else other_ = department + 1;
+                        p = F3_1[other];
+                    }
                     else p = info.portrait;
 
-                    if (p == null) p = emptySprite;
+                    if (p == null) dialoguePortrait.sprite = emptySprite;
+                    else dialoguePortrait.sprite = p;
                     
-                    dialoguePortrait.sprite = p;
 
                     // 배경 사진
                     Sprite thisBg = backgroundPortrait.sprite;
+                    if(thisId < 10) thisBg = bg[0];
+                    else if(thisId < 15) thisBg = bg[1];
+                    else if(thisId < 17) thisBg = bg[2];
+                    else if(thisId < 32) thisBg = bg[3];
+                    else if(thisId < 36) thisBg = bg[4];
+                    else if(thisId < 46) thisBg = bg[5];
+                    else if(thisId < 51) thisBg = bg[4];
+                    else if(thisId < 56) thisBg = bg[10];
+                    else if(thisId < 61) thisBg = bg[6];
+                    else if(thisId < 68) thisBg = bg[7];
+                    else if(thisId < 74) thisBg = bg[12];
+                    else if(thisId < 89) thisBg = bg[8];
+                    else if(thisId < 92) thisBg = bg[12];
+                    else if(thisId < 97) thisBg = bg[11];
+                    else if(thisId < 105) thisBg = bg[9];
+                    else thisBg = bg[10];
+
+                    /*
                     switch (thisId) //변경
                     {
                         case 0:
@@ -289,9 +332,9 @@ public class DialogueManager2 : MonoBehaviour
                             thisBg = bg[10]; break;
                         default: break;
                     }
+                    */
                     backgroundPortrait.sprite = thisBg;
                     
-
 
                     //오디오 설정
                     if (thisId.Equals(1))
@@ -373,6 +416,7 @@ public class DialogueManager2 : MonoBehaviour
 
                     StartCoroutine(TypeText(completeText));
 
+                    //대사 딜레이
                     switch (thisId)
                     {
                         case 10:

@@ -91,9 +91,12 @@ public class Ch2_Quest1Manager : MonoBehaviour
 
         QuestBase.Info info = QuestInfo.Dequeue();
         string username = (string)DialogueManager2.UserName;
-        string name = (info.myName).Replace("[User]", username);
+        Debug.Log(username);
+        string name = info.myName;
+        name = name.Replace("[User]", username);
         dialogueName.text = name;
-        string txt = (info.myText).Replace("[User]", username);
+        string txt = info.myText;
+        txt = txt.Replace("[User]", username);
         dialogueText.text = txt;
 
     }

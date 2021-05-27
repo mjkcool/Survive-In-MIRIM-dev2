@@ -1418,6 +1418,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 221be8eec1844fd45a4b38e0015cea03, type: 3}
   - {fileID: 21300000, guid: 69d1ae24d7ef31242b693bf1ee548a4f, type: 3}
   - {fileID: 21300000, guid: 30611ebca38f0f149bda98b138fc8869, type: 3}
+  F2_2_1:
+  - {fileID: 21300000, guid: 21a95d66e2376ca4d95317f9811e4298, type: 3}
+  - {fileID: 21300000, guid: 0fafc497bc0d7284b8a1db7542e12f40, type: 3}
+  - {fileID: 21300000, guid: 082fb0a5dc591b947874c3055019777a, type: 3}
   F2_2:
   - {fileID: 21300000, guid: 4ee9214178b777b4cba0491e49c0bfb2, type: 3}
   - {fileID: 21300000, guid: 0fafc497bc0d7284b8a1db7542e12f40, type: 3}
@@ -1446,7 +1450,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
   - {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
   - {fileID: 21300000, guid: 23e7cc5011c707e4abb611e488810670, type: 3}
-  empty: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
+  emptySprite: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
   isCurrentlyTyping: 0
   thisId: 0
   MedalAnimation: {fileID: 737315974}
@@ -10073,9 +10077,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bg:
-  - {fileID: 21300000, guid: 03a4c159b317859468f33e87163c3978, type: 3}
-  - {fileID: 21300000, guid: 9af8e83d2c6211641ab348af26418b48, type: 3}
   - {fileID: 21300000, guid: 1c6bb747f2c19424a891f171930e2348, type: 3}
+  - {fileID: 21300000, guid: aaa52f82c9d9b5540b0128238db2ce72, type: 3}
+  - {fileID: 21300000, guid: aaa52f82c9d9b5540b0128238db2ce72, type: 3}
+  endBg: {fileID: 21300000, guid: b08c686583caac74cb0ce8022e0a0317, type: 3}
   DialogueStarter: {fileID: 1423300009}
   DialogueBox: {fileID: 1923019254}
   dialogueName: {fileID: 923398840}

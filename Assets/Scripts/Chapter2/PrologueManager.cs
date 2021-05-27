@@ -25,6 +25,7 @@ public class PrologueManager : MonoBehaviour
     //public AudioClip doorSound; //사용오디오
 
     public Sprite[] bg = new Sprite[3]; //배경이미지
+    public Sprite endBg;
 
     public GameObject DialogueStarter;
     public GameObject DialogueBox;
@@ -53,7 +54,7 @@ public class PrologueManager : MonoBehaviour
     private int optionsAmount;
     public TMP_Text choiceText;
     public Queue<PrologueBase.Info> prologueInfo;
-    private AudioSource audio; 
+    private AudioSource audio;
 
      public void Start()
     {
@@ -146,6 +147,7 @@ public class PrologueManager : MonoBehaviour
         if (prologueInfo.Count.Equals(0)) //프롤로그 종료
         {
             DialogueBox.SetActive(false);
+            backgroundPortrait.sprite = endBg;
             EndofDialogue();
             
         }else{ //다이얼로그 진행
@@ -184,14 +186,7 @@ public class PrologueManager : MonoBehaviour
                 completeText = completeText.Replace("[F4]", F4[department]);
                 name = name.Replace("[F4]", F4[department]);
 
-                if(department == 0){
-                    backgroundPortrait.sprite = bg[0];
-                } else if(department == 1){
-                    backgroundPortrait.sprite = bg[1];
-                } else if(department == 2){
-                    backgroundPortrait.sprite = bg[2];
-                }
-                
+                backgroundPortrait.sprite = bg[department];
             
                 dialogueText.text = completeText;
                 dialogueName.text = name;

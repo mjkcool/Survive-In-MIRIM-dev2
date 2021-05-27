@@ -192,15 +192,9 @@ public class DialogueManager : MonoBehaviour
                     dialoguePortrait.gameObject.SetActive(true);
 
                     
-                    if (info.portrait == null)
-                    {
-                        dialoguePortrait.sprite = emptySprite;
-                    }
-                    else
-                    {
-                        dialoguePortrait.sprite = info.portrait;
-                    }
-
+                    if (info.portrait == null) dialoguePortrait.sprite = emptySprite;
+                    else dialoguePortrait.sprite = info.portrait;
+                    
 
 
                     Sprite thisBg = backgroundPortrait.sprite; //기존 이미지
@@ -240,55 +234,6 @@ public class DialogueManager : MonoBehaviour
                     else if (thisId < 109) thisBg = bg[3];
                     else thisBg = bg[11];
 
-                    /*
-                    switch (thisId)
-                    {
-                        case 1: case 43: case 85:
-                            thisBg = bg[0]; break;
-                        case 4:
-                        case 8:
-                        case 15:
-                            thisBg = bg[1]; break;
-                        case 16: 
-                            thisBg = bg[9]; break;
-                        case 6:
-                        case 10:
-                        case 12:
-                        case 27:
-                        case 56:
-                        case 61:
-                        case 98:
-                            thisBg = bg[5]; break;
-                        case 11:
-                        case 70:
-                            thisBg = bg[10]; break;
-                        case 19:
-                        case 29:
-                        case 80:
-                        case 96:
-                            thisBg = bg[7]; break;
-                        case 22:
-                        case 47:
-                        case 87:
-                            thisBg = bg[4]; break;
-                        case 26:
-                        case 28:
-                        case 49:
-                        case 58:
-                        case 68:
-                            thisBg = bg[2]; break;
-                        case 52:
-                        case 100:
-                            thisBg = bg[3]; break;
-                        case 66:
-                        case 71:
-                        case 83:
-                            thisBg = bg[6]; break;
-                        case 73: thisBg = bg[8]; break;
-                        case 109: thisBg = bg[11]; break;
-                        default: break;
-                    }
-                    */
                     backgroundPortrait.sprite = thisBg;
 
 

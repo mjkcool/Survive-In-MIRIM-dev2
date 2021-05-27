@@ -46,20 +46,20 @@ MonoBehaviour:
   - id: 6
     myName: '[User]'
     myText: "\uC120\uC0DD\uB2D8 \uC800\uD76C \uC5B8\uC81C \uC2DC\uC791\uD574\uC694?\u315C\u315C"
-    portrait: {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
+    portrait: {fileID: 0}
   - id: 7
     myName: '[T2]'
     myText: '[T2_1]'
-    portrait: {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
+    portrait: {fileID: 0}
   - id: 8
     myName: '[User]'
     myText: "\uADF8\uB7FC \uB610 \uACC4\uC18D \uB300\uAE30\uC778\uAC00\uC694\u3160\u3160
       \uBC30\uACE0\uD30C\uC694."
-    portrait: {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
+    portrait: {fileID: 0}
   - id: 9
     myName: '[T2]'
     myText: '[T2_2]'
-    portrait: {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
+    portrait: {fileID: 0}
   - id: 10
     myName: 
     myText: "30\uBD84 \uD6C4\xB7\xB7\xB7."
@@ -237,8 +237,8 @@ MonoBehaviour:
     portrait: {fileID: 0}
   - id: 45
     myName: '[User]'
-    myText: "\uBB34\uC2A8 \uD601\uC2E0\uC774\uC57C!! \uACF5\uC815\uD55C \uACBD\uAE30\uB294
-      \uAD6D\uB8F0\uC774\uC9C0!!"
+    myText: "\uBB34\uC2A8 \uD601\uC2E0\uC774\uC57C!! \uACF5\uC815\uD55C \uACBD\uAE30
+      \uAD6D\uB8F0\uC774\uC57C!!"
     portrait: {fileID: 0}
   - id: 46
     myName: 

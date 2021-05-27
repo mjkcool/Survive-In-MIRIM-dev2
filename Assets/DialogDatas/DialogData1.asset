@@ -487,43 +487,43 @@ MonoBehaviour:
   - id: 100
     myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
     myText: "[User](\uC774) \uC65C\uADF8\uB798?"
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 101
     myName: '[User]'
     myText: "\uC810\uC218\uAC00 \uC5C6\uC5B4\uC11C\uC694\xB7\xB7\xB7."
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 102
     myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
     myText: "\uADF8\uB798? \uB3C4\uB451\uB9DE\uC558\uB098\uBCF4\uB2E4.\n\uD574\uACB0\uD558\uB7EC\uAC00\uC57C\uC9C0
       \uC774\uC81C."
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 103
     myName: '[User]'
     myText: "\uB124\xB7\xB7\xB7."
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 104
     myName: '[User]'
     myText: "\uC608? \uC81C\uAC00 \uC5D0\uB7EC\uB97C \uACE0\uCE58\uACE0 \uB2E4\uB2C8\uB294
       \uAC78 \uC54C\uACE0 \uACC4\uC138\uC694?"
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 105
     myName: 
     myText: "\uAE40\uC720\uB09C \uC120\uC0DD\uB2D8\uC774 \uACE0\uAC1C\uB97C \uB044\uB355\uC774\uC2E0\uB2E4."
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 106
     myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
     myText: "\uBBF8\uB9BC\uC5D0\uC120 \uB108\uAC19\uC740 \uC77C\uC744 \uACAA\uB294
       \uD559\uC0DD\uB4E4\uC774 \uC885\uC885 \uC788\uC9C0."
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 107
     myName: '[User]'
     myText: "\uC815\uB9D0\uC694? \uC800 \uB9D0\uACE0\uB3C4 \uB204\uAC00\uC694?"
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 108
     myName: "\uAE40\uC720\uB09C \uC0DD\uC120\uB2D8"
     myText: "\uC5BC\uB978 \uAC00.\n\uB098\uC774\uC2A4\uC5D0 \uC62C\uB77C\uAC00\uAE30
       \uC804\uC5D0 \uC5BC\uB978 \uD655\uC778\uD574\uC57C\uC9C0."
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: 7b73b6b87b816ea40b5705ae29cf65f5, type: 3}
   - id: 109
     myName: "\uC774\uC81C\uBB18"
     myText: "\uC57C [User]!"
