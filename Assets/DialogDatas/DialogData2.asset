@@ -177,7 +177,7 @@ MonoBehaviour:
       \uACBD\uAE30\uAC00 \uC2DC\uC791\uB418\uC5C8\uB2E4."
     portrait: {fileID: 0}
   - id: 33
-    myName: 
+    myName: "\uACE0\uB099\uC778 \uC120\uC0DD\uB2D8"
     myText: "[\uC544- \uC544-. \r\n\uC774\uC5B4\uB2EC\uB9AC\uAE30 \uACBD\uAE30\uAC00
       \uC788\uC2B5\uB2C8\uB2E4. 10\uBD84 \uB0B4\uB85C \uC120\uC218\uB294 \uC6B4\uB3D9\uC7A5\uC5D0,
       \uAD00\uB78C\uC740 \uC2A4\uD0E0\uB4DC\uC5D0 \uCC29\uC11D\uD574\uC8FC\uC2DC\uAE38
@@ -241,11 +241,11 @@ MonoBehaviour:
       \uAD6D\uB8F0\uC774\uC57C!!"
     portrait: {fileID: 0}
   - id: 46
-    myName: 
+    myName: "\uACE0\uB099\uC778 \uC120\uC0DD\uB2D8"
     myText: "<\uB8F0\uC804\uB2EC\uC774 \uC798\uBABB\uB418\uC5B4 \uD63C\uB780\uC744
       \uB4DC\uB824 \uC8C4\uC1A1\uD569\uB2C8\uB2E4. \uC7A0\uC2DC\uD6C4 \uC774\uC5B4\uB2EC\uB9AC\uAE30
       \uC7AC\uACBD\uAE30\uAC00 \uC788\uACA0\uC2B5\uB2C8\uB2E4.>"
-    portrait: {fileID: 0}
+    portrait: {fileID: 21300000, guid: af5c293959a19704596b85c401764a22, type: 3}
   - id: 47
     myName: '[F3]'
     myText: "\uC544 \uBB50\uC57C \uAE40\uBE60\uC838~"
@@ -327,7 +327,7 @@ MonoBehaviour:
     portrait: {fileID: 0}
   - id: 64
     myName: '[F4]'
-    myText: "\uAC00\uC790. \uC544\uC790\uC544\uC790 \uD654\uC774\uD305!"
+    myText: "\uAC00\uC790!! \uC544\uC790\uC544\uC790 \uD654\uC774\uD305!"
     portrait: {fileID: 0}
   - id: 65
     myName: 
@@ -450,11 +450,12 @@ MonoBehaviour:
     portrait: {fileID: 0}
   - id: 89
     myName: '[F2]'
-    myText: "\uC5B4? \uC5B4\uC5B4? \uC544\uC544\u2026~\uAE4C\uBE44..!"
+    myText: "\uC544! \uC870\uAE08\uB9CC \uB354 \uBE68\uB9AC...! \uC544 \uAD1C\uCC2E\uC544
+      \uAD1C\uCC2E\uC544 \uB108\uBB34 \uC798\uD588\uB2E4!"
     portrait: {fileID: 0}
   - id: 90
     myName: '[User]'
-    myText: "\uBB50\uC57C! \uC6B0\uB9AC\uD300 \uC84C\uC5B4? \uAD1C\uCC2E\uC544, \uC6B0\uB9AC
+    myText: "\uBB50\uC57C, \uC6B0\uB9AC\uD300 \uC84C\uC5B4? \uAD1C\uCC2E\uC544, \uC6B0\uB9AC
       \uC751\uC6D0 \uC5F4\uC2EC\uD788 \uD574\uC11C \uC751\uC6D0\uC810\uC218 \uB9CE\uC774
       \uB544\uC744\uAC70\uC57C!"
     portrait: {fileID: 0}
@@ -484,13 +485,13 @@ MonoBehaviour:
   - id: 95
     myName: '[User]'
     myText: "\uC6B0\uC2B9\uACFC \uBC1C\uD45C\uD55C\uB2E4\uB2C8\uAE4C \uAC00\uC11C
-      \uBBF8\uB9AC \uC549\uC544\uC788\uC790."
+      \uBBF8\uB9AC \uC11C\uC788\uC790."
     portrait: {fileID: 0}
   - id: 96
     myName: "\uACE0\uB099\uC778 \uC120\uC0DD\uB2D8"
     myText: "[\uC790~ \uBAA8\uB450 \uC870\uC6A9! \uADF8\uB7FC \uC774\uC81C, \uC810\uC218\uD569\uC0B0\uC774
       \uC644\uB8CC\uB418\uC5C8\uC73C\uB2C8 \uC21C\uC704\uBC1C\uD45C\uB97C \uD558\uACA0\uC2B5\uB2C8\uB2E4.]"
-    portrait: {fileID: 21300000, guid: af5c293959a19704596b85c401764a22, type: 3}
+    portrait: {fileID: 0}
   - id: 97
     myName: '[User]'
     myText: "\uC598\uB4E4\uC544, \uC6B0\uB9AC \uBA87 \uC885\uBAA9 \uC774\uACBC\uB354\uB77C?"

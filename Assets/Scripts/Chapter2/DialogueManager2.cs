@@ -30,7 +30,7 @@ public class DialogueManager2 : MonoBehaviour
     public AudioClip jumpropeSound;
     public AudioClip duguduguSound;
 
-   public Sprite[] bg = new Sprite[13]; //배경이미지
+    public Sprite[] bg; //배경이미지
 
     public GameObject DialogueBox;
     public TextMeshProUGUI dialogueName;
@@ -280,7 +280,7 @@ public class DialogueManager2 : MonoBehaviour
 
                     // 배경 사진
                     Sprite thisBg = backgroundPortrait.sprite;
-                    if(thisId < 10) thisBg = bg[0];
+                    /*if(thisId < 10) thisBg = bg[0];
                     else if(thisId < 15) thisBg = bg[1];
                     else if(thisId < 17) thisBg = bg[2];
                     else if(thisId < 32) thisBg = bg[3];
@@ -296,6 +296,63 @@ public class DialogueManager2 : MonoBehaviour
                     else if(thisId < 97) thisBg = bg[11];
                     else if(thisId < 105) thisBg = bg[9];
                     else thisBg = bg[10];
+                    */
+                    if (thisId < 5) thisBg = bg[0];
+                    else if (thisId < 10) thisBg = bg[1];
+                    else if (thisId < 14) thisBg = bg[2];
+                    else if (thisId < 15) thisBg = bg[3];
+                    else if (thisId < 17) thisBg = bg[4];
+                    else if (thisId < 33) thisBg = bg[5];
+                    else if (thisId < 34) thisBg = bg[3];
+                    else if (thisId < 37) thisBg = bg[6];
+                    else if (thisId < 46) thisBg = bg[7];
+                    else if (thisId < 47) thisBg = bg[3];
+                    else if (thisId < 50) thisBg = bg[6];
+                    else if (thisId < 51) thisBg = bg[8];
+                    else if (thisId < 52) thisBg = bg[9];
+                    //else if (thisId < 55) thisBg = null;
+                    else if (thisId < 60) thisBg = bg[10];
+                    else if (thisId < 61) thisBg = bg[11];
+                    else if (thisId < 62) thisBg = bg[12];
+                    else if (thisId < 68) thisBg = bg[11];
+                    else if (thisId < 69) thisBg = bg[16];
+                    else if (thisId < 71)
+                    {
+                        if (department == 2) thisBg = bg[13];
+                        else thisBg = bg[14];
+                    }
+                    else if (thisId < 73) thisBg = bg[16];
+                    else if (thisId < 74) thisBg = bg[17];
+                    else if (thisId < 77)
+                    {
+                        if (department == 2) thisBg = bg[13];
+                        else thisBg = bg[14];
+                    }
+                    else if (thisId < 78) thisBg = bg[17];
+                    else if (thisId < 79)
+                    {
+                        if (department == 2) thisBg = bg[13];
+                        else thisBg = bg[14];
+                    }
+                    else if (thisId < 80) thisBg = bg[17];
+                    else if (thisId < 81)
+                    {
+                        if (department == 2) thisBg = bg[13];
+                        else thisBg = bg[14];
+                    }
+                    else if (thisId < 83) thisBg = bg[17];
+                    else if (thisId < 87)
+                    {
+                        if (department == 2) thisBg = bg[13];
+                        else thisBg = bg[14];
+                    }
+                    else if (thisId < 90) thisBg = bg[17];
+                    else if (thisId < 92) thisBg = bg[16];
+                    else if (thisId < 96) thisBg = bg[18];
+                    else if (thisId < 101) thisBg = bg[19];
+                    else if (thisId < 105) thisBg = bg[15];
+                    else if (thisId < 111) thisBg = bg[21];
+                    //else thisBg=교실이미지
 
                     /*
                     switch (thisId) //변경
