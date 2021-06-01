@@ -30,7 +30,6 @@ public class DialogueManager2 : MonoBehaviour
     public AudioClip jumpropeSound;
     public AudioClip duguduguSound;
 
-    public Sprite[] bg; //배경이미지
 
     public GameObject DialogueBox;
     public TextMeshProUGUI dialogueName;
@@ -63,6 +62,8 @@ public class DialogueManager2 : MonoBehaviour
     public Sprite[] F3_1, F3_2, F4_1, F4_2;
     public Sprite[] T1;
     public Sprite emptySprite;
+
+    public Sprite[] cheerzone = new Sprite[3], endBg = new Sprite[3], jumpropeBg1 = new Sprite[3], jumpropeBg2 = new Sprite[3];
 
     private int[] pos_F1_1 = new int[] { 62, 66, 75 };
     private int[] pos_F1_2 = new int[] { 0, 1, 105 };
@@ -177,11 +178,11 @@ public class DialogueManager2 : MonoBehaviour
                 {
                     if ((thisId.Equals(13)) && (!Qcompleted[0])) //퀘스트 1 시작
                     {
-                        
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 1;
                         questStarter.questnum = 1;
                         questStarter.start();
+                        return;
                     }
                     else if ((thisId.Equals(29)) && (!Qcompleted[1])) //퀘스트 2 시작
                     {
@@ -189,6 +190,7 @@ public class DialogueManager2 : MonoBehaviour
                         DialogBtn.questnum = 2;
                         questStarter.questnum = 2;
                         questStarter.start();
+                        return;
                     }
                     else if ((thisId.Equals(45)) && (!Qcompleted[2])) //퀘스트 3 시작
                     {
@@ -196,6 +198,7 @@ public class DialogueManager2 : MonoBehaviour
                         DialogBtn.questnum = 3;
                         questStarter.questnum = 3;
                         questStarter.start();
+                        return;
                     }
                     else if ((thisId.Equals(87)) && (!Qcompleted[3])) //퀘스트 4 시작
                     {
@@ -203,6 +206,7 @@ public class DialogueManager2 : MonoBehaviour
                         DialogBtn.questnum = 4;
                         questStarter.questnum = 4;
                         questStarter.start();
+                        return;
                     }
                     else if ((thisId.Equals(102)) && (!Qcompleted[4])) //퀘스트 5 시작
                     {
@@ -210,6 +214,7 @@ public class DialogueManager2 : MonoBehaviour
                         DialogBtn.questnum = 5;
                         questStarter.questnum = 5;
                         questStarter.start();
+                        return;
                     }
 
                     dialogueText.text = "";
@@ -221,6 +226,19 @@ public class DialogueManager2 : MonoBehaviour
                     completeText = completeText.Replace("[User]", UserName);
                     name = name.Replace("[User]", UserName);
                     int department = PlayerPrefs.GetInt("Department");
+
+                    Sprite bgSprite = info.bgSprite;
+
+                    if (bgSprite == null) //배경이미지가 없으면(과마다 따로 지정하는 배경이면)
+                    {
+                        if (thisId == 53 || thisId == 58 || thisId == 59) bgSprite = jumpropeBg1[department];
+                        else if (thisId >= 55 || thisId <= 57) bgSprite = jumpropeBg2[department];
+                        else if (thisId == 52 || thisId == 54 || (thisId >= 68 && thisId <= 91)) bgSprite = cheerzone[department];
+                        else if (thisId >= 110) bgSprite = endBg[department];
+                        
+                    }
+                    backgroundPortrait.sprite = bgSprite;
+                    
 
                     //과에 따른 이름값 변형
                     completeText = completeText.Replace("[F1]", F1[department]);
@@ -277,71 +295,8 @@ public class DialogueManager2 : MonoBehaviour
 
                     if (p == null) dialoguePortrait.sprite = emptySprite;
                     else dialoguePortrait.sprite = p;
+                   
                     
-
-                    // 배경 사진
-                    Sprite thisBg = backgroundPortrait.sprite;
-
-                    if (thisId < 5) thisBg = bg[0];
-                    else if (thisId < 6) thisBg = bg[24];
-                    else if (thisId < 13) thisBg = bg[1];
-                    else if (thisId < 14) thisBg = bg[23];
-                    else if (thisId < 15) thisBg = bg[25];
-                    else if (thisId < 16) thisBg = bg[2];
-                    else if (thisId < 17) thisBg = bg[4];
-                    else if (thisId < 33) thisBg = bg[5];
-                    else if (thisId < 34) thisBg = bg[3];
-                    else if (thisId < 37) thisBg = bg[6];
-                    else if (thisId < 46) thisBg = bg[7];
-                    else if (thisId < 47) thisBg = bg[3];
-                    else if (thisId < 50) thisBg = bg[6];
-                    else if (thisId < 51) thisBg = bg[8];
-                    else if (thisId < 52) thisBg = bg[9];
-                    //else if (thisId < 55) thisBg = null;
-                    else if (thisId < 60) thisBg = bg[10];
-                    else if (thisId < 61) thisBg = bg[11];
-                    else if (thisId < 62) thisBg = bg[12];
-                    else if (thisId < 68) thisBg = bg[11];
-                    else if (thisId < 69) thisBg = bg[16];
-                    else if (thisId < 71)
-                    {
-                        if (department == 2) thisBg = bg[13];
-                        else thisBg = bg[14];
-                    }
-                    else if (thisId < 73) thisBg = bg[16];
-                    else if (thisId < 74) thisBg = bg[17];
-                    else if (thisId < 77)
-                    {
-                        if (department == 2) thisBg = bg[13];
-                        else thisBg = bg[14];
-                    }
-                    else if (thisId < 78) thisBg = bg[17];
-                    else if (thisId < 79)
-                    {
-                        if (department == 2) thisBg = bg[13];
-                        else thisBg = bg[14];
-                    }
-                    else if (thisId < 80) thisBg = bg[17];
-                    else if (thisId < 81)
-                    {
-                        if (department == 2) thisBg = bg[13];
-                        else thisBg = bg[14];
-                    }
-                    else if (thisId < 83) thisBg = bg[17];
-                    else if (thisId < 87)
-                    {
-                        if (department == 2) thisBg = bg[13];
-                        else thisBg = bg[14];
-                    }
-                    else if (thisId < 90) thisBg = bg[17];
-                    else if (thisId < 92) thisBg = bg[16];
-                    else if (thisId < 96) thisBg = bg[18];
-                    else if (thisId < 101) thisBg = bg[19];
-                    else if (thisId < 105) thisBg = bg[15];
-                    else if (thisId < 111) thisBg = bg[21];
-                    //else thisBg=교실이미지
-
-                    backgroundPortrait.sprite = thisBg;
                     
 
                     //오디오 설정
@@ -425,7 +380,7 @@ public class DialogueManager2 : MonoBehaviour
                     StartCoroutine(TypeText(completeText));
 
                     //대사 딜레이
-                    switch (thisId)
+                    /*switch (thisId)
                     {
                         case 10:
                         case 16:
@@ -443,6 +398,8 @@ public class DialogueManager2 : MonoBehaviour
                             isDelayturn = true; break;
                         default: break;
                     }
+                    */
+                    isDelayturn = info.isDelayed;
                 }//end of lock
             }
         }

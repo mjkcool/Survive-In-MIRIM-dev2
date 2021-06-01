@@ -8,6 +8,8 @@ using TMPro;
 public class Ch2_Quest2Manager : MonoBehaviour
 {
     //Dialog Objects
+    public static string username = "User";
+    private string completeText, name;
     public GameObject Quest, DialogBox;
     public TextMeshProUGUI dialogueName;
     public TextMeshProUGUI dialogueText;
@@ -36,6 +38,14 @@ public class Ch2_Quest2Manager : MonoBehaviour
 
     public void Start()
     {
+        if(PlayerPrefs.HasKey("Name"))
+        {
+            username = PlayerPrefs.GetString("Name");
+        }
+        else
+        {
+            username = "User";
+        }
         QuestInfo = new Queue<QuestBase.Info>();  //초기화
     }
 
@@ -93,11 +103,12 @@ public class Ch2_Quest2Manager : MonoBehaviour
         }
 
         QuestBase.Info info = QuestInfo.Dequeue();
-        string username = (string)DialogueManager2.UserName;
-        string name = (info.myName).Replace("[User]", username);
+        completeText = info.myText;
+        name = info.myName;
+        completeText = completeText.Replace("[User]", username);
+        name = name.Replace("[User]", username);
+        dialogueText.text = completeText;
         dialogueName.text = name;
-        string txt = (info.myText).Replace("[User]", username);
-        dialogueText.text = txt;
     }
 
     private string[] examples = new string[4]

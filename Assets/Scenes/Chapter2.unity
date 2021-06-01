@@ -1371,33 +1371,6 @@ MonoBehaviour:
   twothreeSound: {fileID: 8300000, guid: cbc97b9d270e8d143af6cdcc224de666, type: 3}
   jumpropeSound: {fileID: 8300000, guid: 84bc54ea51cd0f5459aa10a73ed8e4a1, type: 3}
   duguduguSound: {fileID: 8300000, guid: 8753bcf08942f2c4bb1853f564c1a9d5, type: 3}
-  bg:
-  - {fileID: 21300000, guid: 004b28c588ac74642b9351b572fe4771, type: 3}
-  - {fileID: 21300000, guid: e3bf08dd8baaf904f9b211d04ba37a46, type: 3}
-  - {fileID: 21300000, guid: 92f7906efbb49364bac36b57472dad0d, type: 3}
-  - {fileID: 21300000, guid: 40f933e1428b2064e80351b90f1da1cc, type: 3}
-  - {fileID: 21300000, guid: 2a2bd12a2f8cb124cb8acbb4b6ddea66, type: 3}
-  - {fileID: 21300000, guid: 02c788f0a9b7a4d438ced1e0b714f634, type: 3}
-  - {fileID: 21300000, guid: 7a0224d490abeb6448737eab7b300aaa, type: 3}
-  - {fileID: 21300000, guid: 406288019bf93b14db2f691f1df157f1, type: 3}
-  - {fileID: 21300000, guid: ae6f970dfef117e4ba25f29843caec7d, type: 3}
-  - {fileID: 21300000, guid: 924cb06c6d815cf409464f7bc7423c35, type: 3}
-  - {fileID: 21300000, guid: 49b3cd5b72c77644e92b2146f25a05c3, type: 3}
-  - {fileID: 21300000, guid: 438c45018344be1429df4f10077c5704, type: 3}
-  - {fileID: 21300000, guid: 67acbb9a3716e9a498bc7fb56c8d0cd5, type: 3}
-  - {fileID: 21300000, guid: b92f94d7412506b45bf7cde52fc8b46f, type: 3}
-  - {fileID: 21300000, guid: 4371c65fde902744889b99a7c00be4f0, type: 3}
-  - {fileID: 21300000, guid: b77abf4455c1d884785507fd1eeb7b6f, type: 3}
-  - {fileID: 21300000, guid: 162fc34467fe04642b774720fbe80804, type: 3}
-  - {fileID: 21300000, guid: 407260f525e327e4a8437fff05666b14, type: 3}
-  - {fileID: 21300000, guid: 6a935d7d4380697498b728828e2e7e18, type: 3}
-  - {fileID: 21300000, guid: 142a44cbeb938b240978d82d358a1919, type: 3}
-  - {fileID: 21300000, guid: 492afbb268f071f4abe8df92b8c1793d, type: 3}
-  - {fileID: 21300000, guid: 1c9eb210206a0164497b5e87797d8533, type: 3}
-  - {fileID: 21300000, guid: 3c27797e9d3678b40b11b1b45c14b503, type: 3}
-  - {fileID: 21300000, guid: c99c57086c125424cb7b4c744d4b9cf3, type: 3}
-  - {fileID: 21300000, guid: 2a2bd12a2f8cb124cb8acbb4b6ddea66, type: 3}
-  - {fileID: 21300000, guid: bb0b6d7aa1bc96d46bda2bb5cfd94bf6, type: 3}
   DialogueBox: {fileID: 659429563}
   dialogueName: {fileID: 1567119942}
   dialogueText: {fileID: 547642167}
@@ -1464,6 +1437,22 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 588a2701b6372fe47b5d0ea0e862b26d, type: 3}
   - {fileID: 21300000, guid: 23e7cc5011c707e4abb611e488810670, type: 3}
   emptySprite: {fileID: 21300000, guid: 891c266f842b00d4682f6f0b000cb0aa, type: 3}
+  cheerzone:
+  - {fileID: 21300000, guid: 4371c65fde902744889b99a7c00be4f0, type: 3}
+  - {fileID: 21300000, guid: 4371c65fde902744889b99a7c00be4f0, type: 3}
+  - {fileID: 21300000, guid: b92f94d7412506b45bf7cde52fc8b46f, type: 3}
+  endBg:
+  - {fileID: 21300000, guid: 15cf403415fbf064a8f96066738a207d, type: 3}
+  - {fileID: 21300000, guid: 23d02b3eef124a648a8e4398d4da84d4, type: 3}
+  - {fileID: 21300000, guid: 97047240b7ed08c4b9289013bfdf48f4, type: 3}
+  jumpropeBg1:
+  - {fileID: 21300000, guid: 40a1fc56a2dcff44fb2b3c08fe89816b, type: 3}
+  - {fileID: 21300000, guid: 252707c865ffbb54ea89464e0a4151c5, type: 3}
+  - {fileID: 21300000, guid: 3752661e93be5c94486cb2e1e851fe9a, type: 3}
+  jumpropeBg2:
+  - {fileID: 21300000, guid: de2dcca0b96e2004e98483d79f01a973, type: 3}
+  - {fileID: 21300000, guid: 2538a6d58fce600459048980a59a77bf, type: 3}
+  - {fileID: 21300000, guid: 4f0a57a476fc4514a9c7d7f4e62880e9, type: 3}
   isCurrentlyTyping: 0
   thisId: 0
   MedalAnimation: {fileID: 737315974}

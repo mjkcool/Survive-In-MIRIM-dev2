@@ -7,6 +7,7 @@ using TMPro;
 
 public class Ch2_Quest4Manager : MonoBehaviour
 {
+    public static string username = "User";
     //Dialog Objects
     public GameObject Quest, DialogBox;
     public TextMeshProUGUI dialogueName;
