@@ -8,6 +8,7 @@ public class QuestBase : ScriptableObject
     [System.Serializable]
     public class Info
     {
+        public int id;
         public string myName;
         [TextArea(3, 8)]
         public string myText;

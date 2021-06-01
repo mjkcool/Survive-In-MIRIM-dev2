@@ -13,6 +13,8 @@ public class DialogueBase : ScriptableObject
         [TextArea(3, 8)]
         public string myText;
         public Sprite portrait;
+        public Sprite bgSprite;
+        public bool isDelayed;
     }
 
     [Header("Insert Dialogue Information Below")]

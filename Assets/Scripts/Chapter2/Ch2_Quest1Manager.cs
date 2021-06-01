@@ -16,6 +16,8 @@ public class Ch2_Quest1Manager : MonoBehaviour
     public TextMeshProUGUI[] choices = new TextMeshProUGUI[5];
     public Sprite portraitImage;
     public Sprite characterPortrait;
+    public Sprite[] bgPortrait;
+    public Image background;
 
     private int answerNumber, dialogtotalcnt;
     public Queue<QuestBase.Info> QuestInfo;
@@ -58,6 +60,8 @@ public class Ch2_Quest1Manager : MonoBehaviour
         answerNumber = Random.Range(0, 4); //정답-매번 순서 섞임 / 정답 번호 부여
         Debug.Log("정답은 "+answerNumber);
 
+        background.sprite = bgPortrait[0];
+
         setChoiceText(); //선택지에 글씨 배치
         DequeueQuest();
     }
@@ -76,10 +80,17 @@ public class Ch2_Quest1Manager : MonoBehaviour
         }
         else if (QuestInfo.Count.Equals(3)) //선택지 등장
         {
+            Portrait.gameObject.SetActive(true);
             Character.gameObject.SetActive(false);
             DialogBox.SetActive(false);
             ChoicesPack.SetActive(true); //선택지묶음
             return;
+        }
+        else if (QuestInfo.Count.Equals(1))
+        {
+            Portrait.gameObject.SetActive(false);
+            Character.gameObject.SetActive(false);
+            background.sprite = bgPortrait[1];
         }
         else if (QuestInfo.Count.Equals(0)) //Quest 다이얼로그 끝나면
         {
@@ -135,6 +146,7 @@ public class Ch2_Quest1Manager : MonoBehaviour
         }
         else
         {
+            Portrait.gameObject.SetActive(false);
             ChoicesPack.gameObject.SetActive(false);
             DialogBox.SetActive(true);
             dialogueName.text = "디버거";

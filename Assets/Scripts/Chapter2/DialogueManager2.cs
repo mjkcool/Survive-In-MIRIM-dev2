@@ -177,6 +177,7 @@ public class DialogueManager2 : MonoBehaviour
                 {
                     if ((thisId.Equals(13)) && (!Qcompleted[0])) //퀘스트 1 시작
                     {
+                        
                         DialogueBox.SetActive(false);
                         DialogBtn.questnum = 1;
                         questStarter.questnum = 1;
@@ -280,27 +281,13 @@ public class DialogueManager2 : MonoBehaviour
 
                     // 배경 사진
                     Sprite thisBg = backgroundPortrait.sprite;
-                    /*if(thisId < 10) thisBg = bg[0];
-                    else if(thisId < 15) thisBg = bg[1];
-                    else if(thisId < 17) thisBg = bg[2];
-                    else if(thisId < 32) thisBg = bg[3];
-                    else if(thisId < 36) thisBg = bg[4];
-                    else if(thisId < 46) thisBg = bg[5];
-                    else if(thisId < 51) thisBg = bg[4];
-                    else if(thisId < 56) thisBg = bg[10];
-                    else if(thisId < 61) thisBg = bg[6];
-                    else if(thisId < 68) thisBg = bg[7];
-                    else if(thisId < 74) thisBg = bg[12];
-                    else if(thisId < 89) thisBg = bg[8];
-                    else if(thisId < 92) thisBg = bg[12];
-                    else if(thisId < 97) thisBg = bg[11];
-                    else if(thisId < 105) thisBg = bg[9];
-                    else thisBg = bg[10];
-                    */
+
                     if (thisId < 5) thisBg = bg[0];
-                    else if (thisId < 10) thisBg = bg[1];
-                    else if (thisId < 14) thisBg = bg[2];
-                    else if (thisId < 15) thisBg = bg[3];
+                    else if (thisId < 6) thisBg = bg[24];
+                    else if (thisId < 13) thisBg = bg[1];
+                    else if (thisId < 14) thisBg = bg[23];
+                    else if (thisId < 15) thisBg = bg[25];
+                    else if (thisId < 16) thisBg = bg[2];
                     else if (thisId < 17) thisBg = bg[4];
                     else if (thisId < 33) thisBg = bg[5];
                     else if (thisId < 34) thisBg = bg[3];
@@ -354,42 +341,6 @@ public class DialogueManager2 : MonoBehaviour
                     else if (thisId < 111) thisBg = bg[21];
                     //else thisBg=교실이미지
 
-                    /*
-                    switch (thisId) //변경
-                    {
-                        case 0:
-                            thisBg = bg[0]; break;
-                        case 10:
-                            thisBg = bg[1]; break;
-                        case 15:
-                            thisBg = bg[2]; break;
-                        case 17: 
-                            thisBg = bg[3]; break;
-                        case 32:
-                        case 46:
-                            thisBg = bg[4]; break;
-                        case 36:
-                            thisBg = bg[5]; break;
-                        case 51:
-                            thisBg = bg[10]; break;
-                        case 56:
-                            thisBg = bg[6]; break;
-                        case 61:
-                            thisBg = bg[7]; break;
-                        case 68:
-                        case 89:
-                            thisBg = bg[12]; break;
-                        case 74:
-                            thisBg = bg[8]; break;
-                        case 92: 
-                            thisBg = bg[11]; break;
-                        case 97: 
-                            thisBg = bg[9]; break;
-                        case 105: 
-                            thisBg = bg[10]; break;
-                        default: break;
-                    }
-                    */
                     backgroundPortrait.sprite = thisBg;
                     
 
