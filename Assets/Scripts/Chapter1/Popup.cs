@@ -14,11 +14,12 @@ public class Popup : MonoBehaviour
         animator = GetComponent<Animator>();
         if (instance != null)
         {
-            Debug.LogWarning("fix this" + gameObject.name);
+            Debug.Log("팝업 존재");
         }
         else
         {
             instance = this;
+            Debug.Log("팝업 인스턴스 생성");
         }
         
     }
@@ -40,9 +41,10 @@ public class Popup : MonoBehaviour
             return;
         }
 
-       int thisId = PlayerPrefs.GetInt("LoadId");
-       DialogueManager.instance.thisId = thisId;
-       Debug.Log("현재 위치 아이디: " + DialogueManager.instance.thisId);
+        int thisId = PlayerPrefs.GetInt("LoadId");
+        
+        DialogueManager.instance.thisId = thisId;
+        Debug.Log("현재 위치 아이디: " + DialogueManager.instance.thisId);
     }
    
    //데이터 초기화 = 새로시작
@@ -58,7 +60,7 @@ public class Popup : MonoBehaviour
    private IEnumerator CloseAfterDelay()
    {
        animator.SetTrigger("close");
-       yield return new WaitForSeconds(0.5f);
+       yield return new WaitForSeconds(0.0f);
        gameObject.SetActive(false);
        animator.ResetTrigger("close");
    }

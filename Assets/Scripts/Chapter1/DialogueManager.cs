@@ -188,7 +188,6 @@ public class DialogueManager : MonoBehaviour
                     thisId = info.id;
 
                     dialogueName.text = name;
-
                     dialoguePortrait.gameObject.SetActive(true);
 
                     
@@ -354,6 +353,8 @@ public class DialogueManager : MonoBehaviour
 
     private void GoEnd()
     {
+        PlayerPrefs.SetString("Chapter1", "clear");
+        PlayerPrefs.Save(); 
         MedalGround.SetActive(false); 
         MedalAnimation.SetActive(false);
         endingAnimation.SetActive(true);

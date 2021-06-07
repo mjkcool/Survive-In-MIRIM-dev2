@@ -21,7 +21,7 @@ public class LoadingSceneManager : MonoBehaviour
         nextScene = sceneName;
         SceneManager.LoadScene("LoadingScene");
     }
-    
+
     IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(0.4f);
@@ -48,7 +48,6 @@ public class LoadingSceneManager : MonoBehaviour
                 {
                     op.allowSceneActivation = true;
                     yield break;
-                    //yield return new WaitForSeconds(1.0f);
                 }
             }
         }

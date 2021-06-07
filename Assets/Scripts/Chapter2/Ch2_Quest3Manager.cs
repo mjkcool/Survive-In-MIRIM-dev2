@@ -7,7 +7,8 @@ using TMPro;
 
 public class Ch2_Quest3Manager : MonoBehaviour
 {
-    public static string username = "User";
+    public static string UserName = "User";
+    private string completeText, name;
     //Dialog Objects
     public GameObject Quest, DialogBox;
     public TextMeshProUGUI dialogueName;
@@ -37,6 +38,14 @@ public class Ch2_Quest3Manager : MonoBehaviour
 
     public void Start()
     {
+        if(PlayerPrefs.HasKey("Name"))
+        {
+            UserName = PlayerPrefs.GetString("Name");
+        }
+        else
+        {
+            UserName = "User";
+        }
         QuestInfo = new Queue<QuestBase.Info>();  //초기화
     }
 
@@ -97,11 +106,12 @@ public class Ch2_Quest3Manager : MonoBehaviour
         }
 
         QuestBase.Info info = QuestInfo.Dequeue();
-        string username = (string)DialogueManager2.UserName;
-        string name = (info.myName).Replace("[User]", username);
+        completeText = info.myText;
+        name = info.myName;
+        completeText = completeText.Replace("[User]", UserName);
+        name = name.Replace("[User]", UserName);
         dialogueName.text = name;
-        string txt = (info.myText).Replace("[User]", username);
-        dialogueText.text = txt;
+        dialogueText.text = completeText;
     }
 
     private string[] examples = new string[4]
@@ -129,8 +139,12 @@ public class Ch2_Quest3Manager : MonoBehaviour
             Character.gameObject.SetActive(true);
             QuestBase.Info info = QuestInfo.Dequeue();
             DialogBox.SetActive(true);
-            dialogueName.text = info.myName;
-            dialogueText.text = info.myText;
+            completeText = info.myText;
+            name = info.myName;
+            completeText = completeText.Replace("[User]", UserName);
+            name = name.Replace("[User]", UserName);
+            dialogueName.text = name;
+            dialogueText.text = completeText;
             ChoicesPack.gameObject.SetActive(false);
         }
         else
@@ -140,7 +154,12 @@ public class Ch2_Quest3Manager : MonoBehaviour
             dialogueName.text = "디버거";
             dialogueText.text = "잘못된 정답인것같아!";
             flag = false;
+            Invoke("healout", 3f);
         }
+    }
+
+    private void healout(){
+        HealthSystem.instance.outHealth();
     }
     private void EndofQuest()
     {

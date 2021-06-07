@@ -80,13 +80,11 @@ public class QuestManager : MonoBehaviour
         LoadingAnimation.SetActive(false);
         if (correct) {
             success.SetActive(true); 
-            Debug.LogWarning("오디오나올 차례");
             GetComponent<AudioSource>().clip = correctSound;
             GetComponent<AudioSource>().Play();
         }
         else {
             failure.SetActive(true); 
-            Debug.LogWarning("오디오나올 차례");
             GetComponent<AudioSource>().clip = incorrectSound;
             GetComponent<AudioSource>().Play();
         }

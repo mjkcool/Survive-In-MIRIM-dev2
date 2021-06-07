@@ -102,7 +102,6 @@ public class Ch2_Quest1Manager : MonoBehaviour
 
         QuestBase.Info info = QuestInfo.Dequeue();
         string username = (string)DialogueManager2.UserName;
-        Debug.Log(username);
         string name = info.myName;
         name = name.Replace("[User]", username);
         dialogueName.text = name;
@@ -152,7 +151,12 @@ public class Ch2_Quest1Manager : MonoBehaviour
             dialogueName.text = "디버거";
             dialogueText.text = "잘못된 정답인것같아!";
             flag = false;
+            Invoke("healout", 3f);
         }
+    }
+
+    private void healout(){
+        HealthSystem.instance.outHealth();
     }
 
     private void EndofQuest()

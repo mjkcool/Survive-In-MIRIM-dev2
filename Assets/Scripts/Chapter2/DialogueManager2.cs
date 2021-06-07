@@ -19,7 +19,6 @@ public class DialogueManager2 : MonoBehaviour
         {
             instance = this;
         }
-
     }
 
     public static string UserName = "User";

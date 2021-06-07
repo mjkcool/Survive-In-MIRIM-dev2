@@ -7,7 +7,8 @@ using TMPro;
 
 public class Ch2_Quest5Manager : MonoBehaviour
 {
-    public static string username = "User";
+    public static string UserName = "User";
+    private string completeText, name;
     //Dialog Objects
     public GameObject Quest, DialogBox;
     public TextMeshProUGUI dialogueName;
@@ -38,18 +39,26 @@ public class Ch2_Quest5Manager : MonoBehaviour
 
     public void Start()
     {
-        QuestInfo = new Queue<QuestBase.Info>();  //ÃÊ±âÈ­
+        if(PlayerPrefs.HasKey("Name"))
+        {
+            UserName = PlayerPrefs.GetString("Name");
+        }
+        else
+        {
+            UserName = "User";
+        }
+        QuestInfo = new Queue<QuestBase.Info>();  //ì´ˆê¸°í™”
     }
 
     public void EnqueueQuest(QuestBase db)
     {
         Portrait.sprite = portraitImages[1];
         Character.sprite = characterPortrait;
-        //ÀÌ¹ÌÁö »çÀÌÁî ÁöÁ¤
+        //ì´ë¯¸ì§€ ì‚¬ì´ì¦ˆ ì§€ì •
         RectTransform rt = (RectTransform)Portrait.transform;
         rt.sizeDelta = new Vector2(0, 721);
         Quest.SetActive(true);
-        Portrait.gameObject.SetActive(false); //ÃÊ±â¿£ ÄÚµå ÀÌ¹ÌÁö NOT show
+        Portrait.gameObject.SetActive(false); //ì´ˆê¸°ì—” ì½”ë“œ ì´ë¯¸ì§€ NOT show
         QuestInfo.Clear();
 
         foreach (QuestBase.Info info in db.QuestInfo)
@@ -57,14 +66,14 @@ public class Ch2_Quest5Manager : MonoBehaviour
             QuestInfo.Enqueue(info);
         }
         dialogtotalcnt = QuestInfo.Count;
-        answerNumber = Random.Range(0, 4); //Á¤´ä-¸Å¹ø ¼ø¼­ ¼¯ÀÓ / Á¤´ä ¹øÈ£ ºÎ¿©
-        Debug.Log("Á¤´äÀº "+answerNumber);
+        answerNumber = Random.Range(0, 4); //ì •ë‹µ-ë§¤ë²ˆ ìˆœì„œ ì„ì„ / ì •ë‹µ ë²ˆí˜¸ ë¶€ì—¬
+        Debug.Log("ì •ë‹µì€ "+answerNumber);
 
         setChoiceText();
         DequeueQuest();
     }
 
-    private bool flag = true; //±âº»°ªÀº true
+    private bool flag = true; //ê¸°ë³¸ê°’ì€ true
 
     public void DequeueQuest()
     {
@@ -76,14 +85,14 @@ public class Ch2_Quest5Manager : MonoBehaviour
         {
             Portrait.gameObject.SetActive(true);
         }
-        else if (QuestInfo.Count.Equals(2)) //¼±ÅÃÁö
+        else if (QuestInfo.Count.Equals(2)) //ì„ íƒì§€
         {
             Character.gameObject.SetActive(false);
             DialogBox.SetActive(false);
             ChoicesPack.SetActive(true);
             return;
         }
-        else if (QuestInfo.Count.Equals(0)) //Quest ´ÙÀÌ¾ó·Î±× ³¡³ª¸é
+        else if (QuestInfo.Count.Equals(0)) //Quest ë‹¤ì´ì–¼ë¡œê·¸ ëë‚˜ë©´
         {
             Character.gameObject.SetActive(false);
             QuestManager.instance.spinStar();
@@ -93,11 +102,12 @@ public class Ch2_Quest5Manager : MonoBehaviour
 
 
         QuestBase.Info info = QuestInfo.Dequeue();
-        string username = (string)DialogueManager2.UserName;
-        string name = (info.myName).Replace("[User]", username);
+        completeText = info.myText;
+        name = info.myName;
+        completeText = completeText.Replace("[User]", UserName);
+        name = name.Replace("[User]", UserName);
         dialogueName.text = name;
-        string txt = (info.myText).Replace("[User]", username);
-        dialogueText.text = txt;
+        dialogueText.text = completeText;
     }
 
     private string[] examples = new string[4]
@@ -118,26 +128,36 @@ public class Ch2_Quest5Manager : MonoBehaviour
     {
         QuestManager.instance.startLoading(choiceNumber.Equals(answerNumber));
 
-        //ÄÄÆÄÀÏ ¾Ö´Ï¸ŞÀÌ¼Ç
-        if (choiceNumber.Equals(answerNumber)) //Á¤´ä ¸ÂÃá °æ¿ì
+        //ì»´íŒŒì¼ ì• ë‹ˆë©”ì´ì…˜
+        if (choiceNumber.Equals(answerNumber)) //ì •ë‹µ ë§ì¶˜ ê²½ìš°
         {
             Portrait.gameObject.SetActive(false);
             Character.gameObject.SetActive(true);
             QuestBase.Info info = QuestInfo.Dequeue();
             DialogBox.SetActive(true);
-            dialogueName.text = info.myName;
-            dialogueText.text = info.myText;
+            completeText = info.myText;
+            name = info.myName;
+            completeText = completeText.Replace("[User]", UserName);
+            name = name.Replace("[User]", UserName);
+            dialogueName.text = name;
+            dialogueText.text = completeText;
             ChoicesPack.gameObject.SetActive(false);
         }
         else
         {
             ChoicesPack.gameObject.SetActive(false);
             DialogBox.SetActive(true);
-            dialogueName.text = "µğ¹ö°Å";
-            dialogueText.text = "Àß¸øµÈ Á¤´äÀÎ°Í°°¾Æ!";
+            dialogueName.text = "ë””ë²„ê±°";
+            dialogueText.text = "ì˜ëª»ëœ ì •ë‹µì¸ê²ƒê°™ì•„!";
             flag = false;
+            Invoke("healout", 3f);
         }
     }
+
+    private void healout(){
+        HealthSystem.instance.outHealth();
+    }
+        
 
     private void EndofQuest()
     {

@@ -11,7 +11,7 @@ public class FadeOutScript : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("fix this" + gameObject.name);
+            
         }
         else
         {
